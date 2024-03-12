@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <Link to="/">HOME</Link>
+        <Link to="/">PHONG</Link>
         <Link to="/students">STUDENT LIST</Link>
       </nav>
       {/* main content */}
