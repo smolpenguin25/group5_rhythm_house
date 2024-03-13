@@ -1,0 +1,32 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    flex-direction: row;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    background-color: rgb(25, 25, 25);
+}
+
+.navbar-button{
+    margin: auto;
+    margin-left: 50px;
+    width: 100px;
+}
+
+.navbar-button-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.shop-name{
+    font-size: 30px;
+    font-weight: bold;
+    background: linear-gradient(#777777, #ffffff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
