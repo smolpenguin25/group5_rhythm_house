@@ -15,6 +15,8 @@ function Navbar() {
           <Link to="/membership">Membership</Link>
           <Link to="/about">About Us</Link>
           <Link to="/contact">Contact Us</Link>
+          <span className="search">Enter product name: </span><input type="text" placeholder="Search..." value="" onChange="" />
+
         </div>
 
         <div className="navbar-button-container">

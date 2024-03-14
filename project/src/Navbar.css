@@ -30,3 +30,11 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.search{
+    font-size: 20px;
+    background: linear-gradient(#777777, #ffffff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 10px;
+}
