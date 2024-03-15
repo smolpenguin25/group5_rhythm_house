@@ -1,26 +1,20 @@
 import * as React from "react";
 import './EventMainPage.css';
-import abc from "./event_images/eventimg1.png"
+import abc from "./img/eventimg1.png";
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 function EventMainPage() {
-  const navItems = [
+ const navItems = [
     { label: "Live Concerts", url: "#" },
     { label: "Artist", url: "#" },
     { label: "Charts", url: "#" },
+ ];
 
-  ];
-
-  const handleBookingClick = () => {
-    // Handle booking button click
+ const handleBookingClick = () => {
     console.log("Booking button clicked");
-  };
+ };
 
-  const handleJoinUsClick = () => {
-    // Handle join us button click  
-    console.log("Join us button clicked");
-  };
-
-  return (
+ return (
     <>
       <section className="hero-section">
         <div className="hero-container">
@@ -37,21 +31,21 @@ function EventMainPage() {
               </p>
               <div className="hero-actions">
                 <button
-                  className="hero-button hero-button-outline"
-                  onClick={handleBookingClick}
+                 className="hero-button hero-button-outline"
+                 onClick={handleBookingClick}
                 >
-                  Booking Tickets
+                 Booking Tickets
                 </button>
-                <button
-                  className="hero-button hero-button-primary"
-                  onClick={handleJoinUsClick}  
+                <Link
+                 to="/join-us" // Link to the target page
+                 className="hero-button hero-button-primary"
                 >
-                  Join Us
-                </button>
+                 Join Us
+                </Link>
               </div>
               <nav className="hero-nav">
                 <ul className="hero-nav-list">
-                  {navItems.map((item, index) => (
+                 {navItems.map((item, index) => (
                     <li key={index} className="hero-nav-item">
                       <a href={item.url} className="hero-nav-link">
                         {item.label}
@@ -64,9 +58,8 @@ function EventMainPage() {
           </div>
         </div>
       </section>
-      
     </>
-  );
+ );
 }
 
 export default EventMainPage;

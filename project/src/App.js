@@ -8,6 +8,10 @@ import React, { useEffect } from 'react';
 import ContactUs from "./ContactUs"
 import Login from "./Login";
 import EventMainPage from './EventMainPage';
+import JoinUs from "./JoinUs";
+//import JoinUs from "./JoinUs";
+export { JoinUs } from "./JoinUs";
+
 
 function App() {
   useEffect(() => {
@@ -28,6 +32,12 @@ function App() {
           <Route path="signup" />
           <Route path='solo' element={<AlbumSolo/>}/>
           <Route path='events' element={<EventMainPage/>}/>
+          <Route path='about'/>
+          <Route path='/join-us' element={<JoinUs/>}/>
+
+
+
+
         </Route>
       </Routes>
     </div>
