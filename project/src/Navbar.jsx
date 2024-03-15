@@ -18,10 +18,10 @@ function Navbar() {
         </div>
 
         <div className="navbar-button-container">
-          <Button variant="light" className="navbar-button">
+          <Button variant="light" className="navbar-button" href="#/login">
             Login
           </Button>
-          <Button variant="light" className="navbar-button">
+          <Button variant="light" className="navbar-button" href="#/signup">
             Sign Up
           </Button>
         </div>
