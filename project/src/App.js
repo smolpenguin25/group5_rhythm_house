@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap-grid.min.css'
 import React, { useEffect } from 'react';
 import Login from './Login';
+import ContactUs from './ContactUs';
 
 function App() {
   useEffect(() => {
@@ -22,7 +23,7 @@ function App() {
           <Route path='events' />
           <Route path='membership' />
           <Route path='about' />
-          <Route path='contact' />
+          <Route path='contact' element={<ContactUs/>}/>
           <Route path='login' element={<Login/>}/>
           <Route path='signup' />
         </Route>
