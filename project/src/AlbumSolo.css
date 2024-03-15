@@ -1,0 +1,13 @@
+.mr-sm-2 {
+  /* position: relative;
+  float: right; */
+  margin-left: 1000px;
+  width: 300px;
+  margin-top: 20px;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+.search {
+  margin-top: 20px;
+}
