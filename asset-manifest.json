@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/group5_rhythm_house/static/css/main.9ca47adb.css",
-    "main.js": "/group5_rhythm_house/static/js/main.fc83039d.js",
+    "main.css": "/group5_rhythm_house/static/css/main.18a25a23.css",
+    "main.js": "/group5_rhythm_house/static/js/main.b197dc94.js",
     "static/js/453.5e560239.chunk.js": "/group5_rhythm_house/static/js/453.5e560239.chunk.js",
     "static/media/eventimg1.png": "/group5_rhythm_house/static/media/eventimg1.405dc3a5d7ded79e9ede.png",
     "static/media/aboutus.jpg": "/group5_rhythm_house/static/media/aboutus.5742ec6eb4bc3cccf6cd.jpg",
     "index.html": "/group5_rhythm_house/index.html",
-    "main.9ca47adb.css.map": "/group5_rhythm_house/static/css/main.9ca47adb.css.map",
-    "main.fc83039d.js.map": "/group5_rhythm_house/static/js/main.fc83039d.js.map",
+    "main.18a25a23.css.map": "/group5_rhythm_house/static/css/main.18a25a23.css.map",
+    "main.b197dc94.js.map": "/group5_rhythm_house/static/js/main.b197dc94.js.map",
     "453.5e560239.chunk.js.map": "/group5_rhythm_house/static/js/453.5e560239.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ca47adb.css",
-    "static/js/main.fc83039d.js"
+    "static/css/main.18a25a23.css",
+    "static/js/main.b197dc94.js"
   ]
 }
