@@ -10,13 +10,13 @@ function Home() {
                 <div className='carousel-content'>
                     <Carousel>
                         <Carousel.Item>
-                            <img width={200} height={200} src={logo} alt='test' />
+                            <img width={300} height={300} src={logo} alt='test' />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img width={200} height={200} src={logo} alt='test' />
+                            <img width={300} height={300} src={logo} alt='test' />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img width={200} height={200} src={logo} alt='test' />
+                            <img width={300} height={300} src={logo} alt='test' />
                         </Carousel.Item>
                         
                     </Carousel>
@@ -28,13 +28,13 @@ function Home() {
                 <div className='carousel-content'>
                     <Carousel>
                         <Carousel.Item>
-                            <img width={200} height={200} src={logo} alt='test' />
+                            <img width={300} height={300} src={logo} alt='test' />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img width={200} height={200} src={logo} alt='test' />
+                            <img width={300} height={300} src={logo} alt='test' />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img width={200} height={200} src={logo} alt='test' />
+                            <img width={300} height={300} src={logo} alt='test' />
                         </Carousel.Item>
                         
                     </Carousel>
