@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap-grid.min.css'
 import React, { useEffect } from 'react';
 import Login from './Login';
 import ContactUs from './ContactUs';
+import AboutUs from './AboutUs';
 
 function App() {
   useEffect(() => {
@@ -22,7 +23,7 @@ function App() {
           <Route path='magazine' />
           <Route path='events' />
           <Route path='membership' />
-          <Route path='about' />
+          <Route path='about' element={<AboutUs/>}/>
           <Route path='contact' element={<ContactUs/>}/>
           <Route path='login' element={<Login/>}/>
           <Route path='signup' />

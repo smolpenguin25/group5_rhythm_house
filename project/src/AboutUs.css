@@ -1,0 +1,17 @@
+.quote {
+    width: 700px;
+    height: 627px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 700;
+    word-wrap: break-word;
+    margin: auto;
+  }
+  .background{
+    height: 2828px;
+    background: linear-gradient(rgb(85, 85, 105), rgb(20, 20, 20));
+    overflow: auto;
+}
