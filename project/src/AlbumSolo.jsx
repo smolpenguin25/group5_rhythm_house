@@ -1,5 +1,5 @@
 import "./Home.css";
-function EventSolo() {
+function AlbumSolo() {
   return (
     <div className="home-container">
       <div className="carousel-container">
@@ -13,4 +13,4 @@ function EventSolo() {
   );
 }
 
-export default EventSolo;
+export default AlbumSolo;
