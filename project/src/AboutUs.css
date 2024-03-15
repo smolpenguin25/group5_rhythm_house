@@ -2,16 +2,58 @@
     width: 700px;
     height: 627px;
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 20px;
     font-family: 'Inter';
     font-style: italic;
     font-weight: 700;
     word-wrap: break-word;
     margin: auto;
+    animation: moveRightToLeft 3s ease forwards;
+    background-image: rgb(85, 85, 105)
+   
   }
   .background{
-    height: 2828px;
+    height: 2000px;
     background: linear-gradient(rgb(85, 85, 105), rgb(20, 20, 20));
     overflow: auto;
 }
+
+.aboutus1 {
+   display: block;
+   align-items: center;
+   position: absolute;
+    
+    
+}
+.aboutus15 {
+    position: relative;
+    margin-bottom: 15px;
+}
+.aboutus2{
+    margin-bottom: 15px;
+    border-radius: 10px;
+    
+}
+.imgus {
+    border-radius: 10px;
+    animation: moveLeftToRight 2s ease forwards;
+}
+
+@keyframes moveLeftToRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+@keyframes moveRightToLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
