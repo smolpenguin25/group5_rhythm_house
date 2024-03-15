@@ -7,11 +7,14 @@ import AlbumSolo from "./AlbumSolo";
 import React, { useEffect } from 'react';
 import ContactUs from "./ContactUs"
 import Login from "./Login";
+import ErrorPage from "./ErrorPage";
 import EventMainPage from './EventMainPage';
 import JoinUs from "./JoinUs";
 //import JoinUs from "./JoinUs";
 export { JoinUs } from "./JoinUs";
 
+import AboutUs from './AboutUs';
+import SignUp from "./SignUp";
 
 function App() {
   useEffect(() => {
@@ -26,10 +29,12 @@ function App() {
           <Route path="movie" />
           <Route path="magazine" />
           <Route path="membership" />
-          <Route path="about" />
+          <Route path="about" element={<AboutUs/>} />
           <Route path="contact" element={<ContactUs/>}/>
           <Route path="login" element={<Login/>}/>
-          <Route path="signup" />
+          <Route path="signup" element={<SignUp/>}/>
+          <Route path="forgotpassword" />
+          <Route path="*" element={<ErrorPage/>}/>
           <Route path='solo' element={<AlbumSolo/>}/>
           <Route path='events' element={<EventMainPage/>}/>
           <Route path='about'/>
