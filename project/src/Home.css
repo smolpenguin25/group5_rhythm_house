@@ -10,7 +10,7 @@
 }
 
 .carousel-title{
-    position: absolute;
+    position: relative;
     width: 20%;
     font-size: 20px;
     font-weight: bold;
@@ -20,6 +20,6 @@
 }
 
 .carousel-content{
-    margin-top: 30px;
+
     height: 100%;
 }
