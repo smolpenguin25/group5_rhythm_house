@@ -37,7 +37,7 @@ function App() {
           <Route path='solo' element={<AlbumSolo/>}/>
           <Route path='events' element={<EventMainPage/>}/>
           <Route path='about'/>
-          <Route path='/join-us' element={<JoinUs/>}/>
+          <Route path='join-us' element={<JoinUs/>}/>
 
 
 
