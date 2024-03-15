@@ -7,6 +7,7 @@ function Home() {
             <div className="carousel-container">
                 <div className='carousel-title'>Discounted Products</div>
                 <div className='carousel-content'>
+                    
                 </div>
             </div>
         </div>

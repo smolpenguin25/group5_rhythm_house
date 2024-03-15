@@ -18,6 +18,8 @@ function App() {
           <Route path='membership'/>
           <Route path='about'/>
           <Route path='contact'/>
+          <Route path='login'/>
+          <Route path='signup'/>
         </Route>
       </Routes>
       
