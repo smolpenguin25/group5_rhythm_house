@@ -6,15 +6,14 @@ import "bootstrap/dist/css/bootstrap-grid.min.css";
 import AlbumSolo from "./AlbumSolo";
 import React, { useEffect } from 'react';
 import ContactUs from "./ContactUs"
+import AboutUs from './AboutUs';
+import SignUp from "./SignUp";
 import Login from "./Login";
 import ErrorPage from "./ErrorPage";
 import EventMainPage from './EventMainPage';
 import JoinUs from "./JoinUs";
-//import JoinUs from "./JoinUs";
 export { JoinUs } from "./JoinUs";
 
-import AboutUs from './AboutUs';
-import SignUp from "./SignUp";
 
 function App() {
   useEffect(() => {
