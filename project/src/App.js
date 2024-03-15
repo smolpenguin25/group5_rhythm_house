@@ -8,7 +8,8 @@ import React, { useEffect } from 'react';
 import ContactUs from "./ContactUs"
 import Login from "./Login";
 import ErrorPage from "./ErrorPage";
-
+import EventMainPage from './EventMainPage';
+import AboutUs from './AboutUs';
 
 function App() {
   useEffect(() => {
@@ -19,18 +20,18 @@ function App() {
       <Routes>
         <Route path="/" element={<Navbar />}>
           <Route index element={<Home />} />
-          <Route path="solo" element={<AlbumSolo />} />
           <Route path="band" />
           <Route path="movie" />
           <Route path="magazine" />
-          <Route path="events" />
           <Route path="membership" />
-          <Route path="about" />
+          <Route path="about" element={<AboutUs/>} />
           <Route path="contact" element={<ContactUs/>}/>
           <Route path="login" element={<Login/>}/>
           <Route path="signup" />
           <Route path="forgotpassword" />
           <Route path="*" element={<ErrorPage/>}/>
+          <Route path='solo' element={<AlbumSolo/>}/>
+          <Route path='events' element={<EventMainPage/>}/>
         </Route>
       </Routes>
     </div>
