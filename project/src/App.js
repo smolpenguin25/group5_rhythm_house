@@ -7,8 +7,10 @@ import AlbumSolo from "./AlbumSolo";
 import React, { useEffect } from 'react';
 import ContactUs from "./ContactUs"
 import Login from "./Login";
+import ErrorPage from "./ErrorPage";
 import EventMainPage from './EventMainPage';
 import AboutUs from './AboutUs';
+
 function App() {
   useEffect(() => {
     document.title = 'Rhythm House';
@@ -26,6 +28,8 @@ function App() {
           <Route path="contact" element={<ContactUs/>}/>
           <Route path="login" element={<Login/>}/>
           <Route path="signup" />
+          <Route path="forgotpassword" />
+          <Route path="*" element={<ErrorPage/>}/>
           <Route path='solo' element={<AlbumSolo/>}/>
           <Route path='events' element={<EventMainPage/>}/>
         </Route>
