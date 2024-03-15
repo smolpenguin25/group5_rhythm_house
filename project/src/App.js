@@ -3,6 +3,7 @@ import Home from './Home';
 import Navbar from './Navbar';
 import { Route, Routes } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap-grid.min.css'
+import ContactUs from './ContactUs';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route path='events'/>
           <Route path='membership'/>
           <Route path='about'/>
-          <Route path='contact'/>
+          <Route path='contact' element={<ContactUs />} />
         </Route>
       </Routes>
       
