@@ -10,8 +10,17 @@ function App() {
       <Routes>
         <Route path="/" element={<Navbar />}>
           <Route index element={<Home />} />
+          <Route path='solo'/>
+          <Route path='band'/>
+          <Route path='movie'/>
+          <Route path='magazine'/>
+          <Route path='events'/>
+          <Route path='membership'/>
+          <Route path='about'/>
+          <Route path='contact'/>
         </Route>
       </Routes>
+      
     </div>
   );
 }
