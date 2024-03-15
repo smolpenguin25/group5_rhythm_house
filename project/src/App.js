@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import { Route, Routes } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap-grid.min.css'
 import React, { useEffect } from 'react';
+import Login from './Login';
 
 function App() {
   useEffect(() => {
@@ -22,7 +23,7 @@ function App() {
           <Route path='membership' />
           <Route path='about' />
           <Route path='contact' />
-          <Route path='login' />
+          <Route path='login' element={<Login/>}/>
           <Route path='signup' />
         </Route>
       </Routes>
