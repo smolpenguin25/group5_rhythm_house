@@ -1,6 +1,6 @@
 import './Home.css'
 import Carousel from 'react-bootstrap/Carousel';
-import logo from './logo192.png'
+import logo from './img/logo192.png'
 
 function Home() {
     return (
