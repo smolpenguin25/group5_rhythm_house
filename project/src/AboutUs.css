@@ -9,7 +9,7 @@
     font-weight: 700;
     word-wrap: break-word;
     margin: auto;
-    animation: moveRightToLeft 3s ease forwards;
+    animation: moveRightToLeft 2s ease forwards;
     background-image: rgb(85, 85, 105)
    
   }
@@ -37,7 +37,7 @@
 }
 .imgus {
     border-radius: 10px;
-    animation: moveLeftToRight 2s ease forwards;
+    animation: moveLeftToRight 1s ease forwards;
 }
 
 @keyframes moveLeftToRight {
