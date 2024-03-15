@@ -1,5 +1,11 @@
 {
+<<<<<<< HEAD
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "react-bootstrap": "^2.10.1"
+=======
   "devDependencies": {
     "gh-pages": "^6.1.1"
+>>>>>>> c1851ba401a3964e721ed04e0b6ccf3e69bdb366
   }
 }

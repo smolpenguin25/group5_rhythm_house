@@ -1,0 +1,271 @@
+.background {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .background .overlap-group-wrapper {
+    background: linear-gradient(180deg, rgb(77.7, 68.6, 84.86) 0%, rgb(0, 0, 0) 100%);
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid;
+    border-color: #89be9b;
+    height: 1013px;
+    width: 100%; /* Adjust width to be relative to the container */
+    max-width: 1868px; /* Set max-width to prevent overflow on larger screens */
+    margin: 0 auto; /* Center the element horizontally */
+  }
+  
+  .background .overlap-group {
+    height: 715px;
+    width: 100%; /* Adjust width to be relative to the container */
+    max-width: 941px; /* Set max-width to prevent overflow on larger screens */
+    margin: 0 auto; /* Center the element horizontally */
+    position: relative;
+    top: 159px;
+    left: 0%; /* Adjust left position for centering */
+   
+  }
+  
+  @media (max-width: 1080px) {
+    .background .overlap-group {
+      height: auto; /* Let the height adjust according to content */
+      width: 90%; /* Adjust width for smaller screens */
+      max-width: none; /* Reset max-width */
+      left: 0; /* Reset left position */
+      transform: none; /* Reset transform */
+      margin: 0 auto; /* Center the element horizontally */
+      top: 0; /* Reset top position */
+    }
+  }
+  
+  .background .rectangle {
+    background-color: #ffffff;
+    height: 715px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 940px;
+  }
+  
+  .background .div {
+    background-color: #00ffef;
+    height: 129px;
+    left: 1px;
+    position: absolute;
+    top: 0;
+    width: 940px;
+  }
+  
+  .background .text-wrapper {
+    color: #000000;
+    font-family: "Poppins-ExtraBold", Helvetica;
+    font-size: 48px;
+    font-weight: 800;
+    height: 129px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 3px;
+    width: 940px;
+  }
+  
+  .background .text-wrapper-2 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    height: 43px;
+    left: 120px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 179px;
+    width: 340px;
+  }
+  
+  .background .text-wrapper-3 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    height: 43px;
+    left: 120px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 269px;
+    width: 340px;
+  }
+  
+  .background .text-wrapper-4 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    height: 43px;
+    left: 480px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 179px;
+    width: 340px;
+  }
+  
+  .background .text-wrapper-5 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    height: 43px;
+    left: 480px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 269px;
+    width: 340px;
+  }
+  
+  .background .text-wrapper-6 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    height: 43px;
+    left: 120px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 359px;
+    width: 340px;
+  }
+  
+  .background .text-wrapper-7 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    height: 43px;
+    left: 120px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 449px;
+    width: 340px;
+  }
+  
+  .background .text-wrapper-8 {
+    color: #000000;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    height: 43px;
+    left: 120px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 669px;
+    width: 340px;
+  }
+  
+  .background .line {
+    height: 1px;
+    left: 120px;
+    object-fit: cover;
+    position: absolute;
+    top: 226px;
+    width: 340px;
+  }
+  
+  .background .img {
+    height: 1px;
+    left: 480px;
+    object-fit: cover;
+    position: absolute;
+    top: 318px;
+    width: 340px;
+  }
+  
+  .background .line-2 {
+    height: 1px;
+    left: 120px;
+    object-fit: cover;
+    position: absolute;
+    top: 318px;
+    width: 340px;
+  }
+  
+  .background .line-3 {
+    height: 1px;
+    left: 120px;
+    object-fit: cover;
+    position: absolute;
+    top: 408px;
+    width: 700px;
+  }
+  
+  .background .line-4 {
+    height: 1px;
+    left: 120px;
+    object-fit: cover;
+    position: absolute;
+    top: 620px;
+    width: 700px;
+  }
+  
+  .background .line-5 {
+    height: 1px;
+    left: 480px;
+    object-fit: cover;
+    position: absolute;
+    top: 226px;
+    width: 340px;
+  }
+  
+  .background .line-6 {
+    height: 7px;
+    left: 813px;
+    object-fit: cover;
+    position: absolute;
+    top: 612px;
+    width: 7px;
+  }
+  
+  .background .line-7 {
+    height: 17px;
+    left: 803px;
+    object-fit: cover;
+    position: absolute;
+    top: 602px;
+    width: 17px;
+  }
+  
+  .background .rectangle-2 {
+    background-color: #00ffef;
+    border-radius: 2px;
+    height: 30px;
+    left: 421px;
+    position: absolute;
+    top: 630px;
+    width: 100px;
+  }
+  
+  .background .text-wrapper-9 {
+    color: #000000c9;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    height: 30px;
+    left: 421px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 639px;
+    width: 100px;
+  }
+  
+  
