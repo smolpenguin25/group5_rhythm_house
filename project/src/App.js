@@ -10,6 +10,7 @@ import Login from "./Login";
 import ErrorPage from "./ErrorPage";
 import EventMainPage from './EventMainPage';
 import AboutUs from './AboutUs';
+import SignUp from "./SignUp";
 
 function App() {
   useEffect(() => {
@@ -27,7 +28,7 @@ function App() {
           <Route path="about" element={<AboutUs/>} />
           <Route path="contact" element={<ContactUs/>}/>
           <Route path="login" element={<Login/>}/>
-          <Route path="signup" />
+          <Route path="signup" element={<SignUp/>}/>
           <Route path="forgotpassword" />
           <Route path="*" element={<ErrorPage/>}/>
           <Route path='solo' element={<AlbumSolo/>}/>
