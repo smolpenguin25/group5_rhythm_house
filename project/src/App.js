@@ -7,6 +7,7 @@ import AlbumSolo from "./AlbumSolo";
 import React, { useEffect } from 'react';
 import ContactUs from "./ContactUs"
 import Login from "./Login";
+import ErrorPage from "./ErrorPage";
 
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
           <Route path="contact" element={<ContactUs/>}/>
           <Route path="login" element={<Login/>}/>
           <Route path="signup" />
+          <Route path="forgotpassword" />
+          <Route path="*" element={<ErrorPage/>}/>
         </Route>
       </Routes>
     </div>
