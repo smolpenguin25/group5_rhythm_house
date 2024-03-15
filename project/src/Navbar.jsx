@@ -9,14 +9,12 @@ function Navbar() {
       <div className="navbar-container">
         <div className="navbar">
           <span className="shop-name">Rhythm House</span>
-          <Link to="/">Phong</Link>
+          <Link to="/">Home</Link>
           <AlbumDropDownButton />
           <Link to="/events">Events</Link>
           <Link to="/membership">Membership</Link>
           <Link to="/about">About Us</Link>
           <Link to="/contact">Contact Us</Link>
-          <span className="search">Enter product name: </span><input type="text" placeholder="Search..." value="" onChange="" />
-
         </div>
 
         <div className="navbar-button-container">
