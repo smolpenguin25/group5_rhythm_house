@@ -2,7 +2,6 @@ import { Link, Outlet } from "react-router-dom";
 import "./Navbar.css";
 import AlbumDropDownButton from "./AlbumDropDownButton";
 import Button from "react-bootstrap/Button";
-import ContactUs from "./ContactUs";
 
 function Navbar() {
   return (
@@ -19,10 +18,10 @@ function Navbar() {
         </div>
 
         <div className="navbar-button-container">
-          <Button variant="light" className="navbar-button">
+          <Button variant="light" className="navbar-button" href="#/login">
             Login
           </Button>
-          <Button variant="light" className="navbar-button">
+          <Button variant="light" className="navbar-button" href="#/signup">
             Sign Up
           </Button>
         </div>
