@@ -9,7 +9,7 @@ function Navbar() {
       <div className="navbar-container">
         <div className="navbar">
           <span className="shop-name">Rhythm House</span>
-          <Link to="/">Phong</Link>
+          <Link to="/">Home</Link>
           <AlbumDropDownButton />
           <Link to="/events">Events</Link>
           <Link to="/membership">Membership</Link>
