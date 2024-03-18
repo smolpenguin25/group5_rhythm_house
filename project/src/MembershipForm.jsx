@@ -44,7 +44,7 @@ const MembershipForm = () => {
 
           <div className="form-group">
             <label htmlFor="Instrument">Favorite Type of Music*</label>
-            <select name="Instrument" className="form-control" required>
+            <select name="Instrument" className="music-control form-control" required>
               <option value="">Select a type of music</option>
               <option value="rock">Rock</option>
               <option value="pop">Pop</option>
@@ -64,28 +64,28 @@ const MembershipForm = () => {
               type="text"
               name="Address"
               placeholder="Address"
-              className="form-control"
+              className="form-control mb-2"
               required
             />
             <input
               type="text"
               name="City"
               placeholder="City"
-              className="form-control"
+              className="form-control mb-2"
               required
             />
             <input
               type="text"
               name="State"
               placeholder="State"
-              className="form-control"
+              className="form-control mb-2"
               required
             />
             <input
               type="number"
               name="ZipCode"
               placeholder="Zip Code"
-              className="form-control"
+              className="form-control mb-2"
               required
             />
           </div>
@@ -95,20 +95,22 @@ const MembershipForm = () => {
             <input
               type="email"
               name="Email"
-              className="form-control"
+              className="form-control email-control"
               required
             />
           </div>
 
           <div className="form-group">
             <label htmlFor="Phone">Phone*</label>
-            <input type="tel" name="Phone" className="form-control" required />
+            <input type="tel" name="Phone" className="form-control phone-control" required />
           </div>
 
           <div className="form-group-2">
            
             <div className="form-group"> <label htmlFor="Membership">Membership Type*</label></div>
-        
+          <div class="membership-control">
+
+          
             <input
               type="radio"
               id="Basic"
@@ -137,7 +139,7 @@ const MembershipForm = () => {
             <label htmlFor="Platinum">Platinum - $30/month</label>
             <br />
           </div>
-
+          </div>
           <button type="submit" className="btn btn-primary">
             Submit
           </button>
