@@ -10,11 +10,13 @@ import AboutUs from "./AboutUs";
 import SignUp from "./SignUp";
 import Login from "./Login";
 import ErrorPage from "./ErrorPage";
-import EventMainPage from "./EventMainPage";
+import EventMainPage from './EventMainPage';
 import JoinUs from "./JoinUs";
 import Band from "./AlbumBand";
 import ForgotPassword from "./ForgotPassword";
-export { JoinUs } from "./JoinUs";
+import Membership from "./Membership";
+import { EventSchedule } from "./EventSchedule";
+
 
 function App() {
   useEffect(() => {
@@ -29,7 +31,7 @@ function App() {
           <Route path="band" element={<Band />} />
           <Route path="movie" />
           <Route path="magazine" />
-          <Route path="membership" />
+          <Route path="membership"  element={<Membership/>}/>
           <Route path="about" element={<AboutUs />} />
           <Route path="contact" element={<ContactUs />} />
           <Route path="login" element={<Login />} />
@@ -40,6 +42,10 @@ function App() {
           <Route path="events" element={<EventMainPage />} />
           <Route path="about" />
           <Route path="join-us" element={<JoinUs />} />
+          <Route path='event-schedule' element={<EventSchedule/>}/>
+
+
+
         </Route>
       </Routes>
     </div>
