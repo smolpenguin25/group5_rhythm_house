@@ -1,4 +1,4 @@
-.form-background {
+.form-background-mem {
     background-color: #f2f2f2;
     padding: 20px;
     border-radius: 10px;
@@ -10,7 +10,7 @@
     padding-bottom: 30px; /* fixed padding-bottom */
   }
   
-  .form-background h2 {
+  .form-background-mem h2 {
     text-align: center;
     margin-bottom: 30px;
     color: #333;
@@ -18,6 +18,13 @@
   
   .form-group {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .form-group-2 {
+    margin-bottom: 20px;
+    
+    
   }
   
   .form-group label {
@@ -35,7 +42,7 @@
     box-sizing: border-box;
   }
   
-  input[type="radio"] {
+  .form-group input[type="radio"] {
     margin-right: 10px;
   }
   
@@ -51,5 +58,11 @@
   
   button[type="submit"]:hover {
     background-color: #45a049;
+  }
+  .contain{
+    position: relative;
+    top: -59px;
+    width: 1742px;
+    left: -195px;
   }
 
