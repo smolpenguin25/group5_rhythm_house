@@ -12,8 +12,8 @@ import Login from "./Login";
 import ErrorPage from "./ErrorPage";
 import EventMainPage from "./EventMainPage";
 import JoinUs from "./JoinUs";
-export { JoinUs } from "./JoinUs";
 import Band from "./AlbumBand";
+export { JoinUs } from "./JoinUs";
 
 function App() {
   useEffect(() => {
