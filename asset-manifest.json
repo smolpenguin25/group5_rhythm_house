@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/group5_rhythm_house/static/css/main.44ed2bcd.css",
-    "main.js": "/group5_rhythm_house/static/js/main.6277976b.js",
+    "main.css": "/group5_rhythm_house/static/css/main.3d1cd010.css",
+    "main.js": "/group5_rhythm_house/static/js/main.3700f1e1.js",
     "static/js/453.5e560239.chunk.js": "/group5_rhythm_house/static/js/453.5e560239.chunk.js",
     "static/media/eventimg1.png": "/group5_rhythm_house/static/media/eventimg1.405dc3a5d7ded79e9ede.png",
     "static/media/ncdg-9mk-3pby.png": "/group5_rhythm_house/static/media/ncdg-9mk-3pby.5148f01c32d16c0f34c7.png",
@@ -9,16 +9,24 @@
     "static/media/aol-mvxprmk.png": "/group5_rhythm_house/static/media/aol-mvxprmk.fb92964f71a0d70da495.png",
     "static/media/m-6gy-9ohgii.png": "/group5_rhythm_house/static/media/m-6gy-9ohgii.4da293f9a44dbd623242.png",
     "static/media/aboutus.jpg": "/group5_rhythm_house/static/media/aboutus.5742ec6eb4bc3cccf6cd.jpg",
+    "static/media/avatar-5.svg": "/group5_rhythm_house/static/media/avatar-5.e67ca8ad837006d34fb58a1d4e429b3c.svg",
+    "static/media/avatar-2.svg": "/group5_rhythm_house/static/media/avatar-2.56fbebb6e0503882c6b1009f85aac2d8.svg",
+    "static/media/avatar.svg": "/group5_rhythm_house/static/media/avatar.caa52a160a166df9592852dc6f909016.svg",
+    "static/media/avatar-4.svg": "/group5_rhythm_house/static/media/avatar-4.ac92f5184c48090afe0b592133a6c738.svg",
+    "static/media/avatar-3.svg": "/group5_rhythm_house/static/media/avatar-3.479e2d9b2d5e69b41f51292724be8a30.svg",
+    "static/media/searchicon.png": "/group5_rhythm_house/static/media/searchicon.59cf6e7fef0120a7493e.png",
     "index.html": "/group5_rhythm_house/index.html",
     "static/media/play-arrow.svg": "/group5_rhythm_house/static/media/play-arrow.339e17e0ba075fee148630dc270c561c.svg",
     "static/media/arrow-chevron-down.svg": "/group5_rhythm_house/static/media/arrow-chevron-down.3bb8a029d94905a1d1d26b340c2e895f.svg",
     "static/media/arrow-chevron-down-1.svg": "/group5_rhythm_house/static/media/arrow-chevron-down-1.5ea5bb8ac8ea0f01860bf49daaa6767c.svg",
-    "main.44ed2bcd.css.map": "/group5_rhythm_house/static/css/main.44ed2bcd.css.map",
-    "main.6277976b.js.map": "/group5_rhythm_house/static/js/main.6277976b.js.map",
+    "static/media/divider-1.svg": "/group5_rhythm_house/static/media/divider-1.a3eb6d422018766754d684e53621b662.svg",
+    "static/media/divider.svg": "/group5_rhythm_house/static/media/divider.8e4b60ca3cad3e0cf547f591c8dcc249.svg",
+    "main.3d1cd010.css.map": "/group5_rhythm_house/static/css/main.3d1cd010.css.map",
+    "main.3700f1e1.js.map": "/group5_rhythm_house/static/js/main.3700f1e1.js.map",
     "453.5e560239.chunk.js.map": "/group5_rhythm_house/static/js/453.5e560239.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.44ed2bcd.css",
-    "static/js/main.6277976b.js"
+    "static/css/main.3d1cd010.css",
+    "static/js/main.3700f1e1.js"
   ]
 }
