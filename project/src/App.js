@@ -10,12 +10,13 @@ import AboutUs from "./AboutUs";
 import SignUp from "./SignUp";
 import Login from "./Login";
 import ErrorPage from "./ErrorPage";
-import EventMainPage from "./EventMainPage";
+import EventMainPage from './EventMainPage';
 import JoinUs from "./JoinUs";
 import Band from "./AlbumBand";
 import ForgotPassword from "./ForgotPassword";
 import Membership from "./Membership";
-export { JoinUs } from "./JoinUs";
+import { EventSchedule } from "./EventSchedule";
+
 
 function App() {
   useEffect(() => {
@@ -41,6 +42,10 @@ function App() {
           <Route path="events" element={<EventMainPage />} />
           <Route path="about" />
           <Route path="join-us" element={<JoinUs />} />
+          <Route path='event-schedule' element={<EventSchedule/>}/>
+
+
+
         </Route>
       </Routes>
     </div>
