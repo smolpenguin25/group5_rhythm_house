@@ -1,69 +1,151 @@
 import "./Home.css";
 import "./AlbumSolo.css";
-import Form from "react-bootstrap/Form";
+// import Form from "react-bootstrap/Form";
+import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-/>;
+import search from "./img/searchicon.png";
+import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 
-function AlbumSolo() {
+import { Link, Navigate } from "react-router-dom";
+
+function AlbumSolo({ id }) {
+  // const navigate = useNavigate();
+
+  const [lgShow, setLgShow] = useState(false);
+
+  const [ListSolo, setListSolo] = useState([]);
+
+  const navigate = useNavigate();
+
+  const getSolos = () => {
+    fetch("https://65d55b883f1ab8c63436c62f.mockapi.io/solo", {
+      method: "GET",
+      headers: { "content-type": "application/json" },
+    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        // handle error
+      })
+      .then((Solos) => {
+        //console.log("Student List: " + studentList);
+        setListSolo(Solos);
+      })
+      .catch((error) => {
+        console.log("Error: " + error);
+      });
+  };
+
+  useEffect(() => {
+    getSolos();
+  }, []);
+
   return (
     <div className="home-container">
       <div className="carousel-container">
         <div className="carousel-content"></div>
       </div>
       <div>
-        <Form inline>
-          <Row>
-            <Col xs="auto">
-              <Form.Control
-                type="text"
-                placeholder="Search"
-                className=" mr-sm-2"
-              />
-            </Col>
-            <Col xs="auto">
-              <Button className="search" type="submit">
-                <span class="material-symbols-outlined">search</span>
-              </Button>
-            </Col>
-          </Row>
-        </Form>
+        <Modal
+          size="lg"
+          show={lgShow}
+          onHide={() => setLgShow(false)}
+          aria-labelledby="example-modal-sizes-title-lg"
+        >
+          <Modal.Body>
+            <div className="search-a">
+              <input className="search-bar" placeholder="Search" />
+              <button className="sear-b">
+                <i className="material-icon">
+                  <img src={search} alt="" />
+                </i>
+              </button>
+            </div>
+          </Modal.Body>
+        </Modal>
+      </div>
+      <div>
         <div>
-          <h1>Solo</h1>
+          <h1 className="title">SOLO</h1>
+        </div>
+        <div className="sear">
+          <Button onClick={() => setLgShow(true)}>
+            <img width={20} src={search} alt="sear" />
+          </Button>
         </div>
         <Container>
           {/* Stack the columns on mobile by making one full-width and the other half-width */}
           <Row>
+            <Col xs={6} md={4}>
+              <div className="album">
+                <div className="album-i">ALBUM</div>
+                <div className="album-content">
+                  <Link
+                    className="album-content-solo bg-solo"
+                    element={<AlbumSolo />}
+                    to=""
+                  >
+                    SOLO
+                  </Link>
+                </div>
+                <div className="album-content">
+                  <Link
+                    className="album-content-band"
+                    path="solo"
+                    href="#/band"
+                    to=""
+                  >
+                    BAND
+                  </Link>
+                </div>
+                <div className="album-content">
+                  <Link className="album-content-movie" href="#/movie" to="">
+                    MOVIE
+                  </Link>
+                </div>
+                <div className="album-content">
+                  <Link
+                    className="album-content-magazine"
+                    href="#/magazine"
+                    to=""
+                  >
+                    MAGAZINE
+                  </Link>
+                </div>
+              </div>
+            </Col>
+
+            {/* item */}
             <Col xs={12} md={8}>
-              xs=12 md=8
+              <Row>
+                {ListSolo.map((sol, index) => (
+                  <Col key={index}>
+                    <div className="album-item">
+                      <button onClick={() => navigate(`/Solos/${id}`)}>
+                        <img
+                          className="album-item-img"
+                          alt=""
+                          src={sol.avatar}
+                        />
+                      </button>
+                      <button onClick={() => navigate(`/Solos/${id}`)}>
+                        <div className="album-item-name">{sol.name}</div>
+                      </button>
+                      <div className="album-item-prices">
+                        <div className="album-item-price">{sol.price}</div>
+                        <div className="album-item-sell">{sol.sell}</div>
+                        <div className="album-item-percent">{sol.percent}</div>
+                      </div>
+                    </div>
+                  </Col>
+                ))}
+              </Row>
             </Col>
-            <Col xs={6} md={4}>
-              xs=6 md=4
-            </Col>
-          </Row>
-
-          {/* Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop */}
-          <Row>
-            <Col xs={6} md={4}>
-              xs=6 md=4
-            </Col>
-            <Col xs={6} md={4}>
-              xs=6 md=4
-            </Col>
-            <Col xs={6} md={4}>
-              xs=6 md=4
-            </Col>
-          </Row>
-
-          {/* Columns are always 50% wide, on mobile and desktop */}
-          <Row>
-            <Col xs={6}>xs=6</Col>
-            <Col xs={6}>xs=6</Col>
           </Row>
         </Container>
       </div>

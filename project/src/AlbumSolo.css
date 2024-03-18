@@ -3,11 +3,166 @@
   float: right; */
   margin-left: 1000px;
   width: 300px;
-  margin-top: 20px;
+  margin-top: -80px;
 }
-.material-symbols-outlined {
+/* .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+} */
+* {
+  font-family: arial;
+}
+.sear {
+  position: relative;
+  margin-top: -50px;
+  padding-bottom: 40px;
+}
+.material-icon img {
+  width: 18px;
+  border-radius: 10px;
+}
+.sear-b {
+  border-radius: 5px;
+  position: relative;
+  margin-left: 21px;
+}
+.search-bar {
+  transition: 0.6s all ease-in-out;
+}
+.search-bar:focus-visible {
+  outline: none;
+  box-shadow: 0px 0px 6px 6px rgba(0, 0, 128, 0.499);
+}
+.search-a input {
+  width: 700px;
+  border-radius: 5px;
 }
 .search {
-  margin-top: 20px;
+  margin-top: -150px;
+}
+.album {
+  /* border: 1px solid black; */
+  position: relative;
+  align-items: left;
+}
+div .title {
+  position: relative;
+  margin-top: -100px;
+  padding-bottom: 100px;
+}
+.title {
+  font-family: Arial;
+  color: white;
+  font-size: 60px;
+}
+.album-i {
+  width: 241px;
+  height: 67px;
+  color: rgba(255, 255, 255, 0.808);
+  font-size: 50px;
+  font-family: Arial;
+  /* font-style: italic; */
+  font-weight: 900;
+  word-wrap: break-word;
+}
+.album-content {
+  width: 200px;
+  height: 35px;
+  margin: 20px;
+  color: white;
+  font-size: 30px;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 900;
+  word-wrap: break-word;
+  text-decoration: none;
+}
+.album-content-solo:hover {
+  color: #c90ff3;
+}
+
+.album-content-solo {
+  width: 200px;
+  height: 300px;
+  text-decoration: none;
+  color: white;
+  margin-left: -135px;
+  /* background-color: red; */
+  border-radius: 5px;
+}
+.bg-solo {
+  background-color: red;
+}
+
+.album-content-band {
+  text-decoration: none;
+  color: black;
+  margin-left: -130px;
+}
+.album-content-movie {
+  text-decoration: none;
+  color: black;
+  margin-left: -110px;
+}
+.album-content-magazine {
+  text-decoration: none;
+  color: black;
+  margin-left: -40px;
+}
+.album-item {
+  margin-bottom: 20px;
+  width: 180px;
+  height: 470px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+}
+.album-item-img {
+  width: 180px;
+  height: 250px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+.album-item-name {
+  width: 150px;
+  height: 50px;
+  left: 15px;
+  top: 260px;
+  position: absolute;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.819);
+  font-size: 20px;
+  font-family: arial;
+  font-weight: 300;
+  word-wrap: break-word;
+}
+.album-item-prices {
+  display: flex;
+}
+.album-item-price {
+  width: 60px;
+  padding: 10px;
+  margin-top: 430px;
+  color: red;
+}
+.album-item-sell {
+  width: 60px;
+  padding: 10px;
+  margin-top: 430px;
+  text-decoration: line-through;
+  color: gray;
+}
+.album-item-percent {
+  width: 38px;
+  height: 20px;
+  text-align: center;
+  color: black;
+  font-size: 15px;
+  font-family: Inter;
+  font-weight: 200;
+  word-wrap: break-word;
+  margin-top: 442px;
+  background-color: gold;
+}
+.sear {
+  margin-left: 1000px;
 }
