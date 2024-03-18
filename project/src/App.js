@@ -13,6 +13,7 @@ import ErrorPage from "./ErrorPage";
 import EventMainPage from "./EventMainPage";
 import JoinUs from "./JoinUs";
 import Band from "./AlbumBand";
+import ForgotPassword from "./ForgotPassword";
 export { JoinUs } from "./JoinUs";
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
           <Route path="contact" element={<ContactUs />} />
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<SignUp />} />
-          <Route path="forgotpassword" />
+          <Route path="forgotpassword" element={<ForgotPassword />} />
           <Route path="*" element={<ErrorPage />} />
           <Route path="solo" element={<AlbumSolo />} />
           <Route path="events" element={<EventMainPage />} />
