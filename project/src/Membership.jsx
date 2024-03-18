@@ -1,5 +1,4 @@
 
-
 import MembershipForm from "./MembershipForm";
 
 function Membership() {
