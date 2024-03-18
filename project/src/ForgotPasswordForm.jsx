@@ -10,7 +10,7 @@ function ForgotPasswordForm() {
                 <div className="top-thirty">
                     <Button variant="primary" className="login-button">Send Reset Link</Button>
                 </div>
-                <div className="bottom-thirty">
+                <div className="bottom-thirty top-thirty">
                     <Link to="/login" className="inline-text">Back to Login</Link>
                 </div>
             </form>
