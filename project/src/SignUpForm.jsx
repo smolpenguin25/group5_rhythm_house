@@ -1,14 +1,13 @@
 import "./Login.css";
 import Button from "react-bootstrap/Button";
-import { Link } from 'react-router-dom';
 
 function SignUpForm() {
     return (
         <div className="form-background">
             <form action="">
-                <input type="text" placeholder="Username or Email Address" className="inputbox" />
-                <input type="text" placeholder="Phone Number (not required)" className="inputbox" />
-                <input type="text" placeholder="Password" className="inputbox" />
+                <input type="text" placeholder="Username or Email Address" className="inputbox top-thirty width-eighty" />
+                <input type="text" placeholder="Phone Number (not required)" className="inputbox top-thirty width-eighty" />
+                <input type="text" placeholder="Password" className="inputbox top-thirty width-eighty" />
                 <div className="birthday-input">
                     <span className="inline-text">Date of birth: </span>
                     <input type="date" id="birthday" name="birthday" className="date-picker"/>
