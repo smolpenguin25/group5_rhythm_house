@@ -14,6 +14,7 @@ import EventMainPage from "./EventMainPage";
 import JoinUs from "./JoinUs";
 import Band from "./AlbumBand";
 import ForgotPassword from "./ForgotPassword";
+import Membership from "./Membership";
 export { JoinUs } from "./JoinUs";
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
           <Route path="band" element={<Band />} />
           <Route path="movie" />
           <Route path="magazine" />
-          <Route path="membership" />
+          <Route path="membership"  element={<Membership/>}/>
           <Route path="about" element={<AboutUs />} />
           <Route path="contact" element={<ContactUs />} />
           <Route path="login" element={<Login />} />
