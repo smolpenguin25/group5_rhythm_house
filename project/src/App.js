@@ -11,8 +11,8 @@ import SignUp from "./SignUp";
 import Login from "./Login";
 import ErrorPage from "./ErrorPage";
 import EventMainPage from './EventMainPage';
-import JoinUs from "./JoinUs";
-export { JoinUs } from "./JoinUs";
+import { JoinUs } from "./JoinUs";
+import { EventSchedule } from "./EventSchedule";
 
 
 function App() {
@@ -38,6 +38,9 @@ function App() {
           <Route path='events' element={<EventMainPage/>}/>
           <Route path='about'/>
           <Route path='join-us' element={<JoinUs/>}/>
+          <Route path='event-schedule' element={<EventSchedule/>}/>
+
+
 
 
 

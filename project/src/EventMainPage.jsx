@@ -10,9 +10,9 @@ function EventMainPage() {
     { label: "Charts", url: "#" },
  ];
 
- const handleBookingClick = () => {
-    console.log("Booking button clicked");
- };
+//  const handleBookingClick = () => {
+//     console.log("Booking button clicked");
+//  };
 
  return (
     <>
@@ -30,12 +30,12 @@ function EventMainPage() {
                 Enlarge Connecting Venues,Bands and Fans{" "}
               </p>
               <div className="hero-actions">
-                <button
+                <Link
+                 to="/event-schedule" // Link to the target page
                  className="hero-button hero-button-outline"
-                 onClick={handleBookingClick}
                 >
-                 Booking Tickets
-                </button>
+                 Booking Ticket
+                </Link>
                 <Link
                  to="/join-us" // Link to the target page
                  className="hero-button hero-button-primary"
