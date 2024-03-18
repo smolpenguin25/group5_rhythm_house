@@ -1,0 +1,68 @@
+.login-background{
+    height: 100vh;
+    background: linear-gradient(rgb(85, 85, 105), rgb(20, 20, 20));
+    overflow: auto;
+}
+
+.form-background{
+    background-color: grey;
+    width: 30%;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    padding-bottom: 30px;
+    box-shadow: 5px 5px rgb(202, 41, 68);
+}
+
+.inputbox{
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 80%;
+    height: 35px;
+}
+
+.top-thirty{
+    margin-top: 30px;
+}
+
+.login-button{
+    width: 80%;
+}
+
+.forgot-link{
+    color: blue;
+}
+
+.account-button{
+    margin: auto;
+    margin-top: 30px;
+    padding-top: 30px;
+    width: 80%;
+    border-top: 1px solid black;
+}
+
+.radio-flex-box{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.birthday-input{
+    width: 80%;
+    text-align: left;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.inline-text{
+    text-shadow: 1px 1px black;
+    color: white;
+}
+
+.date-picker{
+    border: 1px solid black;
+    border-radius: 5px;
+}

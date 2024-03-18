@@ -15,6 +15,8 @@ function Navbar() {
           <Link to="/membership">Membership</Link>
           <Link to="/about">About Us</Link>
           <Link to="/contact">Contact Us</Link>
+
+
         </div>
 
         <div className="navbar-button-container">
