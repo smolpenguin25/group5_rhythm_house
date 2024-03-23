@@ -17,6 +17,7 @@ import ForgotPassword from "./ForgotPassword";
 import Membership from "./Membership";
 import { EventSchedule } from "./EventSchedule";
 import { More } from "./More";
+import SignUpSuccess from "./SignUpSuccess";
 
 
 
@@ -46,8 +47,7 @@ function App() {
           <Route path="join-us" element={<JoinUs />} />
           <Route path='event-schedule' element={<EventSchedule/>}/>
           <Route path='more' element={<More/>}/>
-
-
+          <Route path='success' element={<SignUpSuccess/>}/>
 
         </Route>
       </Routes>
