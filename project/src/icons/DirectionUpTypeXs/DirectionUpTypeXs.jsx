@@ -5,25 +5,25 @@ Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcN
 
 import React from "react";
 
-export const FillTrue1 = ({ className }) => {
+export const DirectionUpTypeXs = ({ className }) => {
   return (
     <svg
-      className={`fill-true-1 ${className}`}
+      className={`direction-up-type-xs ${className}`}
       fill="none"
       height="24"
       viewBox="0 0 24 24"
       width="24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g className="g" clipPath="url(#clip0_884_18495)">
+      <g className="g" clipPath="url(#clip0_884_18751)">
         <path
           className="path"
-          d="M12.001 4.52898C14.35 2.41998 17.98 2.48998 20.243 4.75698C22.505 7.02498 22.583 10.637 20.479 12.993L11.999 21.485L3.52101 12.993C1.41701 10.637 1.49601 7.01898 3.75701 4.75698C6.02201 2.49298 9.64501 2.41698 12.001 4.52898Z"
+          d="M11.9998 11.828L9.17184 14.657L7.75684 13.243L11.9998 9L16.2428 13.243L14.8278 14.657L11.9998 11.828Z"
           fill="#222222"
         />
       </g>
       <defs className="defs">
-        <clipPath className="clip-path" id="clip0_884_18495">
+        <clipPath className="clip-path" id="clip0_884_18751">
           <rect className="rect" fill="white" height="24" width="24" />
         </clipPath>
       </defs>

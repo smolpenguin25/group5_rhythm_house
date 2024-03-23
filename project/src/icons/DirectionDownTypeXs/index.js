@@ -1,0 +1,1 @@
+export { DirectionDownTypeXs } from "./DirectionDownTypeXs";

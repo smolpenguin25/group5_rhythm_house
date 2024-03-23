@@ -1,0 +1,1 @@
+export { IconsArrow } from "./IconsArrow";

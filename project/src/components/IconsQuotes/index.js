@@ -1,0 +1,1 @@
+export { IconsQuotes } from "./IconsQuotes";

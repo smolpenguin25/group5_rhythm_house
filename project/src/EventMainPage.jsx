@@ -7,7 +7,7 @@ function EventMainPage() {
  const navItems = [
     { label: "Live Concerts", url: "#" },
     { label: "Artist", url: "#" },
-    { label: "Charts", url: "#" },
+    { label: "More", url: "/join-us#/more" },
  ];
 
 //  const handleBookingClick = () => {

@@ -1,0 +1,1 @@
+export { DirectionDownTypeNormal } from "./DirectionDownTypeNormal";

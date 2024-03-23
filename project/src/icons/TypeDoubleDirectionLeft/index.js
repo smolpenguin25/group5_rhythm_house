@@ -1,0 +1,1 @@
+export { TypeDoubleDirectionLeft } from "./TypeDoubleDirectionLeft";

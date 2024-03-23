@@ -16,6 +16,8 @@ import Band from "./AlbumBand";
 import ForgotPassword from "./ForgotPassword";
 import Membership from "./Membership";
 import { EventSchedule } from "./EventSchedule";
+import { More } from "./More";
+
 
 
 function App() {
@@ -43,6 +45,7 @@ function App() {
           <Route path="about" />
           <Route path="join-us" element={<JoinUs />} />
           <Route path='event-schedule' element={<EventSchedule/>}/>
+          <Route path='more' element={<More/>}/>
 
 
 
