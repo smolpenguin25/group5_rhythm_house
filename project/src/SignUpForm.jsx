@@ -64,7 +64,7 @@ function SignUpForm() {
             }
         }).catch(error => {
             // handle error
-            console.log("error");
+            console.log("ok");
             const newUser = {
                 "username": Username,
                 "password": Password,
