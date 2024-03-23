@@ -8,8 +8,7 @@ function EventMainPage() {
     { label: "Live Concerts", url: "#" },
     { label: "Artist", url: "#" },
     { label: "More", url: "/group5_rhythm_house/#/more/" },
-    <Link>
-    </Link>
+
  ];
 
 //  const handleBookingClick = () => {
