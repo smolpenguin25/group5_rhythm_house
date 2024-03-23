@@ -47,8 +47,9 @@ function LoginForm() {
             }
             // handle error
         }).then(tasks => {
-            const usrname = Object.values(tasks[0])[1];
-            const pss = Object.values(tasks[0])[2];
+            const usrname = Object.values(tasks[0])[0];
+            const pss = Object.values(tasks[0])[1];
+            console.log(tasks);
             console.log(usrname);
 
             if (usrname === userName) {
