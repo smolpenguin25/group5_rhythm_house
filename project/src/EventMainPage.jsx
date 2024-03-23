@@ -5,9 +5,7 @@ import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 function EventMainPage() {
  const navItems = [
-    { label: "Live Concerts", url: "#" },
-    { label: "Artist", url: "#" },
-    { label: "More", url: "/group5_rhythm_house/#/more/" },
+    { label: "See More . . .", url: "/group5_rhythm_house/#/more/" },
 
  ];
 

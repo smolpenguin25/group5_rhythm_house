@@ -1,14 +1,22 @@
-import React from "react";
+// import React, { useState } from 'react';
 import "./JoinUs.css";
 import rafaella from './img/aol-mvxprmk.png'
 import bg from './img/ncdg-9mk-3pby.png'
 import playarrow from './img/play-arrow.svg'
 import arrowdown from './img/arrow-chevron-down.svg'
 import arrowdown1 from './img/arrow-chevron-down-1.svg'
+import { Link } from "react-router-dom";
+// import ReactPlayer from 'react-player';
+
+
+ 
 
 
 export const JoinUs = () => {
+  // const [play, setPlay] = useState(false);
+  // const videoUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
   return (
+    
     <div className="macbook-pro">
       <div className="div">
         <div className="overlap">
@@ -33,9 +41,14 @@ export const JoinUs = () => {
               <p className="text-wrapper-4">Turn on the feeling with all music event</p>
             </div>
             <div className="overlap-group-wrapper">
-              <div className="play-arrow-wrapper">
+              <div className="play-arrow-wrapper" >
                 <img className="play-arrow" alt="Play arrow" src={playarrow} />
               </div>
+              {/* {play && (
+        // <div className="video-player">
+        //   <ReactPlayer url={videoUrl} playing={play} onEnded={() => setPlay(false)} />
+        // </div>
+      )} */}
             </div>
           </div>
           <div className="rectangle-3" />
@@ -73,7 +86,10 @@ export const JoinUs = () => {
         <div className="group-3">
           <div className="group-4">
             <div className="overlap-group-2">
+              <Link to="/event-schedule" >
               <div className="text-wrapper-14">BUY TICKET</div>
+
+              </Link>
             </div>
           </div>
           <div className="text-wrapper-15">HOURS</div>
