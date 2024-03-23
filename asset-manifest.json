@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/group5_rhythm_house/static/css/main.8a5b4da3.css",
-    "main.js": "/group5_rhythm_house/static/js/main.7594d1f0.js",
+    "main.js": "/group5_rhythm_house/static/js/main.4e33e49c.js",
     "static/js/453.5e560239.chunk.js": "/group5_rhythm_house/static/js/453.5e560239.chunk.js",
     "static/media/eventimg1.png": "/group5_rhythm_house/static/media/eventimg1.405dc3a5d7ded79e9ede.png",
     "static/media/ncdg-9mk-3pby.png": "/group5_rhythm_house/static/media/ncdg-9mk-3pby.5148f01c32d16c0f34c7.png",
@@ -31,11 +31,11 @@
     "static/media/divider.svg": "/group5_rhythm_house/static/media/divider.b3c59722229f7832e1c676a7d3c45765.svg",
     "static/media/divider-1.svg": "/group5_rhythm_house/static/media/divider-1.358b14f1e07f2ebbdf2e12ee779dec6c.svg",
     "main.8a5b4da3.css.map": "/group5_rhythm_house/static/css/main.8a5b4da3.css.map",
-    "main.7594d1f0.js.map": "/group5_rhythm_house/static/js/main.7594d1f0.js.map",
+    "main.4e33e49c.js.map": "/group5_rhythm_house/static/js/main.4e33e49c.js.map",
     "453.5e560239.chunk.js.map": "/group5_rhythm_house/static/js/453.5e560239.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8a5b4da3.css",
-    "static/js/main.7594d1f0.js"
+    "static/js/main.4e33e49c.js"
   ]
 }
