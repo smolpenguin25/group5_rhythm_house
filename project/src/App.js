@@ -21,7 +21,8 @@ import AlbumMagazine from "./AlbumMagazine";
 import MagazineDetail from "./AlbumMagazineDetail";
 import AlbumRock from "./AlbumRock";
 import RockDetail from "./AlbumRockDetail";
-export { JoinUs } from "./JoinUs";
+import { More } from "./More";
+import { EventSchedule } from "./EventSchedule";
 
 function App() {
   useEffect(() => {
@@ -53,6 +54,9 @@ function App() {
           <Route path="about" />
           <Route path="join-us" element={<JoinUs />} />
           <Route path="solo/:id" element={<SoloDetail />} />
+          <Route path="more" element={<More/>} />
+          <Route path="event-schedule" element={<EventSchedule/>} />
+
         </Route>
       </Routes>
     </div>
