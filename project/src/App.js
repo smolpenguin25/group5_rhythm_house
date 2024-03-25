@@ -21,6 +21,7 @@ import AlbumMagazine from "./AlbumMagazine";
 import MagazineDetail from "./AlbumMagazineDetail";
 import AlbumRock from "./AlbumRock";
 import RockDetail from "./AlbumRockDetail";
+import Membership from "./Membership";
 import { More } from "./More";
 import { EventSchedule } from "./EventSchedule";
 
@@ -42,7 +43,7 @@ function App() {
           <Route path="magazine/:id" element={<MagazineDetail />} />
           <Route path="rock" element={<AlbumRock />} />
           <Route path="rock/:id" element={<RockDetail />} />
-          <Route path="membership" />
+          <Route path="membership" element={<Membership/>} />
           <Route path="about" element={<AboutUs />} />
           <Route path="contact" element={<ContactUs />} />
           <Route path="login" element={<Login />} />
