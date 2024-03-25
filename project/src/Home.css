@@ -1,5 +1,5 @@
 .home-container{
-    height: 1000px;
+    height: auto;
     background: linear-gradient(rgb(85, 85, 105), rgb(20, 20, 20));
     overflow: auto;
 }

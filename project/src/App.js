@@ -24,6 +24,7 @@ import RockDetail from "./AlbumRockDetail";
 import Membership from "./Membership";
 import { More } from "./More";
 import { EventSchedule } from "./EventSchedule";
+import Cart from "./Cart";
 
 function App() {
   useEffect(() => {
@@ -57,6 +58,7 @@ function App() {
           <Route path="solo/:id" element={<SoloDetail />} />
           <Route path="more" element={<More/>} />
           <Route path="event-schedule" element={<EventSchedule/>} />
+          <Route path="cart" element={<Cart/>}/>
 
         </Route>
       </Routes>
