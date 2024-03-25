@@ -4,13 +4,18 @@ import AlbumDropDownButton from "./AlbumDropDownButton";
 import Button from "react-bootstrap/Button";
 import { Icon } from 'react-icons-kit';
 import { shopping_cart } from 'react-icons-kit/ikons/shopping_cart';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
-function Navbar() {
+function Navbar({setCart}) {
   const cart_icon = shopping_cart;
 
   const [CartList, setCartList] = useState([]);
+
+  useEffect(() => {
+    setCart(CartList);
+  });
+
 
   return (
     <div>
@@ -41,7 +46,7 @@ function Navbar() {
           </Button>
         </div>
       </div>
-      <Outlet></Outlet>
+      <Outlet context={[CartList, setCartList]}></Outlet>
     </div>
   );
 }

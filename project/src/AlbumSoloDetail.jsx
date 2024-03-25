@@ -5,11 +5,19 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import { useOutletContext } from "react-router-dom";
 
 function SoloDetail() {
+  const [CartList, setCartList] = useOutletContext(); //cart list
+
   const { id } = useParams(); // Lấy id từ URL
 
   const [solo, setSolo] = useState({}); // State để lưu thông tin của solo
+
+  //add item to cart
+  const addToCart = () => {
+    setCartList(oldCart => [...oldCart, solo]);
+  }
 
   // Hàm để lấy thông tin của solo từ API
   const fetchSolo = () => {
@@ -109,7 +117,7 @@ function SoloDetail() {
 
                 <div className="add">
                   <div>
-                    <Button variant="outline-success" className="addtocart">
+                    <Button variant="outline-success" className="addtocart" onClick={addToCart}>
                       Add to Cart
                     </Button>
                   </div>

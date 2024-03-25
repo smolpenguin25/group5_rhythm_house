@@ -1,0 +1,26 @@
+.cart-header{
+    margin-top: 10px;
+    background-color: white;
+}
+
+.cart-list{
+    margin: auto;
+    overflow-y: scroll;
+    height: 70vh;
+    width: 50vw;
+    background-color: white;
+}
+
+.cart-item-list{
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+.cart-item{
+    margin: auto;
+}
+
+.cart-item-avatar{
+    height: 100px;
+    width: 100px;
+}
