@@ -10,7 +10,6 @@ import { IconsInstagram } from "./icons/IconsInstagram";
 import { IconsQuotes2 } from "./icons/IconsQuotes2";
 import { IconsQuotes5 } from "./icons/IconsQuotes5";
 import './More.css';
-import './Carousel.css';
 import avatar from "./img/avataralt.svg";
 import avatar1 from "./img/avataralt-1.svg";
 import avatar2 from "./img/avataralt-2.svg";
@@ -225,7 +224,10 @@ export const More = () => {
 
             </div> */}
             <div className="media">
-              <Carousel>
+                <div className="arrow">
+                  <IconsArrow className="icons-arrow" />
+                </div> 
+              <Carousel className="carousel-item active">
                 <Carousel.Item>
                   <div className="instashot">
                     <img  className="img" alt="Img" src={img} />
@@ -248,13 +250,12 @@ export const More = () => {
 
                 </Carousel.Item>
                 <Carousel.Item>
-                  {/* <div className="carousel-overlap-2"> */}
-                  <div className="instashot-2">
-                    <img className="img-2" alt="Img" src={img1} />
+                  <div className="instashot-3">
+                    <img className="img" alt="Img" src={img1} />
                     <div className="title-tags">
                       <div className="likes-comments">
-                        <div className="like">
-                          <IconsHeart fill={false} />
+                        <div className="div-2">
+                          <IconsHeart3 className="icon-instance-node" />
                           <div className="text-wrapper-5">222</div>
                         </div>
                         <div className="div-2">
@@ -262,15 +263,12 @@ export const More = () => {
                           <div className="text-wrapper-5">156</div>
                         </div>
                       </div>
-                      <div className="text-wrapper-6">DJ showing up</div>
+                      <div className="text-wrapper-6">DJ SHOWING UP</div>
                       <p className="p">#music #concert #conference #london #event #artist #dj #soundtrack #dance</p>
                     </div>
                   </div>
-                  {/* </div> */}
                 </Carousel.Item>
-                <div className="arrow">
-                  <IconsArrow className="icons-arrow" />
-                </div>
+               
                 <Carousel.Item>
                   <div className="instashot-3">
                     <img className="img" alt="Img" src={img2} />
@@ -328,11 +326,12 @@ export const More = () => {
                     </div>
                   </div>
                 </Carousel.Item>
-                <div className="arrow2">
-                  <IconsArrow1 className="icons-arrow" />
-                </div>
+                
 
               </Carousel>
+               <div className="arrow2">
+                  <IconsArrow1 className="icons-arrow" />
+                </div> 
             </div>
 
 
