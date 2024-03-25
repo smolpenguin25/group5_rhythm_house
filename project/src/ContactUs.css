@@ -1,51 +1,83 @@
-.background {
-  background-color: rgba(255, 255, 255, 1); /* Change to white background */
+.form-background-con {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  width: 30%;
+  margin-top: 100px;
+  border-radius: 10px;
+  padding-bottom: 30px; /* fixed padding-bottom */
+}
+
+.form-background-con h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.form-group-con {
+  margin-bottom: 20px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+}
+.form-group-2-con {
+  margin-bottom: 20px;
+  
+  
+}
+
+.form-group-con label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+}
+.form-control-con {
   width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.music-control-con {
+  width: 60% !important;
+  text-align: center;
+}
+.email-control-con {
+  width: 80%!important;
+  text-align: center;
+}
+.phone-control-con {
+  width: 80%!important;
+  text-align: center;
+}
+.form-group-con input[type="radio"] {
+  margin-right: 10px;
 }
 
-.background .overlap-group-wrapper {
-  background: linear-gradient(180deg, rgb(77.7, 68.6, 84.86) 0%, rgb(0, 0, 0) 100%);
-  background-color: rgba(255, 255, 255, 1); /* Change to white background */
-  border: 1px solid;
-  border-color: #89be9b;
-  height: 1013px;
-  width: 100%; /* Adjust width to be relative to the container */
-  max-width: 1868px; /* Set max-width to prevent overflow on larger screens */
-  margin: 0 auto; /* Center the element horizontally */
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.background .overlap-group {
-  height: 715px;
-  width: 100%; /* Adjust width to be relative to the container */
-  max-width: 941px; /* Set max-width to prevent overflow on larger screens */
-  margin: 0 auto; /* Center the element horizontally */
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+.contain{
   position: relative;
-  top: 159px;
-  left: 0%; /* Adjust left position for centering */
+  top: -59px;
+  width: 1742px;
+  left: -195px;
 }
+.titleForm {
+color: #fff;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: 400 }
 
-/* Change text color to black */
-.background .text-wrapper,
-.background .text-wrapper-2,
-.background .text-wrapper-3,
-.background .text-wrapper-4,
-.background .text-wrapper-5,
-.background .text-wrapper-6,
-.background .text-wrapper-7,
-.background .text-wrapper-8,
-.background .text-wrapper-9 {
-  color: #000000;
-}
-
-/* Change form input text color to black */
-.form-control {
-  color: #000000;
-}
-
-/* Change form button text color to white */
-.btn {
-  color: #ffffff;
-}

@@ -1,7 +1,13 @@
 import image1 from "./img/aboutus.jpg"
 import './AboutUs.css'
 function AboutUs() {
-    return ( <div className='background '>
+    return ( 
+      <div className='background '>
+      <div className="aboutus">
+      
+
+           
+    
             <div class=" aboutus1">
             <h1 class="aboutus15">AboutUs</h1>
             <div class="aboutus2">
@@ -14,7 +20,9 @@ function AboutUs() {
         
     
         
-    </div> );
+    </div> 
+  </div>
+    );
 }
 
 export default AboutUs;

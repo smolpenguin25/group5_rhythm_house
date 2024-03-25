@@ -1,4 +1,12 @@
+
+.aboutus {
+    width: 100%; /* or any other defined width */
+    display: flex;
+    justify-content: center;
+  }
+  
 .quote {
+
     width: 700px;
     height: 627px;
     text-align: center;

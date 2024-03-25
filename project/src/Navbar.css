@@ -1,7 +1,7 @@
 .navbar{
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 65%;
     flex-direction: row;
 }
 
@@ -14,13 +14,15 @@
 
 .navbar-button{
     margin: auto;
-    margin-left: 50px;
+    margin-left: 10px;
     width: 100px;
+    color: black;
 }
 
 .navbar-button-container{
     display: flex;
     justify-content: space-between;
+    width: 20%;
 }
 
 .shop-name{
@@ -37,4 +39,15 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-left: 10px;
+}
+
+.icon-1{
+    color: white;
+    margin: auto;
+}
+
+.icon-container-1{
+    display: flex;
+    height: 100px;
+    width: 30px;
 }

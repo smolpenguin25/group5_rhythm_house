@@ -2,8 +2,11 @@ import { Link, Outlet } from "react-router-dom";
 import "./Navbar.css";
 import AlbumDropDownButton from "./AlbumDropDownButton";
 import Button from "react-bootstrap/Button";
+import { Icon } from 'react-icons-kit';
+import { shopping_cart } from 'react-icons-kit/ikons/shopping_cart';
 
 function Navbar() {
+  const cart_icon = shopping_cart;
   return (
     <div>
       <div className="navbar-container">
@@ -15,8 +18,10 @@ function Navbar() {
           <Link to="/membership">Membership</Link>
           <Link to="/about">About Us</Link>
           <Link to="/contact">Contact Us</Link>
-
-
+        </div>
+          
+        <div className="icon-container-1">
+          <Link to="/cart" className="icon-1"><Icon icon={cart_icon} size={30} /></Link>  
         </div>
 
         <div className="navbar-button-container">
