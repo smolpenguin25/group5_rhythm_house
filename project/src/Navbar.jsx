@@ -4,9 +4,14 @@ import AlbumDropDownButton from "./AlbumDropDownButton";
 import Button from "react-bootstrap/Button";
 import { Icon } from 'react-icons-kit';
 import { shopping_cart } from 'react-icons-kit/ikons/shopping_cart';
+import React, { useState } from 'react';
+
 
 function Navbar() {
   const cart_icon = shopping_cart;
+
+  const [CartList, setCartList] = useState([]);
+
   return (
     <div>
       <div className="navbar-container">
@@ -21,7 +26,10 @@ function Navbar() {
         </div>
           
         <div className="icon-container-1">
-          <Link to="/cart" className="icon-1"><Icon icon={cart_icon} size={30} /></Link>  
+          <Link to="/cart" className="icon-1"><Icon icon={cart_icon} size={30} /></Link>
+          <div  className="cart-label-container">
+            <label className="cart-label">{CartList.length}</label>
+          </div>  
         </div>
 
         <div className="navbar-button-container">
