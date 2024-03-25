@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import { Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap-grid.min.css";
 import AlbumSolo from "./AlbumSolo";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ContactUs from "./ContactUs";
 import AboutUs from "./AboutUs";
 import SignUp from "./SignUp";
@@ -30,10 +30,11 @@ function App() {
   useEffect(() => {
     document.title = "Rhythm House";
   }, []);
+
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Navbar />}>
+        <Route path="/" element={<Navbar/>}>
           <Route index element={<Home />} />
 
           <Route path="band" element={<AlbumBand />} />
