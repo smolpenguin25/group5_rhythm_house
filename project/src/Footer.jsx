@@ -1,82 +1,436 @@
-function Footer1() {
-    return ( <div>
-        <div className="Footer" style={{width: '100%', height: '100%', position: 'relative', background: 'black'}}>
-    <div className="Line38" style={{width: 406, height: 0, left: 425, top: 39, position: 'absolute', transform: 'rotate(90deg)', transformOrigin: '0 0', border: '1px white solid'}}></div>
-    <div className="Line39" style={{width: 386.08, height: 0, left: 39, top: 138, position: 'absolute', transform: 'rotate(1.19deg)', transformOrigin: '0 0', border: '1px white solid'}}></div>
-    <div className="Sitelogo" style={{width: 229, height: 49, left: 45, top: 63, position: 'absolute', justifyContent: 'flex-start', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
-        <div className="Line3" style={{width: 20, height: 0, transform: 'rotate(90deg)', transformOrigin: '0 0', border: '4px white solid'}}></div>
-        <div className="Line4" style={{width: 16, height: 0, transform: 'rotate(90deg)', transformOrigin: '0 0', border: '4px white solid'}}></div>
-        <div className="Line5" style={{width: 12, height: 0, transform: 'rotate(90deg)', transformOrigin: '0 0', border: '4px white solid'}}></div>
-        <div className="Sitelogo" style={{color: 'white', fontSize: 22, fontFamily: 'Roboto', fontWeight: '300', wordWrap: 'break-word'}}>Rhythm House</div>
-    </div>
-    <div className="Group19" style={{width: 234, left: 42, top: 204, position: 'absolute'}}>
-        <div className="Address" style={{width: 197, height: 38, paddingTop: 12, paddingBottom: 11, left: 37, top: 0, position: 'absolute', justifyContent: 'flex-end', alignItems: 'center', display: 'inline-flex'}}>
-            <div className="Address" style={{color: 'white', fontSize: 13, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>590 Cach Mang Thang Tam, Ward 11, District 3, HCM</div>
-        </div>
-        <div className="Icon" style={{width: 24, height: 24, left: 0, top: 6, position: 'absolute', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
-            <div className="Vector" style={{width: 18, height: 22, border: '1px white solid'}}></div>
-            <div className="Vector" style={{width: 6, height: 6, border: '1px white solid'}}></div>
-        </div>
-    </div>
-    <div className="Group20" style={{width: 186, left: 39, top: 250, position: 'absolute'}}>
-        <div className="Email" style={{width: 149, height: 20, paddingTop: 1, paddingBottom: 3, paddingLeft: 1, paddingRight: 41, left: 37, top: 2, position: 'absolute', justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex'}}>
-            <div className="Email" style={{color: 'white', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>xxxx@gmail.com</div>
-        </div>
-        <div className="Icon" style={{width: 24, height: 24, left: 0, top: 0, position: 'absolute', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
-            <div className="Vector" style={{width: 20, height: 16, border: '1px white solid'}}></div>
-            <div className="Vector" style={{width: 20, height: 7, border: '1px white solid'}}></div>
-        </div>
-    </div>
-    <div className="ContactUs" style={{left: 149, top: 166, position: 'absolute', color: 'white', fontSize: 18, fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word'}}>Contact Us</div>
-    <div className="Group25" style={{width: 176, left: 39, top: 294, position: 'absolute'}}>
-        <div className="Icon" style={{width: 24, height: 24, left: 0, top: 0, position: 'absolute', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
-            <div className="Vector" style={{width: 20.89, height: 20.93, border: '1px white solid'}}></div>
-        </div>
-        <div className="PhoneNumber" style={{width: 139, height: 20, paddingTop: 1, paddingBottom: 3, paddingRight: 68, left: 37, top: 2, position: 'absolute', justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex'}}>
-            <div className="18008543680" style={{color: 'white', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>000000000</div>
-        </div>
-    </div>
-    <div className="Frame12" style={{left: 149, top: 357, position: 'absolute', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 16, display: 'inline-flex'}}>
-        <div className="Social" style={{width: 30, height: 30, position: 'relative'}}>
-            <div className="Ellipse17" style={{width: 30, height: 30, left: 0, top: 0, position: 'absolute', background: 'white', borderRadius: 9999}} />
-            <div className="Vector" style={{width: 10.91, height: 20, left: 10, top: 5, position: 'absolute', border: '1px black solid'}}></div>
-        </div>
-        <div className="Social" style={{width: 30, height: 30, position: 'relative'}}>
-            <div className="Ellipse17" style={{width: 30, height: 30, left: 0, top: 0, position: 'absolute', background: 'white', borderRadius: 9999}} />
-            <div className="Vector" style={{width: 11.25, height: 11.25, left: 12.50, top: 6.25, position: 'absolute', border: '1px black solid'}}></div>
-            <div className="Vector" style={{width: 20, height: 20, left: 3.75, top: 6.25, position: 'absolute', border: '1px black solid'}}></div>
-        </div>
-        <div className="Social" style={{width: 30, height: 30, position: 'relative'}}>
-            <div className="Ellipse17" style={{width: 30, height: 30, left: 0, top: 0, position: 'absolute', background: 'white', borderRadius: 9999}} />
-            <img className="Instagram" style={{width: 19.84, height: 19.84, left: 5.12, top: 5.12, position: 'absolute'}} src="https://via.placeholder.com/20x20" />
-        </div>
-    </div>
-    <div className="Arrows" style={{width: 34, height: 34, left: 1389, top: 468, position: 'absolute', transform: 'rotate(-90deg)', transformOrigin: '0 0'}}>
-        <div className="Ellipse8" style={{width: 34, height: 34, left: 0, top: 0, position: 'absolute', background: 'white', borderRadius: 9999, border: '1px white solid'}} />
-        <div className="Vector" style={{width: 7, height: 16, left: 13, top: 9, position: 'absolute', border: '1px black solid'}}></div>
-    </div>
-    <div className="MenuFooterVert1" style={{width: 203, height: 197, left: 501, top: 53, position: 'absolute'}}>
-        <div className="Product" style={{left: 0, top: 0, position: 'absolute', color: 'white', fontSize: 18, fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word'}}>Product</div>
-        <div className="LandingPage" style={{left: 0, top: 53, position: 'absolute', color: 'white', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>Album-Band</div>
-        <div className="PopupBuilder" style={{left: 0, top: 85, position: 'absolute', color: 'white', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>Album-Solo</div>
-        <div className="WebDesign" style={{left: 0, top: 117, position: 'absolute', color: 'white', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>Album-Movie</div>
-        <div className="Content" style={{left: 0, top: 149, position: 'absolute', color: 'white', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>Magazine</div>
-        <div className="Integrations" style={{left: 0, top: 181, position: 'absolute', color: 'white', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>Concert</div>
-    </div>
-    <div className="MenuFooterVert3" style={{width: 203, height: 229, left: 736, top: 53, position: 'absolute'}}>
-        <div className="Resources" style={{left: 0, top: 0, position: 'absolute', color: 'white', fontSize: 18, fontFamily: 'Roboto', fontWeight: '700', wordWrap: 'break-word'}}>Navigation</div>
-        <div className="Academy" style={{left: 0, top: 53, position: 'absolute', color: 'white', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>Home</div>
-        <div className="Blog" style={{left: 0, top: 85, position: 'absolute', color: 'white', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>Album</div>
-        <div className="Themes" style={{left: 0, top: 117, position: 'absolute', color: 'white', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>Event</div>
-        <div className="Hosting" style={{left: 0, top: 149, position: 'absolute', color: 'white', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>Membership</div>
-        <div className="Developers" style={{left: 0, top: 181, position: 'absolute', color: 'white', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>About Us</div>
-        <div className="Support" style={{left: 0, top: 213, position: 'absolute', color: 'white', fontSize: 14, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>Contact Us</div>
-    </div>
-    <div className="2024RhythmHouseAllRightsReserved" style={{left: 1417, top: 368, position: 'absolute', color: 'white', fontSize: 16, fontFamily: 'Inter', fontStyle: 'italic', fontWeight: '300', wordWrap: 'break-word'}}>@2024 Rhythm House. All rights reserved.</div>
-    <img className="Map" style={{width: 304, height: 244, left: 1423, top: 38, position: 'absolute'}} src="https://via.placeholder.com/304x244" />
-    <div className="Address" style={{width: 396.20, left: 1397.75, top: 305, position: 'absolute', color: 'white', fontSize: 13, fontFamily: 'Roboto', fontWeight: '400', wordWrap: 'break-word'}}>590 Cach Mang Thang Tam, Ward 11, District 3, HCM</div>
-</div>
-    </div> );
-}
+import * as React from "react";
+import img5 from "./img/mapnek.png";
 
-export default Footer1;
+function Footer() {
+  return (
+    <>
+      <div className="div">
+        <div className="div-2">
+          <div className="column">
+            <div className="div-3">
+              <div className="div-4">
+                <div className="div-5">
+                  <div className="div-6" />
+                  <div className="div-7" />
+                  <div className="div-8" />
+                  <div className="div-9">Rhythm House</div>
+                </div>
+                <div className="div-10">Contact Us</div>
+                <div className="div-11">
+                  <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/3867ebf889624d9e7a83e8b0cafff7e6a3ac007517fdb75ace3b7414ec945e86?"
+                    className="img"
+                  />
+                  <div className="div-12">
+                    590 Cach Mang Thang Tam, Ward 11, District 3, HCM
+                  </div>
+                </div>
+                <div className="div-13">
+                  <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/fcb69222e5d61cc9af49db599119f82cf468dabe5fcbe71dc5eae2b9cfdf0db3?"
+                    className="img"
+                  />
+                  <div className="div-14">xxxx@gmail.com</div>
+                </div>
+                <div className="div-15">
+                  <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c3cb131fcedcf83310305a9c335750226fa53562d085876e5139200382d096a?"
+                    className="img"
+                  />
+                  <div className="div-16">000000000</div>
+                </div>
+                <div className="div-17">
+                  <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d0dad3146a4a100d4251a5155fbcfc33fc601b991ff2d707cbf0b466f8a95470?"
+                    className="img-2"
+                  />
+                  <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/e974bdce026e98ce850dad5ab72a416b22242e0c35449f930b0beaf9f23673c6?"
+                    className="img-3"
+                  />
+                  <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/a3aa860d6926266fbc1f3ea265a0cfc015678b84330d799c946fe121a97485ac?"
+                    className="img-4"
+                  />
+                </div>
+              </div>
+              <div className="div-18" />
+              <div className="div-19">
+                <div className="div-20">Product</div>
+                <div className="div-21">Album-Band</div>
+                <div className="div-22">Album-Solo</div>
+                <div className="div-23">Album-Movie</div>
+                <div className="div-24">Magazine</div>
+                <div className="div-25">Concert</div>
+              </div>
+            </div>
+          </div>
+          <div className="column-2">
+            <div className="div-26">
+              <div className="div-27">
+                <div className="div-28">Navigation</div>
+                <div className="div-29">Home</div>
+                <div className="div-30">Album</div>
+                <div className="div-31">Event</div>
+                <div className="div-32">Membership</div>
+                <div className="div-33">About Us</div>
+                <div className="div-34">Contact Us</div>
+              </div>
+              <div className="div-35">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2825779582945!2d106.6622787737751!3d10.789655958952158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f631cb7c4b7%3A0xd152d83450f68d15!2sFPT%20Aptech!5e0!3m2!1svi!2s!4v1711339077607!5m2!1svi!2s"
+                  width="304"
+                  height="224"
+                  style={{ border: "0" }}
+
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+                <div className="div-36">
+                  590 Cach Mang Thang Tam, Ward 11, District 3, HCM
+                </div>
+                <div className="div-37">
+                  @2024 Rhythm House. All rights reserved.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style jsx>{`
+        .div {
+          background-color: var(--Cold-Grey-black, #000);
+          padding: 38px 80px 0 39px;
+        }
+        @media (max-width: 991px) {
+          .div {
+            padding: 0 20px;
+          }
+        }
+        .div-2 {
+          gap: 20px;
+          display: flex;
+        }
+        @media (max-width: 991px) {
+          .div-2 {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0px;
+          }
+        }
+        .column {
+          display: flex;
+          flex-direction: column;
+          line-height: normal;
+          width: 38%;
+          margin-left: 0px;
+        }
+        @media (max-width: 991px) {
+          .column {
+            width: 100%;
+          }
+        }
+        .div-3 {
+          display: flex;
+          flex-grow: 1;
+          gap: 20px;
+          justify-content: space-between;
+        }
+        @media (max-width: 991px) {
+          .div-3 {
+            max-width: 100%;
+            margin-top: 40px;
+            flex-wrap: wrap;
+          }
+        }
+        .div-4 {
+          display: flex;
+          flex-direction: column;
+          margin: auto 0;
+        }
+        .div-5 {
+          align-items: center;
+          display: flex;
+          gap: 6px;
+          font-size: 22px;
+          color: #fff;
+          font-weight: 300;
+          padding: 12px 0;
+        }
+        .div-6 {
+          border-color: rgba(255, 255, 255, 1);
+          border-style: solid;
+          border-width: 4px;
+          background-color: #fff;
+          align-self: stretch;
+          width: 4px;
+          height: 20px;
+          margin: auto 0;
+        }
+        .div-7 {
+          border-color: rgba(255, 255, 255, 1);
+          border-style: solid;
+          border-width: 4px;
+          background-color: #fff;
+          align-self: stretch;
+          width: 4px;
+          height: 16px;
+          margin: auto 0;
+        }
+        .div-8 {
+          border-color: rgba(255, 255, 255, 1);
+          border-style: solid;
+          border-width: 4px;
+          background-color: #fff;
+          align-self: stretch;
+          width: 4px;
+          height: 12px;
+          margin: auto 0;
+        }
+        .div-9 {
+          font-family: Roboto, sans-serif;
+          align-self: stretch;
+        }
+        .div-10 {
+          color: var(--Cold-Grey-white, #fff);
+          align-self: center;
+          margin-top: 58px;
+          font: 700 18px Roboto, sans-serif;
+        }
+        @media (max-width: 991px) {
+          .div-10 {
+            margin-top: 40px;
+          }
+        }
+        .div-11 {
+          display: flex;
+          margin-top: 27px;
+          gap: 13px;
+          font-size: 13px;
+          color: #fff;
+          font-weight: 400;
+        }
+        .img {
+          aspect-ratio: 1;
+          object-fit: auto;
+          object-position: center;
+          width: 24px;
+        }
+        .div-12 {
+          font-family: Roboto, sans-serif;
+          flex-grow: 1;
+          flex-basis: auto;
+        }
+        .div-13 {
+          align-self: start;
+          display: flex;
+          margin-top: 16px;
+          gap: 14px;
+          font-size: 14px;
+          color: #fff;
+          font-weight: 400;
+          white-space: nowrap;
+        }
+        @media (max-width: 991px) {
+          .div-13 {
+            white-space: initial;
+          }
+        }
+        .div-14 {
+          font-family: Roboto, sans-serif;
+          flex-grow: 1;
+          flex-basis: auto;
+          margin: auto 0;
+        }
+        .div-15 {
+          align-self: start;
+          display: flex;
+          margin-top: 20px;
+          gap: 13px;
+          font-size: 14px;
+          color: #fff;
+          font-weight: 400;
+          white-space: nowrap;
+        }
+        @media (max-width: 991px) {
+          .div-15 {
+            white-space: initial;
+          }
+        }
+        .div-16 {
+          font-family: Roboto, sans-serif;
+          margin: auto 0;
+        }
+        .div-17 {
+          align-self: center;
+          display: flex;
+          margin-top: 39px;
+          gap: 16px;
+        }
+        .img-2 {
+          aspect-ratio: 1;
+          object-fit: auto;
+          object-position: center;
+          width: 30px;
+        }
+        .img-3 {
+          aspect-ratio: 1;
+          object-fit: auto;
+          object-position: center;
+          width: 30px;
+        }
+        .img-4 {
+          aspect-ratio: 1;
+          object-fit: auto;
+          object-position: center;
+          width: 30px;
+        }
+        .div-18 {
+          border-color: rgba(255, 255, 255, 1);
+          border-style: solid;
+          border-width: 1px;
+          background-color: #fff;
+          width: 1px;
+          height: 368px;
+        }
+        .div-19 {
+          align-self: start;
+          display: flex;
+          margin-top: 18px;
+          flex-direction: column;
+          font-size: 14px;
+          color: var(--Cold-Grey-white, #fff);
+          font-weight: 400;
+          white-space: nowrap;
+        }
+        @media (max-width: 991px) {
+          .div-19 {
+            white-space: initial;
+          }
+        }
+        .div-20 {
+          font: 700 18px Roboto, sans-serif;
+        }
+        .div-21 {
+          font-family: Roboto, sans-serif;
+          margin-top: 39px;
+        }
+        @media (max-width: 991px) {
+          .div-21 {
+            margin-right: 6px;
+          }
+        }
+        .div-22 {
+          font-family: Roboto, sans-serif;
+          margin-top: 22px;
+        }
+        .div-23 {
+          font-family: Roboto, sans-serif;
+          margin-top: 22px;
+        }
+        .div-24 {
+          font-family: Roboto, sans-serif;
+          margin-top: 22px;
+        }
+        .div-25 {
+          font-family: Roboto, sans-serif;
+          margin-top: 19px;
+        }
+        .column-2 {
+          display: flex;
+          flex-direction: column;
+          line-height: normal;
+          width: 62%;
+          margin-left: 20px;
+        }
+        @media (max-width: 991px) {
+          .column-2 {
+            width: 100%;
+          }
+        }
+        .div-26 {
+          display: flex;
+          gap: 20px;
+          justify-content: space-between;
+        }
+        @media (max-width: 991px) {
+          .div-26 {
+            max-width: 100%;
+            margin-top: 40px;
+            flex-wrap: wrap;
+          }
+        }
+        .div-27 {
+          align-self: start;
+          display: flex;
+          margin-top: 19px;
+          flex-direction: column;
+          font-size: 14px;
+          color: var(--Cold-Grey-white, #fff);
+          font-weight: 400;
+        }
+        .div-28 {
+          font: 700 18px Roboto, sans-serif;
+        }
+        .div-29 {
+          font-family: Roboto, sans-serif;
+          margin-top: 35px;
+        }
+        .div-30 {
+          font-family: Roboto, sans-serif;
+          margin-top: 22px;
+        }
+        .div-31 {
+          font-family: Roboto, sans-serif;
+          margin-top: 22px;
+        }
+        .div-32 {
+          font-family: Roboto, sans-serif;
+          margin-top: 22px;
+        }
+        .div-33 {
+          font-family: Roboto, sans-serif;
+          margin-top: 19px;
+        }
+        .div-34 {
+          font-family: Roboto, sans-serif;
+          margin-top: 22px;
+        }
+        .div-35 {
+          display: flex;
+          flex-direction: column;
+          color: #fff;
+        }
+        .img-5 {
+          aspect-ratio: 1.25;
+          object-fit: auto;
+          object-position: center;
+          width: 304px;
+          align-self: end;
+          max-width: 100%;
+        }
+        .div-36 {
+          margin-top: 25px;
+          font: 400 13px Roboto, sans-serif;
+        }
+        .div-37 {
+          margin-top: 50px;
+          font: italic 300 16px Inter, -apple-system, Roboto, Helvetica,
+            sans-serif;
+        }
+        @media (max-width: 991px) {
+          .div-37 {
+            margin-top: 40px;
+          }
+        }
+      `}</style>
+    </>
+  );
+}
+export default Footer;
