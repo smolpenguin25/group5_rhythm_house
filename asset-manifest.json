@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/group5_rhythm_house/static/css/main.ae97568f.css",
-    "main.js": "/group5_rhythm_house/static/js/main.000f9327.js",
+    "main.css": "/group5_rhythm_house/static/css/main.21df4c46.css",
+    "main.js": "/group5_rhythm_house/static/js/main.47c964db.js",
     "static/js/453.5e560239.chunk.js": "/group5_rhythm_house/static/js/453.5e560239.chunk.js",
     "static/media/eventimg1.png": "/group5_rhythm_house/static/media/eventimg1.405dc3a5d7ded79e9ede.png",
     "static/media/ncdg-9mk-3pby.png": "/group5_rhythm_house/static/media/ncdg-9mk-3pby.5148f01c32d16c0f34c7.png",
@@ -11,6 +11,7 @@
     "static/media/aboutus.jpg": "/group5_rhythm_house/static/media/aboutus.5742ec6eb4bc3cccf6cd.jpg",
     "static/media/img.svg": "/group5_rhythm_house/static/media/img.283909bc661d46fc1c0f4d95261589cf.svg",
     "static/media/img-3.svg": "/group5_rhythm_house/static/media/img-3.f4c4fc513887edbf458f6a7c22cbde68.svg",
+    "static/media/mapnek.png": "/group5_rhythm_house/static/media/mapnek.259531d22ed749cc8200.png",
     "static/media/img-2.svg": "/group5_rhythm_house/static/media/img-2.b0ff9717ec6d4e1905b08df2a5a61c7e.svg",
     "static/media/img-4.svg": "/group5_rhythm_house/static/media/img-4.7d84aa9f8df724ece459e83e8f0b1c57.svg",
     "static/media/img-1.svg": "/group5_rhythm_house/static/media/img-1.7ffeb1a08c068677b776eb1eb02ae5f4.svg",
@@ -30,12 +31,12 @@
     "static/media/arrow-chevron-down-1.svg": "/group5_rhythm_house/static/media/arrow-chevron-down-1.1566a03b8df17611a575bb1f7f552e51.svg",
     "static/media/divider.svg": "/group5_rhythm_house/static/media/divider.3cd09591c7eb7a20b38730c25d37dcaf.svg",
     "static/media/divider-1.svg": "/group5_rhythm_house/static/media/divider-1.135f7006488a7285599b2d197f665e38.svg",
-    "main.ae97568f.css.map": "/group5_rhythm_house/static/css/main.ae97568f.css.map",
-    "main.000f9327.js.map": "/group5_rhythm_house/static/js/main.000f9327.js.map",
+    "main.21df4c46.css.map": "/group5_rhythm_house/static/css/main.21df4c46.css.map",
+    "main.47c964db.js.map": "/group5_rhythm_house/static/js/main.47c964db.js.map",
     "453.5e560239.chunk.js.map": "/group5_rhythm_house/static/js/453.5e560239.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae97568f.css",
-    "static/js/main.000f9327.js"
+    "static/css/main.21df4c46.css",
+    "static/js/main.47c964db.js"
   ]
 }
