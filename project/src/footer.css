@@ -11,3 +11,9 @@
   height: 715px;
   width: 940px;
 }
+.Footer{
+  background: var(--Cold-Grey-black, #000);
+  width: 1868px;
+height: 407px;
+flex-shrink: 0;
+}

@@ -33,7 +33,7 @@ function EventMainPage() {
                  to="/event-schedule" // Link to the target page
                  className="hero-button hero-button-outline"
                 >
-                 Booking Ticket
+                 Schedule
                 </Link>
                 <Link
                  to="/join-us" // Link to the target page

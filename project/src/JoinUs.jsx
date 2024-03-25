@@ -87,7 +87,7 @@ export const JoinUs = () => {
           <div className="group-4">
             <div className="overlap-group-2">
               <Link to="/event-schedule" >
-              <div className="text-wrapper-14">BUY TICKET</div>
+              <div className="text-wrapper-14">Schedule</div>
 
               </Link>
             </div>

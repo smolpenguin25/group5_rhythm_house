@@ -1,7 +1,6 @@
     .hero-section {
         background-color: var(--Dark, #141416);
         display: flex;
-        padding-bottom: 80px;
         flex-direction: column;
     }
 
@@ -10,7 +9,7 @@
         flex-direction: column;
         overflow: hidden;
         position: relative;
-        min-height: 1183px;
+        min-height: 900px;
         width: 100%;
         justify-content: center;
         align-items: center;
