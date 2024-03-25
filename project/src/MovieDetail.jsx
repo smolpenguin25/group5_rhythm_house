@@ -6,25 +6,25 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 
-function BandDetail() {
+function MovieDetail() {
   const { id } = useParams(); // Lấy id từ URL
 
-  const [band, setBand] = useState({}); // State để lưu thông tin của solo
+  const [movie, setMovie] = useState({}); // State để lưu thông tin của solo
 
   // Hàm để lấy thông tin của solo từ API
-  const fetchBand = () => {
-    fetch(`https://65d55b883f1ab8c63436c62f.mockapi.io/band/${id}`)
+  const fetchMovie = () => {
+    fetch(`https://65f93911df1514524610c6a0.mockapi.io/movie/${id}`)
       .then((response) => {
         if (response.ok) {
           return response.json();
         }
-        throw new Error("Failed to fetch band");
+        throw new Error("Failed to fetch solo");
       })
       .then((data) => {
-        setBand(data); // Cập nhật state với thông tin của solo
+        setMovie(data); // Cập nhật state với thông tin của solo
       })
       .catch((error) => {
-        console.error("Error fetching band:", error);
+        console.error("Error fetching solo:", error);
       });
   };
 
@@ -32,7 +32,7 @@ function BandDetail() {
 
   // Gọi hàm fetchSolo khi component được render
   useEffect(() => {
-    fetchBand();
+    fetchMovie();
   }, [id]); // Khi id thay đổi, component sẽ re-render và gọi lại hàm fetchSolo
 
   return (
@@ -40,7 +40,7 @@ function BandDetail() {
       <Container>
         <div className="duongdan">
           <h3>
-            Album/{band.type}/{band.name}
+            Album/{movie.type}/{movie.name}
           </h3>
         </div>
         <div className="main">
@@ -49,7 +49,7 @@ function BandDetail() {
             <Col xs={4}>
               <div className="main-left">
                 {/* Hiển thị ảnh solo */}
-                <img src={band.avatar} alt={band.avatar} />
+                <img src={movie.avatar} alt={movie.avatar} />
                 <div className="kengang"></div>
                 <div className="playlist">
                   <div className="playlist-bg">
@@ -57,21 +57,21 @@ function BandDetail() {
                       <div className="playlist-avatar">
                         {" "}
                         <br />
-                        <img src={band.avatar} alt={band.avatar} />
+                        <img src={movie.avatar} alt={movie.avatar} />
                       </div>
                       <div className="playlist-nav-i">
                         {" "}
                         <br />
                         <div>
-                          <b className="playlist-name">{band.songname}</b>
+                          <b className="playlist-name">{movie.songname}</b>
                         </div>{" "}
                         <br />
                         <div className="playlist-i">Playlist</div>
                       </div>
                     </div>
                     <div className="playlist-list">
-                      <pre>{band.songlist}</pre> <br />
-                      <pre>{band.songtime}</pre>
+                      <pre>{movie.songlist}</pre> <br />
+                      <pre>{movie.songtime}</pre>
                     </div>
                   </div>
                 </div>
@@ -80,29 +80,31 @@ function BandDetail() {
             <Col xs={6}>
               {/* Hiển thị thông tin chi tiết solo */}
               <div className="detail-info">
-                <div className="detail-info-name">{band.name}</div>
+                <div className="detail-info-name">{movie.name}</div>
                 <div className="detail-info-purch">
                   <div>
                     <div className="start">
-                      {band.start}{" "}
-                      <img src={band.startimg} alt={band.startimg} />
-                      <img src={band.startimg} alt={band.startimg} />
-                      <img src={band.startimg} alt={band.startimg} />
-                      <img src={band.startimg} alt={band.startimg} />
-                      <img src={band.startimg} alt={band.startimg} />
+                      {movie.start}{" "}
+                      <img src={movie.startimg} alt={movie.startimg} />
+                      <img src={movie.startimg} alt={movie.startimg} />
+                      <img src={movie.startimg} alt={movie.startimg} />
+                      <img src={movie.startimg} alt={movie.startimg} />
+                      <img src={movie.startimg} alt={movie.startimg} />
                     </div>
                   </div>
                   <div className="kedoc"></div>
-                  <div>{band.ratings} ratings</div>
+                  <div>{movie.ratings} ratings</div>
                   <div className="kedoc"></div>
-                  <div>{band.bipmonth}+ bought in past month</div>
+                  <div>{movie.bipmonth}+ bought in past month</div>
                 </div>
 
                 <div>
                   <div className="detail-price">
-                    <div className="album-item-price">{band.price}</div>
+                    <div className="album-item-price">{movie.price}</div>
+                    <div className="album-item-sell">{movie.sell}</div>
+                    <div className="album-item-percent">{movie.percent}</div>
                   </div>
-                  <div className="soldout">{band.soldout}</div>
+                  <div className="soldout">{movie.soldout}</div>
                 </div>
 
                 <div className="add">
@@ -122,7 +124,7 @@ function BandDetail() {
                   <br />
                   <h3 className="describe">Describe:</h3>
 
-                  <pre className="describe-describe">{band.describe}</pre>
+                  <pre className="describe-describe">{movie.describe}</pre>
                 </div>
               </div>
             </Col>
@@ -134,4 +136,4 @@ function BandDetail() {
   );
 }
 
-export default BandDetail;
+export default MovieDetail;

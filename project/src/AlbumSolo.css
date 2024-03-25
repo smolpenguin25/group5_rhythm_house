@@ -5,9 +5,6 @@
   width: 300px;
   margin-top: -80px;
 }
-/* .material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-} */
 * {
   font-family: arial;
 }
@@ -40,7 +37,6 @@
   margin-top: -150px;
 }
 .album {
-  /* border: 1px solid black; */
   position: relative;
   align-items: left;
 }
@@ -66,31 +62,55 @@ div .title {
 }
 .album-content {
   width: 200px;
-  height: 35px;
+  min-height: 35px;
   margin: 20px;
-  color: white;
   font-size: 30px;
-  font-family: Inter;
   font-style: italic;
   font-weight: 900;
-  word-wrap: break-word;
-  text-decoration: none;
 }
-.album-content-solo:hover {
-  color: #c90ff3;
+.album-content-solo,
+.album-content-band,
+.album-content-movie,
+.album-content-magazine,
+.album-content-rock {
+  position: relative; /* Thiết lập vị trí tương đối để chứa đường kẻ dưới */
 }
 
-.album-content-solo {
-  width: 200px;
-  height: 300px;
-  text-decoration: none;
-  color: white;
-  margin-left: -135px;
-  /* background-color: red; */
-  border-radius: 5px;
+.album-content-solo::after,
+.album-content-band::after,
+.album-content-movie::after,
+.album-content-magazine::after,
+.album-content-rock::after {
+  content: ""; /* Tạo một phần tử giả để làm đường kẻ dưới */
+  position: absolute; /* Thiết lập vị trí tuyệt đối để đặt đường kẻ dưới */
+  left: 0; /* Đặt vị trí bắt đầu của đường kẻ dưới */
+  bottom: -2px; /* Đặt vị trí dưới của đường kẻ dưới (ở đây là 2px) */
+  width: 100%; /* Độ rộng của đường kẻ dưới */
+  height: 2px; /* Chiều cao của đường kẻ dưới */
+  background-color: white; /* Màu của đường kẻ dưới */
+  visibility: hidden; /* Ẩn đường kẻ dưới mặc định */
+  transition: visibility 0.3s ease; /* Hiệu ứng chuyển đổi khi hiển thị đường kẻ dưới */
+}
+
+.album-content-solo:hover::after,
+.album-content-solo:focus::after,
+.album-content-band:hover::after,
+.album-content-band:focus::after,
+.album-content-movie:hover::after,
+.album-content-movie:focus::after,
+.album-content-magazine:hover::after,
+.album-content-magazine:focus::after,
+.album-content-rock:hover::after,
+.album-content-rock:focus::after {
+  visibility: visible; /* Hiển thị đường kẻ dưới khi di chuột qua hoặc khi văn bản đang được chọn */
 }
 .bg-solo {
-  background-color: red;
+  color: white;
+}
+.album-content-solo {
+  text-decoration: none;
+  color: black;
+  margin-left: -135px;
 }
 
 .album-content-band {
@@ -98,6 +118,24 @@ div .title {
   color: black;
   margin-left: -130px;
 }
+.hover-item:hover {
+  scale: 1.03;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.album-content:hover {
+  scale: 1.03;
+  transition: 0.3s;
+}
+.album-content-solo:hover,
+.album-content-band:hover,
+.album-content-movie:hover,
+.album-content-magazine:hover,
+.album-content-rock:hover {
+  color: aliceblue;
+  scale: 1.03;
+}
+
 .album-content-movie {
   text-decoration: none;
   color: black;
@@ -108,16 +146,32 @@ div .title {
   color: black;
   margin-left: -40px;
 }
+.album-content-rock {
+  text-decoration: none;
+  color: black;
+  margin-left: -120px;
+}
 .album-item {
-  margin-bottom: 20px;
-  width: 180px;
+  /* margin-bottom: 20px; */
+  width: 155px;
   height: 470px;
   position: relative;
-  background: rgba(255, 255, 255, 0.1);
+  /* background: rgba(255, 255, 255, 0.1); */
 }
+.click-detail button {
+  max-width: 200px;
+  min-width: 200px;
+  /* width: 25%; */
+  background-color: black;
+}
+.vitri {
+  position: relative;
+  margin-top: 21px;
+}
+
 .album-item-img {
-  width: 180px;
-  height: 250px;
+  width: 175px;
+  height: 240px;
   left: 0px;
   top: 0px;
   position: absolute;
@@ -137,6 +191,9 @@ div .title {
 }
 .album-item-prices {
   display: flex;
+  position: relative;
+  margin-top: -20px;
+  justify-content: space-evenly;
 }
 .album-item-price {
   width: 60px;
@@ -165,4 +222,16 @@ div .title {
 }
 .sear {
   margin-left: 1000px;
+}
+.price-rock {
+  width: 100px;
+}
+#form-order {
+  background-color: rgba(0, 0, 0, 0.262);
+}
+.price-maga {
+  margin-left: 12px;
+}
+.describe-describe {
+  height: 720px;
 }

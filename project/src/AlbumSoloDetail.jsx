@@ -1,43 +1,137 @@
 import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import "./Detail.css";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 
 function SoloDetail() {
-  //lay param
-  const { id } = useParams();
+  const { id } = useParams(); // Lấy id từ URL
 
-  const [solo, setsolo] = useState({});
+  const [solo, setSolo] = useState({}); // State để lưu thông tin của solo
 
-  const getSolo = () => {
-    fetch(`https://65d55b883f1ab8c63436c62f.mockapi.io/solo/${id}`, {
-      method: "GET",
-      headers: { "content-type": "application/json" },
-    })
-      .then((res) => {
-        if (res.ok) {
-          return res.json();
+  // Hàm để lấy thông tin của solo từ API
+  const fetchSolo = () => {
+    fetch(`https://65d55b883f1ab8c63436c62f.mockapi.io/solo/${id}`)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
         }
-        // handle error
+        throw new Error("Failed to fetch solo");
       })
-      .then((sol) => {
-        //console.log("Student List: " + studentList);
-        setsolo(sol);
+      .then((data) => {
+        setSolo(data); // Cập nhật state với thông tin của solo
       })
       .catch((error) => {
-        console.log("Error: " + error);
+        console.error("Error fetching solo:", error);
       });
   };
 
-  //goi ham
+  //ham sold out
+
+  // Gọi hàm fetchSolo khi component được render
   useEffect(() => {
-    getSolo();
-  });
+    fetchSolo();
+  }, [id]); // Khi id thay đổi, component sẽ re-render và gọi lại hàm fetchSolo
 
   return (
-    <div>
-      <h1>Student Detail</h1>
-      <h1 className="user-name">{solo.name}</h1>
-      <img src={solo.avatar} alt={solo.avatar} className="user-avatar" />
-      <h2 className="user-position">Price: {solo.price}</h2>
+    <div className="container-detail">
+      <Container>
+        <div className="duongdan">
+          <h3>
+            Album/{solo.type}/{solo.name}
+          </h3>
+        </div>
+        <div className="main">
+          <Row>
+            <Col xs={1} />
+            <Col xs={4}>
+              <div className="main-left">
+                {/* Hiển thị ảnh solo */}
+                <img src={solo.avatar} alt={solo.avatar} />
+                <div className="kengang"></div>
+                <div className="playlist">
+                  <div className="playlist-bg">
+                    <div className="playlist-nav">
+                      <div className="playlist-avatar">
+                        {" "}
+                        <br />
+                        <img src={solo.avatar} alt={solo.avatar} />
+                      </div>
+                      <div className="playlist-nav-i">
+                        {" "}
+                        <br />
+                        <div>
+                          <b className="playlist-name">{solo.songname}</b>
+                        </div>{" "}
+                        <br />
+                        <div className="playlist-i">Playlist</div>
+                      </div>
+                    </div>
+                    <div className="playlist-list">
+                      <pre>{solo.songlist}</pre> <br />
+                      <pre>{solo.songtime}</pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Col>
+            <Col xs={6}>
+              {/* Hiển thị thông tin chi tiết solo */}
+              <div className="detail-info">
+                <div className="detail-info-name">{solo.name}</div>
+                <div className="detail-info-purch">
+                  <div>
+                    <div className="start">
+                      {solo.start}{" "}
+                      <img src={solo.startimg} alt={solo.startimg} />
+                      <img src={solo.startimg} alt={solo.startimg} />
+                      <img src={solo.startimg} alt={solo.startimg} />
+                      <img src={solo.startimg} alt={solo.startimg} />
+                      <img src={solo.startimg} alt={solo.startimg} />
+                    </div>
+                  </div>
+                  <div className="kedoc"></div>
+                  <div>{solo.ratings} ratings</div>
+                  <div className="kedoc"></div>
+                  <div>{solo.bipmonth}+ bought in past month</div>
+                </div>
+
+                <div>
+                  <div className="detail-price">
+                    <div className="album-item-price">{solo.price}</div>
+                    <div className="album-item-sell">{solo.sell}</div>
+                    <div className="album-item-percent">{solo.percent}</div>
+                  </div>
+                  <div className="soldout">{solo.soldout}</div>
+                </div>
+
+                <div className="add">
+                  <div>
+                    <Button variant="outline-success" className="addtocart">
+                      Add to Cart
+                    </Button>
+                  </div>
+                  <div className="kc">
+                    <Button variant="outline-warning" className="buynow">
+                      Buy Now
+                    </Button>
+                  </div>
+                </div>
+                <div className="kengang"></div>
+                <div>
+                  <br />
+                  <h3 className="describe">Describe:</h3>
+
+                  <pre className="describe-describe">{solo.describe}</pre>
+                </div>
+              </div>
+            </Col>
+            <Col xs={1} />
+          </Row>
+        </div>
+      </Container>
     </div>
   );
 }

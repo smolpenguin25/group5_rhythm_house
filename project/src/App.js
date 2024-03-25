@@ -10,16 +10,18 @@ import AboutUs from "./AboutUs";
 import SignUp from "./SignUp";
 import Login from "./Login";
 import ErrorPage from "./ErrorPage";
-import EventMainPage from './EventMainPage';
+import EventMainPage from "./EventMainPage";
 import JoinUs from "./JoinUs";
-import Band from "./AlbumBand";
-import ForgotPassword from "./ForgotPassword";
-import Membership from "./Membership";
-import { EventSchedule } from "./EventSchedule";
-import { More } from "./More";
-import SignUpSuccess from "./SignUpSuccess";
-
-
+import SoloDetail from "./AlbumSoloDetail";
+import AlbumBand from "./AlbumBand";
+import BandDetail from "./AlbumBandDetail";
+import AlbumMovie from "./AlbumMovie";
+import MovieDetail from "./MovieDetail";
+import AlbumMagazine from "./AlbumMagazine";
+import MagazineDetail from "./AlbumMagazineDetail";
+import AlbumRock from "./AlbumRock";
+import RockDetail from "./AlbumRockDetail";
+export { JoinUs } from "./JoinUs";
 
 function App() {
   useEffect(() => {
@@ -31,24 +33,26 @@ function App() {
         <Route path="/" element={<Navbar />}>
           <Route index element={<Home />} />
 
-          <Route path="band" element={<Band />} />
-          <Route path="movie" />
-          <Route path="magazine" />
-          <Route path="membership"  element={<Membership/>}/>
+          <Route path="band" element={<AlbumBand />} />
+          <Route path="band/:id" element={<BandDetail />} />
+          <Route path="movie" element={<AlbumMovie />} />
+          <Route path="movie/:id" element={<MovieDetail />} />
+          <Route path="magazine" element={<AlbumMagazine />} />
+          <Route path="magazine/:id" element={<MagazineDetail />} />
+          <Route path="rock" element={<AlbumRock />} />
+          <Route path="rock/:id" element={<RockDetail />} />
+          <Route path="membership" />
           <Route path="about" element={<AboutUs />} />
           <Route path="contact" element={<ContactUs />} />
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<SignUp />} />
-          <Route path="forgotpassword" element={<ForgotPassword />} />
+          <Route path="forgotpassword" />
           <Route path="*" element={<ErrorPage />} />
           <Route path="solo" element={<AlbumSolo />} />
           <Route path="events" element={<EventMainPage />} />
           <Route path="about" />
           <Route path="join-us" element={<JoinUs />} />
-          <Route path='event-schedule' element={<EventSchedule/>}/>
-          <Route path='more' element={<More/>}/>
-          <Route path='success' element={<SignUpSuccess/>}/>
-
+          <Route path="solo/:id" element={<SoloDetail />} />
         </Route>
       </Routes>
     </div>

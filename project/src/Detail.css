@@ -1,0 +1,130 @@
+.kengang {
+  width: 400px;
+  height: 0px;
+  border: 1px black solid;
+  position: relative;
+  margin-top: 50px;
+  width: 100%;
+}
+.duongdan {
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.5);
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  margin-top: 50px;
+}
+.container-detail {
+  height: 1000px;
+  background: linear-gradient(rgb(85, 85, 105), rgb(20, 20, 20));
+  overflow: auto;
+  min-width: 100%;
+}
+.main {
+  position: relative;
+  margin-top: 50px;
+}
+.main-left img {
+  width: 100%;
+}
+.detail-info-name {
+  font-size: 24px;
+  text-align: start;
+  color: aliceblue;
+}
+.detail-info-purch {
+  display: flex;
+  color: white;
+}
+.kedoc {
+  width: 22px;
+  height: 0px;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+  border: 1px white solid;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.start {
+  display: flex;
+}
+.start img {
+  height: 14px;
+  position: relative;
+  margin-top: 4px;
+}
+.detail-price {
+  display: flex;
+  position: relative;
+  margin-top: -430px;
+  margin-left: -10px;
+  font-size: 20px;
+}
+.soldout {
+  color: green;
+  font-size: 25px;
+  text-align: start;
+}
+.addtocart {
+  width: 150px;
+  height: 38px;
+}
+.buynow {
+  width: 150px;
+  height: 38px;
+}
+.add {
+  text-align: start;
+  position: relative;
+  margin-top: 40px;
+}
+.kc {
+  display: flex;
+  position: relative;
+  margin-top: 10px;
+}
+.describe {
+  color: aliceblue;
+  text-align: start;
+}
+.describe-describe {
+  color: aliceblue;
+  text-align: start;
+}
+.playlist {
+  color: aliceblue;
+  background-color: #1e5130;
+  border-radius: 15px;
+}
+.playlist-list {
+  display: flex;
+  justify-content: space-between;
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+.playlist-avatar img {
+  width: 150px;
+  border-radius: 15px;
+}
+.playlist-bg {
+  margin: 30px;
+}
+.playlist-nav {
+  display: flex;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+.playlist-nav-i {
+  width: 400px;
+  align-items: center;
+}
+.playlist-name {
+  color: black;
+  font-size: 35px;
+}
+.playlist-i {
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+}

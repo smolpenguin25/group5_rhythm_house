@@ -1,6 +1,5 @@
 import "./Home.css";
 import "./AlbumSolo.css";
-// import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -9,17 +8,13 @@ import Container from "react-bootstrap/Container";
 import search from "./img/searchicon.png";
 import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-import { Link, Navigate } from "react-router-dom";
-
-function AlbumSolo({ id }) {
-  // const navigate = useNavigate();
-
+function AlbumSolo() {
   const [lgShow, setLgShow] = useState(false);
-
   const [ListSolo, setListSolo] = useState([]);
-
   const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useState("");
 
   const getSolos = () => {
     fetch("https://65d55b883f1ab8c63436c62f.mockapi.io/solo", {
@@ -33,7 +28,6 @@ function AlbumSolo({ id }) {
         // handle error
       })
       .then((Solos) => {
-        //console.log("Student List: " + studentList);
         setListSolo(Solos);
       })
       .catch((error) => {
@@ -44,6 +38,15 @@ function AlbumSolo({ id }) {
   useEffect(() => {
     getSolos();
   }, []);
+
+  // search
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredList = ListSolo.filter((sol) =>
+    sol.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className="home-container">
@@ -59,7 +62,12 @@ function AlbumSolo({ id }) {
         >
           <Modal.Body>
             <div className="search-a">
-              <input className="search-bar" placeholder="Search" />
+              <input
+                className="search-bar"
+                placeholder="Search"
+                value={searchTerm}
+                onChange={handleSearch}
+              />
               <button className="sear-b">
                 <i className="material-icon">
                   <img src={search} alt="" />
@@ -79,70 +87,62 @@ function AlbumSolo({ id }) {
           </Button>
         </div>
         <Container>
-          {/* Stack the columns on mobile by making one full-width and the other half-width */}
           <Row>
             <Col xs={6} md={4}>
               <div className="album">
                 <div className="album-i">ALBUM</div>
-                <div className="album-content">
-                  <Link
-                    className="album-content-solo bg-solo"
-                    element={<AlbumSolo />}
-                    to=""
-                  >
-                    SOLO
+                <div className="album-content bg-solo">
+                  <Link className="album-content-solo" to="/solo">
+                    <span className="bg-solo">SOLO</span>
                   </Link>
                 </div>
                 <div className="album-content">
-                  <Link
-                    className="album-content-band"
-                    path="solo"
-                    href="#/band"
-                    to=""
-                  >
+                  <Link className="album-content-band" to="/band">
                     BAND
                   </Link>
                 </div>
                 <div className="album-content">
-                  <Link className="album-content-movie" href="#/movie" to="">
+                  <Link className="album-content-movie" to="/movie">
                     MOVIE
                   </Link>
                 </div>
                 <div className="album-content">
-                  <Link
-                    className="album-content-magazine"
-                    href="#/magazine"
-                    to=""
-                  >
+                  <Link className="album-content-magazine" to="/magazine">
                     MAGAZINE
+                  </Link>
+                </div>
+                <div className="album-content">
+                  <Link className="album-content-rock" to="/rock">
+                    ROCK
                   </Link>
                 </div>
               </div>
             </Col>
-
-            {/* item */}
             <Col xs={12} md={8}>
-              <Row>
+              <Row className="click-detail">
                 {ListSolo.map((sol, index) => (
-                  <Col key={index}>
-                    <div className="album-item">
-                      <button onClick={() => navigate(`/Solos/${id}`)}>
+                  <button
+                    className="hover-item"
+                    onClick={() => navigate(`/solo/${sol.id}`)}
+                  >
+                    <Col className="vitri" key={index}>
+                      <div className="album-item">
                         <img
                           className="album-item-img"
                           alt=""
                           src={sol.avatar}
                         />
-                      </button>
-                      <button onClick={() => navigate(`/Solos/${id}`)}>
                         <div className="album-item-name">{sol.name}</div>
-                      </button>
-                      <div className="album-item-prices">
-                        <div className="album-item-price">{sol.price}</div>
-                        <div className="album-item-sell">{sol.sell}</div>
-                        <div className="album-item-percent">{sol.percent}</div>
+                        <div className="album-item-prices">
+                          <div className="album-item-price">{sol.price}</div>
+                          <div className="album-item-sell">{sol.sell}</div>
+                          <div className="album-item-percent">
+                            {sol.percent}
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </Col>
+                    </Col>
+                  </button>
                 ))}
               </Row>
             </Col>

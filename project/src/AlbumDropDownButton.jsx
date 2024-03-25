@@ -9,6 +9,7 @@ function AlbumDropDownButton() {
         <Dropdown.Item href="#/band">Band</Dropdown.Item>
         <Dropdown.Item href="#/movie">Movie</Dropdown.Item>
         <Dropdown.Item href="#/magazine">Magazine</Dropdown.Item>
+        <Dropdown.Item href="#/rock">Rock</Dropdown.Item>
       </DropdownButton>
     </div>
   );

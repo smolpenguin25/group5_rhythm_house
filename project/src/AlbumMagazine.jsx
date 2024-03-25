@@ -10,13 +10,13 @@ import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function AlbumBand() {
+function AlbumMagazine() {
   const [lgShow, setLgShow] = useState(false);
-  const [ListBand, setListBand] = useState([]);
+  const [ListMagazine, setListMagazine] = useState([]);
   const navigate = useNavigate();
 
-  const getBands = () => {
-    fetch("https://65d55b883f1ab8c63436c62f.mockapi.io/band", {
+  const getMagazines = () => {
+    fetch("https://65f93911df1514524610c6a0.mockapi.io/magazine", {
       method: "GET",
       headers: { "content-type": "application/json" },
     })
@@ -26,8 +26,8 @@ function AlbumBand() {
         }
         // handle error
       })
-      .then((Bands) => {
-        setListBand(Bands);
+      .then((Magazines) => {
+        setListMagazine(Magazines);
       })
       .catch((error) => {
         console.log("Error: " + error);
@@ -35,7 +35,7 @@ function AlbumBand() {
   };
 
   useEffect(() => {
-    getBands();
+    getMagazines();
   }, []);
 
   return (
@@ -64,7 +64,7 @@ function AlbumBand() {
       </div>
       <div>
         <div>
-          <h1 className="title">BAND</h1>
+          <h1 className="title">MAGAZINE</h1>
         </div>
         <div className="sear">
           <Button onClick={() => setLgShow(true)}>
@@ -76,14 +76,14 @@ function AlbumBand() {
             <Col xs={6} md={4}>
               <div className="album">
                 <div className="album-i">ALBUM</div>
-                <div className="album-content">
+                <div className="album-content bg-solo">
                   <Link className="album-content-solo" to="/solo">
                     SOLO
                   </Link>
                 </div>
                 <div className="album-content">
                   <Link className="album-content-band" to="/band">
-                    <span className="bg-solo">BAND</span>
+                    BAND
                   </Link>
                 </div>
                 <div className="album-content">
@@ -93,7 +93,7 @@ function AlbumBand() {
                 </div>
                 <div className="album-content">
                   <Link className="album-content-magazine" to="/magazine">
-                    MAGAZINE
+                    <span className="bg-solo">MAGAZINE</span>
                   </Link>
                 </div>
                 <div className="album-content">
@@ -105,21 +105,21 @@ function AlbumBand() {
             </Col>
             <Col xs={12} md={8}>
               <Row className="click-detail">
-                {ListBand.map((ban, index) => (
+                {ListMagazine.map((mag, index) => (
                   <button
                     className="hover-item"
-                    onClick={() => navigate(`/band/${ban.id}`)}
+                    onClick={() => navigate(`/magazine/${mag.id}`)}
                   >
                     <Col className="vitri" key={index}>
                       <div className="album-item">
                         <img
                           className="album-item-img"
                           alt=""
-                          src={ban.avatar}
+                          src={mag.avatar}
                         />
-                        <div className="album-item-name">{ban.name}</div>
+                        <div className="album-item-name">{mag.name}</div>
                         <div className="album-item-prices price-maga">
-                          <div className="album-item-price">{ban.price}</div>
+                          <div className="album-item-price">{mag.price}</div>
                         </div>
                       </div>
                     </Col>
@@ -134,4 +134,4 @@ function AlbumBand() {
   );
 }
 
-export default AlbumBand;
+export default AlbumMagazine;
