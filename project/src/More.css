@@ -319,7 +319,7 @@
     flex-direction: column;
     gap: 24px;
     left: 400px;
-    position: absolute;
+    /* position: absolute; */
     top: 0;
   }
   
@@ -405,6 +405,12 @@
     top: 0;
     width: 370px;
   }
+  .box .carousel-overlap-2 {
+    height: 506px;
+    left: 0;
+    top: 0;
+    width: 370px;
+  }
   
   .box .instashot-2 {
     align-items: flex-start;
@@ -412,8 +418,7 @@
     flex-direction: column;
     gap: 24px;
     left: 0;
-    opacity: 0.3;
-    position: absolute;
+    /* opacity: 0.3; */
     top: 0;
   }
   
@@ -437,7 +442,18 @@
     border-radius: 28px;
     box-shadow: var(--small);
     height: 56px;
-    left: 157px;
+    left: 1850px;
+    position: absolute;
+    top: 157px;
+    width: 56px;
+  }
+
+  .box .arrow2 {
+    background-color: var(--general-light);
+    border-radius: 28px;
+    box-shadow: var(--small);
+    height: 56px;
+    left: 57px;
     position: absolute;
     top: 157px;
     width: 56px;
@@ -457,7 +473,7 @@
     flex-direction: column;
     gap: 24px;
     left: 800px;
-    position: absolute;
+    /* position: absolute; */
     top: 0;
   }
   
@@ -467,7 +483,7 @@
     flex-direction: column;
     gap: 24px;
     left: 1200px;
-    position: absolute;
+    /* position: absolute; */
     top: 0;
   }
   

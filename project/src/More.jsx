@@ -1,4 +1,5 @@
 import React from "react";
+import Carousel from 'react-bootstrap/Carousel';
 import { IconsHeart } from "./components/IconsHeart";
 import { IconsQuotes } from "./components/IconsQuotes";
 import { IconsArrow } from "./icons/IconsArrow";
@@ -9,6 +10,7 @@ import { IconsInstagram } from "./icons/IconsInstagram";
 import { IconsQuotes2 } from "./icons/IconsQuotes2";
 import { IconsQuotes5 } from "./icons/IconsQuotes5";
 import './More.css';
+import './Carousel.css';
 import avatar from "./img/avataralt.svg";
 import avatar1 from "./img/avataralt-1.svg";
 import avatar2 from "./img/avataralt-2.svg";
@@ -30,30 +32,30 @@ export const More = () => {
             <div className="text-wrapper">Feedback</div>
             <div className="div">
               <div className="testimonial">
-              <div className="overlap-group-wrapper-2">
-                <div className="overlap-group">
-                  <div className="rectangle" />
-                  <div className="content-2">
-                    <div className="content-4">
-                      <div className="icons-quotes-wrapper">
-                      <IconsQuotes2 className="icons-quotes" />
-                      </div>
-                      <div className="text">
-                        <p className="lorem-ipsum-is">
-                        The darkness becomes pitch black by the album’s closer, “27 Club,” a song Whack says is inspired by the Mary Jane Girls’ 1983 R&B ballad “You Are My Heaven.” It’s jarring at first to hear the word “suicide” repeated like a chant, but it becomes clear that the purpose of the repetition is not to sanction the act but rather to release Whack from its hold. In an interview with Vulture, she revealed that when she started recording the song she didn’t know what it would be about. “But it came so easy,” she said. “I cried, and I was like, ‘This is what I’ve been trying to say.’”
+                <div className="overlap-group-wrapper-2">
+                  <div className="overlap-group">
+                    <div className="rectangle" />
+                    <div className="content-2">
+                      <div className="content-4">
+                        <div className="icons-quotes-wrapper">
+                          <IconsQuotes2 className="icons-quotes" />
+                        </div>
+                        <div className="text">
+                          <p className="lorem-ipsum-is">
+                            The darkness becomes pitch black by the album’s closer, “27 Club,” a song Whack says is inspired by the Mary Jane Girls’ 1983 R&B ballad “You Are My Heaven.” It’s jarring at first to hear the word “suicide” repeated like a chant, but it becomes clear that the purpose of the repetition is not to sanction the act but rather to release Whack from its hold. In an interview with Vulture, she revealed that when she started recording the song she didn’t know what it would be about. “But it came so easy,” she said. “I cried, and I was like, ‘This is what I’ve been trying to say.’”
 
 
-                        </p>
+                          </p>
+                        </div>
+                        <IconsQuotes direction="right" type="double" />
                       </div>
-                      <IconsQuotes direction="right" type="double" />
-                    </div>
-                    <div className="user">
-                      <img className="avatar" alt="Avatar" src={avatar} />
-                      <div className="name">
-                        <div className="text-wrapper-2">Myne Barack</div>
-                        <div className="text-wrapper-3">ipsum.com</div>
+                      <div className="user">
+                        <img className="avatar" alt="Avatar" src={avatar} />
+                        <div className="name">
+                          <div className="text-wrapper-2">Myne Barack</div>
+                          <div className="text-wrapper-3">ipsum.com</div>
+                        </div>
                       </div>
-                    </div>
                     </div>
                   </div>
                 </div>
@@ -68,7 +70,7 @@ export const More = () => {
                       </div>
                       <div className="text">
                         <p className="lorem-ipsum-is">
-                        Not everyone can afford to pay for the news right now. That’s why we choose to keep our journalism open for everyone to read, even in Vietnam. If this is you, please continue to read for free.
+                          Not everyone can afford to pay for the news right now. That’s why we choose to keep our journalism open for everyone to read, even in Vietnam. If this is you, please continue to read for free.
                         </p>
                       </div>
                       <IconsQuotes5 className="icons-quotes" />
@@ -93,7 +95,7 @@ export const More = () => {
                       </div>
                       <div className="text">
                         <p className="lorem-ipsum-is">
-                        Along with rousing melodies and galloping choruses, Crutchfield plays with cliche and mixes metaphors (particularly on Crowbar, endlessly winking at itself). The lyrical effect is a kind of mind maze: concentrate too hard and you’ll tie yourself in knots, but look at it out of the corner of your eye and it swims into focus. Crutchfield has said that after the sobriety glow-up of Saint Cloud, there’s no major narrative attached to Tigers Blood, an album that comes across more like a good feeling than a statement.
+                          Along with rousing melodies and galloping choruses, Crutchfield plays with cliche and mixes metaphors (particularly on Crowbar, endlessly winking at itself). The lyrical effect is a kind of mind maze: concentrate too hard and you’ll tie yourself in knots, but look at it out of the corner of your eye and it swims into focus. Crutchfield has said that after the sobriety glow-up of Saint Cloud, there’s no major narrative attached to Tigers Blood, an album that comes across more like a good feeling than a statement.
                         </p>
                       </div>
                       <IconsQuotes5 className="icons-quotes" />
@@ -115,20 +117,18 @@ export const More = () => {
           <div className="overlap">
             <IconsInstagram className="icons-instagram" />
             <div className="text-wrapper-4">See our Best Shots</div>
-            <div className="carousel-content">
-
-            <div className="media">
+            {/* <div className="media">
               <div className="instashot">
                 <img className="img" alt="Img" src={img} />
                 <div className="title-tags">
                   <div className="likes-comments">
                     <div className="div-2">
                       <IconsHeart3 className="icon-instance-node" />
-                      <div className="text-wrapper-5">412</div>
+                      <div className="text-wrapper-5">270</div>
                     </div>
                     <div className="div-2">
                       <IconsChat1 className="icon-instance-node" />
-                      <div className="text-wrapper-5">140</div>
+                      <div className="text-wrapper-5">22</div>
                     </div>
                   </div>
                   <div className="text-wrapper-6">enjoying</div>
@@ -144,11 +144,11 @@ export const More = () => {
                     <div className="likes-comments">
                       <div className="like">
                         <IconsHeart fill={false} />
-                        <div className="text-wrapper-5">412</div>
+                        <div className="text-wrapper-5">222</div>
                       </div>
                       <div className="div-2">
                         <IconsChat1 className="icon-instance-node" />
-                        <div className="text-wrapper-5">140</div>
+                        <div className="text-wrapper-5">156</div>
                       </div>
                     </div>
                     <div className="text-wrapper-6">DJ showing up</div>
@@ -167,11 +167,11 @@ export const More = () => {
                   <div className="likes-comments">
                     <div className="div-2">
                       <IconsHeart3 className="icon-instance-node" />
-                      <div className="text-wrapper-5">412</div>
+                      <div className="text-wrapper-5">382</div>
                     </div>
                     <div className="div-2">
                       <IconsChat1 className="icon-instance-node" />
-                      <div className="text-wrapper-5">140</div>
+                      <div className="text-wrapper-5">120</div>
                     </div>
                   </div>
                   <div className="text-wrapper-6">Before concert</div>
@@ -186,11 +186,11 @@ export const More = () => {
                   <div className="likes-comments">
                     <div className="div-2">
                       <IconsHeart3 className="icon-instance-node" />
-                      <div className="text-wrapper-5">412</div>
+                      <div className="text-wrapper-5">239</div>
                     </div>
                     <div className="div-2">
                       <IconsChat1 className="icon-instance-node" />
-                      <div className="text-wrapper-5">140</div>
+                      <div className="text-wrapper-5">152</div>
                     </div>
                   </div>
                   <div className="text-wrapper-6">Main area</div>
@@ -223,8 +223,119 @@ export const More = () => {
                 </div>
               </div>
 
+            </div> */}
+            <div className="media">
+              <Carousel>
+                <Carousel.Item>
+                  <div className="instashot">
+                    <img  className="img" alt="Img" src={img} />
+                    <div className="title-tags">
+                      <div className="likes-comments">
+                        <div className="div-2">
+                          <IconsHeart3 className="icon-instance-node" />
+                          <div className="text-wrapper-5">270</div>
+                        </div>
+                        <div className="div-2">
+                          <IconsChat1 className="icon-instance-node" />
+                          <div className="text-wrapper-5">22</div>
+                        </div>
+                      </div>
+                      <div className="text-wrapper-6">enjoying</div>
+                      <p className="p">#music #concert #conference #london #event #artist #dj #soundtrack #dance</p>
+                    </div>
+                  </div>
+
+
+                </Carousel.Item>
+                <Carousel.Item>
+                  {/* <div className="carousel-overlap-2"> */}
+                  <div className="instashot-2">
+                    <img className="img-2" alt="Img" src={img1} />
+                    <div className="title-tags">
+                      <div className="likes-comments">
+                        <div className="like">
+                          <IconsHeart fill={false} />
+                          <div className="text-wrapper-5">222</div>
+                        </div>
+                        <div className="div-2">
+                          <IconsChat1 className="icon-instance-node" />
+                          <div className="text-wrapper-5">156</div>
+                        </div>
+                      </div>
+                      <div className="text-wrapper-6">DJ showing up</div>
+                      <p className="p">#music #concert #conference #london #event #artist #dj #soundtrack #dance</p>
+                    </div>
+                  </div>
+                  {/* </div> */}
+                </Carousel.Item>
+                <div className="arrow">
+                  <IconsArrow className="icons-arrow" />
+                </div>
+                <Carousel.Item>
+                  <div className="instashot-3">
+                    <img className="img" alt="Img" src={img2} />
+                    <div className="title-tags">
+                      <div className="likes-comments">
+                        <div className="div-2">
+                          <IconsHeart3 className="icon-instance-node" />
+                          <div className="text-wrapper-5">382</div>
+                        </div>
+                        <div className="div-2">
+                          <IconsChat1 className="icon-instance-node" />
+                          <div className="text-wrapper-5">120</div>
+                        </div>
+                      </div>
+                      <div className="text-wrapper-6">Before concert</div>
+                      <p className="p">#music #concert #conference #london #event #artist #dj #soundtrack #dance</p>
+                    </div>
+                  </div>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <div className="instashot-4">
+                    <img className="img" alt="Img" src={img3} />
+                    <div className="title-tags">
+                      <div className="likes-comments">
+                        <div className="div-2">
+                          <IconsHeart3 className="icon-instance-node" />
+                          <div className="text-wrapper-5">239</div>
+                        </div>
+                        <div className="div-2">
+                          <IconsChat1 className="icon-instance-node" />
+                          <div className="text-wrapper-5">152</div>
+                        </div>
+                      </div>
+                      <div className="text-wrapper-6">Main area</div>
+                      <p className="p">#music #concert #conference #london #event #artist #dj #soundtrack #dance</p>
+                    </div>
+                  </div>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <div className="instashot-2">
+                    <img className="img-3" alt="Img" src={img4} />
+                    <div className="title-tags">
+                      <div className="likes-comments">
+                        <div className="div-2">
+                          <IconsHeart3 className="icon-instance-node" />
+                          <div className="text-wrapper-5">412</div>
+                        </div>
+                        <div className="div-2">
+                          <IconsChat1 className="icon-instance-node" />
+                          <div className="text-wrapper-5">140</div>
+                        </div>
+                      </div>
+                      <div className="text-wrapper-6">Somewhere</div>
+                      <p className="p">#music #concert #conference #london #event #artist #dj #soundtrack #dance</p>
+                    </div>
+                  </div>
+                </Carousel.Item>
+                <div className="arrow2">
+                  <IconsArrow1 className="icons-arrow" />
+                </div>
+
+              </Carousel>
             </div>
-              </div>
+
+
 
 
           </div>
