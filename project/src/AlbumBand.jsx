@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SearchNameBand from "./AlbumBandSearch";
-import Footer from "./Footer";
 
 function AlbumBand() {
   const [lgShow, setLgShow] = useState(false);
@@ -153,7 +152,6 @@ function AlbumBand() {
           </Row>
         </Container>
       </div>
-      <Footer></Footer>
     </div>
   );
 }

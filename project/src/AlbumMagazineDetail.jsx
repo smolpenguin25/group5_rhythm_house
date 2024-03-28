@@ -7,7 +7,6 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { useOutletContext } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import Footer from "./Footer";
 
 function MagazineDetail() {
   const [CartList, setCartList] = useOutletContext();
@@ -114,7 +113,7 @@ function MagazineDetail() {
 
                 <div>
                   <div className="detail-price">
-                    <div className="album-item-price" id="fix-prices">{magazine.price}$</div>
+                    <div className="album-item-price">{magazine.price}$</div>
                   </div>
                   <div className="soldout">{magazine.soldout}</div>
                 </div>
@@ -177,7 +176,6 @@ function MagazineDetail() {
           </Row>
         </div>
       </Container>
-      <Footer></Footer>
     </div>
   );
 }

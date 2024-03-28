@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SearchNameRock from "./AlbumRockSearch";
-import Footer from "./Footer";
 
 function AlbumRock() {
   const [ListRock, setListRock] = useState([]);
@@ -153,7 +152,6 @@ function AlbumRock() {
           </Row>
         </Container>
       </div>
-      <Footer></Footer>
     </div>
   );
 }
