@@ -5,16 +5,22 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import search from "./img/searchicon.png";
 import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import SearchName from "./AlbumSoloSearch";
 
 function AlbumSolo() {
   const [lgShow, setLgShow] = useState(false);
   const [ListSolo, setListSolo] = useState([]);
   const navigate = useNavigate();
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [isSearching, setIsSearching] = useState(false);
+
+  const handleSearch = async (searchData) => {
+    setSearchResults(searchData);
+    setIsSearching(true);
+  };
 
   const getSolos = () => {
     fetch("https://65d55b883f1ab8c63436c62f.mockapi.io/solo", {
@@ -39,53 +45,16 @@ function AlbumSolo() {
     getSolos();
   }, []);
 
-  // search
-  const handleSearch = (event) => {
-    setSearchTerm(event.target.value);
-  };
-
-  const filteredList = ListSolo.filter((sol) =>
-    sol.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
   return (
     <div className="home-container">
       <div className="carousel-container">
         <div className="carousel-content"></div>
       </div>
       <div>
-        <Modal
-          size="lg"
-          show={lgShow}
-          onHide={() => setLgShow(false)}
-          aria-labelledby="example-modal-sizes-title-lg"
-        >
-          <Modal.Body>
-            <div className="search-a">
-              <input
-                className="search-bar"
-                placeholder="Search"
-                value={searchTerm}
-                onChange={handleSearch}
-              />
-              <button className="sear-b">
-                <i className="material-icon">
-                  <img src={search} alt="" />
-                </i>
-              </button>
-            </div>
-          </Modal.Body>
-        </Modal>
-      </div>
-      <div>
         <div>
           <h1 className="title">SOLO</h1>
         </div>
-        <div className="sear">
-          <Button onClick={() => setLgShow(true)}>
-            <img width={20} src={search} alt="sear" />
-          </Button>
-        </div>
+
         <Container>
           <Row>
             <Col xs={6} md={4}>
@@ -120,30 +89,79 @@ function AlbumSolo() {
             </Col>
             <Col xs={12} md={8}>
               <Row className="click-detail">
-                {ListSolo.map((sol, index) => (
-                  <button
-                    className="hover-item"
-                    onClick={() => navigate(`/solo/${sol.id}`)}
-                  >
-                    <Col className="vitri" key={index}>
-                      <div className="album-item">
-                        <img
-                          className="album-item-img"
-                          alt=""
-                          src={sol.avatar}
-                        />
-                        <div className="album-item-name">{sol.name}</div>
-                        <div className="album-item-prices">
-                          <div className="album-item-price">{sol.price}</div>
-                          <div className="album-item-sell">{sol.sell}</div>
-                          <div className="album-item-percent">
-                            {sol.percent}
-                          </div>
-                        </div>
-                      </div>
-                    </Col>
-                  </button>
-                ))}
+                <div className="search-test">
+                  <SearchName onSearch={handleSearch} />
+                  <div className="product-list">
+                    {isSearching
+                      ? searchResults.map((solo, index) => (
+                          <button
+                            className="hover-item"
+                            onClick={() => navigate(`/solo/${solo.id}`)}
+                            key={index}
+                          >
+                            <Col className="vitri">
+                              <div className="album-item">
+                                <img
+                                  className="album-item-img"
+                                  alt=""
+                                  src={solo.avatar}
+                                />
+                                <div className="album-item-name">
+                                  {solo.name}
+                                </div>
+                                <div className="album-item-prices">
+                                  <div className="album-item-price">
+                                    {solo.price}
+                                  </div>
+                                  <div className="album-item-sell">
+                                    {solo.sell}
+                                  </div>
+                                  <div className="album-item-percent">
+                                    {solo.percent}
+                                  </div>
+                                </div>
+                              </div>
+                            </Col>
+                          </button>
+                        ))
+                      : ListSolo.map(
+                          (solo, index) =>
+                            !searchResults.find(
+                              (item) => item.id === solo.id
+                            ) && (
+                              <button
+                                className="hover-item"
+                                onClick={() => navigate(`/solo/${solo.id}`)}
+                                key={index}
+                              >
+                                <Col className="vitri">
+                                  <div className="album-item">
+                                    <img
+                                      className="album-item-img"
+                                      alt=""
+                                      src={solo.avatar}
+                                    />
+                                    <div className="album-item-name">
+                                      {solo.name}
+                                    </div>
+                                    <div className="album-item-prices">
+                                      <div className="album-item-price">
+                                        {solo.price}
+                                      </div>
+                                      <div className="album-item-sell">
+                                        {solo.sell}
+                                      </div>
+                                      <div className="album-item-percent">
+                                        {solo.percent}
+                                      </div>
+                                    </div>
+                                  </div>
+                                </Col>
+                              </button>
+                            )
+                        )}
+                  </div>
+                </div>
               </Row>
             </Col>
           </Row>

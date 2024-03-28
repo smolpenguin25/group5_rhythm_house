@@ -5,15 +5,16 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import { useContext } from "react";
+import { useOutletContext } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Form from "react-bootstrap/Form";
+import Card from "react-bootstrap/Card";
 import Accordion from "react-bootstrap/Accordion";
 import AccordionContext from "react-bootstrap/AccordionContext";
 import { useAccordionButton } from "react-bootstrap/AccordionButton";
-import Card from "react-bootstrap/Card";
+import { useContext } from "react";
+import Alert from "react-bootstrap/Alert";
 
-import Form from "react-bootstrap/Form";
-
-// ll
 const PINK = "rgba(255, 192, 203, 0.6)";
 const BLUE = "rgba(0, 0, 255, 0.6)";
 
@@ -39,9 +40,45 @@ function ContextAwareToggle({ children, eventKey, callback }) {
 }
 
 function RockDetail() {
+  const [show, setShow] = useState(false);
+
+  const [CartList, setCartList] = useOutletContext(); //cart list
+
+  // list solo
+  const [ListRock, setListRock] = useState([]);
+  const navigate = useNavigate();
+
   const { id } = useParams(); // Lấy id từ URL
 
   const [rock, setRock] = useState({}); // State để lưu thông tin của solo
+
+  //add item to cart
+  const addToCart = () => {
+    setCartList((oldCart) => [...oldCart, rock]);
+  };
+
+  const getRocks = () => {
+    fetch("https://65fbb97314650eb2100a7459.mockapi.io/rock", {
+      method: "GET",
+      headers: { "content-type": "application/json" },
+    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        // handle error
+      })
+      .then((Rocks) => {
+        setListRock(Rocks);
+      })
+      .catch((error) => {
+        console.log("Error: " + error);
+      });
+  };
+
+  useEffect(() => {
+    getRocks();
+  }, []);
 
   // Hàm để lấy thông tin của solo từ API
   const fetchRock = () => {
@@ -50,22 +87,19 @@ function RockDetail() {
         if (response.ok) {
           return response.json();
         }
-        throw new Error("Failed to fetch solo");
+        throw new Error("Failed to fetch band");
       })
       .then((data) => {
         setRock(data); // Cập nhật state với thông tin của solo
       })
       .catch((error) => {
-        console.error("Error fetching solo:", error);
+        console.error("Error fetching band:", error);
       });
   };
 
-  //ham sold out
-
-  // Gọi hàm fetchSolo khi component được render
   useEffect(() => {
     fetchRock();
-  }, [id]); // Khi id thay đổi, component sẽ re-render và gọi lại hàm fetchSolo
+  }, [id]);
 
   return (
     <div className="container-detail">
@@ -80,7 +114,6 @@ function RockDetail() {
             <Col xs={1} />
             <Col xs={4}>
               <div className="main-left">
-                {/* Hiển thị ảnh solo */}
                 <img src={rock.avatar} alt={rock.avatar} />
                 <div className="kengang"></div>
                 <div className="playlist">
@@ -110,7 +143,6 @@ function RockDetail() {
               </div>
             </Col>
             <Col xs={6}>
-              {/* Hiển thị thông tin chi tiết solo */}
               <div className="detail-info">
                 <div className="detail-info-name">{rock.name}</div>
                 <div className="detail-info-purch">
@@ -132,9 +164,7 @@ function RockDetail() {
 
                 <div>
                   <div className="detail-price">
-                    <div className="album-item-price price-rock">
-                      {rock.price}
-                    </div>
+                    <div className="album-item-price">{rock.price}</div>
                   </div>
                 </div>
 
@@ -179,12 +209,34 @@ function RockDetail() {
                               </Form.Group>
                             </Row>
                             <Row>
-                              <Button
+                              <Alert show={show} variant="success">
+                                <Alert.Heading>My Alert</Alert.Heading>
+                                <p>
+                                Congratulations! You have successfully registered.
+                                </p>
+                                <hr />
+                                <div className="d-flex justify-content-end">
+                                  <Button
+                                    onClick={() => setShow(false)}
+                                    variant="outline-success"
+                                  >
+                                    Close me
+                                  </Button>
+                                </div>
+                              </Alert>
+
+                              {!show && (
+                                <Button onClick={() => setShow(true)}>
+                                  Send
+                                </Button>
+                              )}
+                              {/* <Button
                                 variant="outline-success"
                                 className="addtocart"
+                                type="submit"
                               >
                                 Send
-                              </Button>
+                              </Button> */}
                             </Row>
                           </Form>
                         </Card.Body>
@@ -192,6 +244,7 @@ function RockDetail() {
                     </Card>
                   </Accordion>
                 </div>
+
                 <div className="kengang"></div>
                 <div>
                   <br />
@@ -201,6 +254,57 @@ function RockDetail() {
                 </div>
               </div>
             </Col>
+            <Col xs={1} />
+          </Row>
+        </div>
+        <div className="main">
+          <Row>
+            <Col xs={1} />
+            <Col xs={10}>
+              <h3 className="related-title">RELATED PRODUCTS</h3>
+            </Col>
+
+            <Col xs={1} />
+          </Row>
+        </div>
+        <div className="main">
+          <Row>
+            <Col xs={1} />
+            <Col xs={10} className="related-kc">
+              {ListRock.slice(0, 7).map(
+                (rock, index) =>
+                  rock.id !== id && (
+                    <button
+                      className="hover-item"
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                        navigate(`/rock/${rock.id}`);
+                      }}
+                    >
+                      <div className="album-item " id="related-item">
+                        <img
+                          className="album-item-img"
+                          id="related-img"
+                          alt=""
+                          src={rock.avatar}
+                        />
+                        <div className="album-item-name" id="related-name">
+                          {rock.name}
+                        </div>
+                        <div className="album-item-prices" id="related-price">
+                          <div
+                            className="album-item-price"
+                            id="related-price-i"
+                          >
+                            {rock.price}
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+                  )
+              )}
+            </Col>
+
             <Col xs={1} />
           </Row>
         </div>

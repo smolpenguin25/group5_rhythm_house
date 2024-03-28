@@ -5,18 +5,25 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import search from "./img/searchicon.png";
 import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import SearchNameMovie from "./AlbumMovieSearch";
 
 function AlbumMovie() {
   const [lgShow, setLgShow] = useState(false);
   const [ListMovie, setListMovie] = useState([]);
   const navigate = useNavigate();
+  const [searchResults, setSearchResults] = useState([]);
+  const [isSearching, setIsSearching] = useState(false);
+
+  const handleSearch = async (searchData) => {
+    setSearchResults(searchData);
+    setIsSearching(true);
+  };
 
   const getMovies = () => {
-    fetch("https://65f93911df1514524610c6a0.mockapi.io/movie", {
+    fetch("https://65fbb97314650eb2100a7459.mockapi.io/movie", {
       method: "GET",
       headers: { "content-type": "application/json" },
     })
@@ -44,33 +51,10 @@ function AlbumMovie() {
         <div className="carousel-content"></div>
       </div>
       <div>
-        <Modal
-          size="lg"
-          show={lgShow}
-          onHide={() => setLgShow(false)}
-          aria-labelledby="example-modal-sizes-title-lg"
-        >
-          <Modal.Body>
-            <div className="search-a">
-              <input className="search-bar" placeholder="Search" />
-              <button className="sear-b">
-                <i className="material-icon">
-                  <img src={search} alt="" />
-                </i>
-              </button>
-            </div>
-          </Modal.Body>
-        </Modal>
-      </div>
-      <div>
         <div>
           <h1 className="title">MOVIE</h1>
         </div>
-        <div className="sear">
-          <Button onClick={() => setLgShow(true)}>
-            <img width={20} src={search} alt="sear" />
-          </Button>
-        </div>
+
         <Container>
           <Row>
             <Col xs={6} md={4}>
@@ -88,7 +72,7 @@ function AlbumMovie() {
                 </div>
                 <div className="album-content">
                   <Link className="album-content-movie" to="/movie">
-                    <span className="bg-solo">MOVIE</span>
+                  <span className="bg-solo">MOVIE</span>
                   </Link>
                 </div>
                 <div className="album-content">
@@ -105,30 +89,79 @@ function AlbumMovie() {
             </Col>
             <Col xs={12} md={8}>
               <Row className="click-detail">
-                {ListMovie.map((mov, index) => (
-                  <button
-                    className="hover-item"
-                    onClick={() => navigate(`/movie/${mov.id}`)}
-                  >
-                    <Col className="vitri" key={index}>
-                      <div className="album-item">
-                        <img
-                          className="album-item-img"
-                          alt=""
-                          src={mov.avatar}
-                        />
-                        <div className="album-item-name">{mov.name}</div>
-                        <div className="album-item-prices">
-                          <div className="album-item-price">{mov.price}</div>
-                          <div className="album-item-sell">{mov.sell}</div>
-                          <div className="album-item-percent">
-                            {mov.percent}
-                          </div>
-                        </div>
-                      </div>
-                    </Col>
-                  </button>
-                ))}
+                <div className="search-test">
+                  <SearchNameMovie onSearch={handleSearch} />
+                  <div className="product-list">
+                    {isSearching
+                      ? searchResults.map((movie, index) => (
+                          <button
+                            className="hover-item"
+                            onClick={() => navigate(`/movie/${movie.id}`)}
+                            key={index}
+                          >
+                            <Col className="vitri">
+                              <div className="album-item">
+                                <img
+                                  className="album-item-img"
+                                  alt=""
+                                  src={movie.avatar}
+                                />
+                                <div className="album-item-name">
+                                  {movie.name}
+                                </div>
+                                <div className="album-item-prices">
+                                  <div className="album-item-price">
+                                    {movie.price}
+                                  </div>
+                                  <div className="album-item-sell">
+                                    {movie.sell}
+                                  </div>
+                                  <div className="album-item-percent">
+                                    {movie.percent}
+                                  </div>
+                                </div>
+                              </div>
+                            </Col>
+                          </button>
+                        ))
+                      : ListMovie.map(
+                          (movie, index) =>
+                            !searchResults.find(
+                              (item) => item.id === movie.id
+                            ) && (
+                              <button
+                                className="hover-item"
+                                onClick={() => navigate(`/movie/${movie.id}`)}
+                                key={index}
+                              >
+                                <Col className="vitri">
+                                  <div className="album-item">
+                                    <img
+                                      className="album-item-img"
+                                      alt=""
+                                      src={movie.avatar}
+                                    />
+                                    <div className="album-item-name">
+                                      {movie.name}
+                                    </div>
+                                    <div className="album-item-prices">
+                                      <div className="album-item-price">
+                                        {movie.price}
+                                      </div>
+                                      <div className="album-item-sell">
+                                        {movie.sell}
+                                      </div>
+                                      <div className="album-item-percent">
+                                        {movie.percent}
+                                      </div>
+                                    </div>
+                                  </div>
+                                </Col>
+                              </button>
+                            )
+                        )}
+                  </div>
+                </div>
               </Row>
             </Col>
           </Row>

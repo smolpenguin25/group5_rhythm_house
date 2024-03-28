@@ -5,19 +5,70 @@ import bg from './img/ncdg-9mk-3pby.png'
 import playarrow from './img/play-arrow.svg'
 import arrowdown from './img/arrow-chevron-down.svg'
 import arrowdown1 from './img/arrow-chevron-down-1.svg'
-import { Link } from "react-router-dom";
-// import ReactPlayer from 'react-player';
+import 'reactjs-popup/dist/index.css';
+import TicketModal from './Modal';
+import './Modal.css'; 
+import React, { useState, useEffect } from 'react';
 
 
- 
+
+
+
+
 
 
 export const JoinUs = () => {
-  // const [play, setPlay] = useState(false);
-  // const videoUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+  const [isOpen, setOpen] = useState(false);
+
+  function handleChange() {
+    setOpen(!isOpen);
+  }
+  
+
+  const targetDate = new Date('2024-05-11T00:00:00');
+
+  // State to hold the time remaining
+  const [timeRemaining, setTimeRemaining] = useState({
+     days: 0,
+     hours: 0,
+     minutes: 0,
+     seconds: 0,
+  });
+  
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
+
+
+  useEffect(() => {
+
+    // Function to calculate the time remaining
+    const calculateTimeRemaining = () => {
+      const now = new Date();
+      const difference = targetDate - now;
+
+      // Calculate days, hours, minutes, and seconds
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      setTimeRemaining({ days, hours, minutes, seconds });
+    };
+
+    // Calculate the time remaining immediately
+    calculateTimeRemaining();
+
+    // Set an interval to recalculate the time remaining every second
+    const intervalId = setInterval(calculateTimeRemaining, 1000);
+
+    // Clear the interval when the component unmounts
+    return () => clearInterval(intervalId);
+ }, [targetDate]);
   return (
-    
-    <div className="macbook-pro">
+
+    <div className="macbook-pro ">
       <div className="div">
         <div className="overlap">
           <img className="aol-mvxprmk" alt="Aol mvxprmk" src={rafaella} />
@@ -43,12 +94,10 @@ export const JoinUs = () => {
             <div className="overlap-group-wrapper">
               <div className="play-arrow-wrapper" >
                 <img className="play-arrow" alt="Play arrow" src={playarrow} />
+
+                
               </div>
-              {/* {play && (
-        // <div className="video-player">
-        //   <ReactPlayer url={videoUrl} playing={play} onEnded={() => setPlay(false)} />
-        // </div>
-      )} */}
+
             </div>
           </div>
           <div className="rectangle-3" />
@@ -85,25 +134,27 @@ export const JoinUs = () => {
         <div className="ellipse-3" />
         <div className="group-3">
           <div className="group-4">
-            <div className="overlap-group-2">
-              <Link to="/event-schedule" >
-              <div className="text-wrapper-14">Schedule</div>
 
-              </Link>
-            </div>
+                <button className="buy-ticket-btn modal-popup" onClick={openModal}>BUY TICKET</button>
+                <TicketModal className="bg-black" open={modalOpen} closeModal={closeModal} />
           </div>
           <div className="text-wrapper-15">HOURS</div>
           <div className="text-wrapper-16">MINUTES</div>
           <div className="text-wrapper-17">SECONS</div>
           <div className="text-wrapper-18">DAYS</div>
           <div className="text-wrapper-19">MUSIC FESTIVAL START IN</div>
-          <div className="text-wrapper-20">98</div>
-          <div className="text-wrapper-21">11</div>
-          <div className="text-wrapper-22">05</div>
-          <div className="text-wrapper-23">01</div>
+          <div className="text-wrapper-20">{timeRemaining.days}</div>
+          <div className="text-wrapper-21">{timeRemaining.hours}</div>
+          <div className="text-wrapper-22">{timeRemaining.minutes}</div>
+          <div className="text-wrapper-23">{timeRemaining.seconds}</div>
         </div>
       </div>
+      
+
     </div>
+    
+    
   );
 };
+
 export default JoinUs;
