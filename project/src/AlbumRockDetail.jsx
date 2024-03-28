@@ -169,10 +169,10 @@ function RockDetail() {
 
                 <div>
                   <div className="detail-price">
-                    <div className="album-item-price">{rock.price}$</div>
+                    <div className="album-item-price" id="fix-prices">{rock.price}$</div>
                   </div>
                   <div className="detail-price">
-                    <div className="album-item-price ">{rock.pricesold}</div>
+                    <div className="album-item-price " id="fix-prices">{rock.pricesold}</div>
                   </div>
                 </div>
 
@@ -292,7 +292,7 @@ function RockDetail() {
                         <div className="album-item-name" id="related-name">
                           {rock.name}
                         </div>
-                        <div className="album-item-prices" id="related-price">
+                        <div className="album-item-prices"  id="related-price">
                           <div
                             className="album-item-price"
                             id="related-price-i"

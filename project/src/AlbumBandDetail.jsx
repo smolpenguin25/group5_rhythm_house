@@ -9,7 +9,7 @@ import { useOutletContext } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function BandDetail() {
-  const [CartList, setCartList] = useOutletContext(); 
+  const [CartList, setCartList] = useOutletContext();
 
   const [ListBand, setListBand] = useState([]);
   const navigate = useNavigate();
@@ -19,16 +19,16 @@ function BandDetail() {
   const [band, setBand] = useState({});
 
   const addToCart = () => {
-    for (let i = 0; i < CartList.length; i++){
-      if(band.name === CartList[i].name){
+    for (let i = 0; i < CartList.length; i++) {
+      if (band.name === CartList[i].name) {
         CartList[i].amount++;
         console.log(CartList[i].amount);
-        setCartList(oldCart => [...oldCart]);
+        setCartList((oldCart) => [...oldCart]);
         return;
       }
     }
     band.amount = 1;
-    setCartList(oldCart => [...oldCart, band]);
+    setCartList((oldCart) => [...oldCart, band]);
   };
 
   const getBands = () => {
@@ -136,14 +136,20 @@ function BandDetail() {
 
                 <div>
                   <div className="detail-price">
-                    <div className="album-item-price">{band.price}$</div>
+                    <div className="album-item-price" id="fix-prices">
+                      {band.price}$
+                    </div>
                   </div>
                   <div className="soldout">{band.soldout}</div>
                 </div>
 
                 <div className="add">
                   <div>
-                    <Button variant="outline-success" className="addtocart">
+                    <Button
+                      variant="outline-success"
+                      className="addtocart"
+                      onClick={addToCart}
+                    >
                       Add to Cart
                     </Button>
                   </div>
@@ -182,12 +188,30 @@ function BandDetail() {
               {ListBand.slice(0, 7).map(
                 (ban, index) =>
                   ban.id !== id && (
-                    <button className="hover-item" onClick={() => {window.scrollTo(0, 0);navigate(`/band/${ban.id}`)} } >
+                    <button
+                      className="hover-item"
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                        navigate(`/band/${ban.id}`);
+                      }}
+                    >
                       <div className="album-item " id="related-item">
-                        <img className="album-item-img" id="related-img" alt="" src={ban.avatar} />
-                        <div className="album-item-name" id="related-name">{ban.name}</div>
+                        <img
+                          className="album-item-img"
+                          id="related-img"
+                          alt=""
+                          src={ban.avatar}
+                        />
+                        <div className="album-item-name" id="related-name">
+                          {ban.name}
+                        </div>
                         <div className="album-item-prices" id="related-price">
-                          <div className="album-item-price" id="related-price-i">{ban.price}$</div>
+                          <div
+                            className="album-item-price"
+                            id="related-price-i"
+                          >
+                            {ban.price}$
+                          </div>
                         </div>
                       </div>
                     </button>

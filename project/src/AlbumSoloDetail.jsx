@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { useOutletContext } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 
 function SoloDetail() {
   const [CartList, setCartList] = useOutletContext();
@@ -19,6 +20,15 @@ function SoloDetail() {
   const [solo, setSolo] = useState({});
 
   const addToCart = () => {
+    for (let i = 0; i < CartList.length; i++){
+      if(solo.name === CartList[i].name){
+        CartList[i].amount++;
+        console.log(CartList[i].amount);
+        setCartList(oldCart => [...oldCart]);
+        return;
+      }
+    }
+    solo.amount = 1;
     setCartList(oldCart => [...oldCart, solo]);
   };
 
@@ -127,9 +137,9 @@ function SoloDetail() {
 
                 <div>
                   <div className="detail-price">
-                    <div className="album-item-price">{solo.price}$</div>
-                    <div className="album-item-sell">{solo.sell}</div>
-                    <div className="album-item-percent">{solo.percent}</div>
+                    <div className="album-item-price " id="fix-prices">{solo.price}$</div>
+                    <div className="album-item-sell" id="fix-prices">{solo.sell}</div>
+                    <div className="album-item-percent" id="fix-prices-s">{solo.percent}</div>
                   </div>
                   <div className="soldout">{solo.soldout}</div>
                 </div>
@@ -194,6 +204,7 @@ function SoloDetail() {
           </Row>
         </div>
       </Container>
+      <Footer></Footer>
     </div>
   );
 }

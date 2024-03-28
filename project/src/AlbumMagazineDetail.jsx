@@ -113,14 +113,14 @@ function MagazineDetail() {
 
                 <div>
                   <div className="detail-price">
-                    <div className="album-item-price">{magazine.price}$</div>
+                    <div className="album-item-price" id="fix-prices">{magazine.price}$</div>
                   </div>
                   <div className="soldout">{magazine.soldout}</div>
                 </div>
 
                 <div className="add">
                   <div>
-                    <Button variant="outline-success" className="addtocart">
+                    <Button variant="outline-success" className="addtocart" onClick={addToCart}>
                       Add to Cart
                     </Button>
                   </div>
