@@ -422,25 +422,6 @@
   width: 11px;
 }
 
-.macbook-pro .ellipse-2 {
-  background-color: #ffffff1a;
-  border-radius: 5.5px;
-  height: 11px;
-  left: 688px;
-  position: absolute;
-  top: 1877px;
-  width: 11px;
-}
-
-.macbook-pro .ellipse-3 {
-  background-color: #ffffff1a;
-  border-radius: 5.5px;
-  height: 11px;
-  left: 740px;
-  position: absolute;
-  top: 1877px;
-  width: 11px;
-}
 
 .macbook-pro .img {
   height: 29px;
@@ -472,6 +453,9 @@
   position: relative;
   width: 150px;
 }
+
+
+
 
 .macbook-pro .text-wrapper-14 {
   color: #121212;
@@ -608,3 +592,4 @@
   top: 88px;
   white-space: nowrap;
 }
+

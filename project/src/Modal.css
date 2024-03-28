@@ -1,0 +1,209 @@
+/*  
+background-color: #A9C9FF;
+background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px; /* Adjusted to use viewport units for better responsiveness */
+    margin: 0 auto; /* Center the figure section */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+   }
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    height: 100vh;  
+    
+  
+}
+
+body {
+
+}
+
+.movie {
+    max-width: 800px;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 0 5px 20px 10px rgba(0, 0, 0, .2);
+   overflow: hidden;
+   
+}
+
+.movie__hero {
+  flex: 0 0 45%;
+}
+
+.movie__img {
+    width: 100%;
+    display: block;
+    margin-top: 20px; /* Moves the image 10px down */
+
+    
+}
+
+.movie__content {
+    background-color: #fff;
+    flex: 1;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie__price {
+    background:linear-gradient(to bottom, black 0%, orange 100%);
+    flex: 0 0 50px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+    writing-mode: vertical-lr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie__title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.heading__primary {
+    font-size: 16px;
+    margin-right: auto;
+    color: royalblue;
+}
+
+.fa-fire {
+    color: salmon;
+}
+
+.movie__tag {
+    font-size: 10px;
+    color: #fff;
+  padding: 2px 7px;
+  border-radius: 100px;
+  margin-right: 8px;
+  display: block;
+  text-transform: uppercase;
+
+}
+
+.movie__tag--1 {
+  background-color: #A9C9FF;
+}
+
+.movie__tag--2 {
+    background-color: orange;
+}
+
+.movie__description {
+    font-size: 14px;
+}
+
+.movie__details {
+    display: flex;
+    margin: auto;
+}
+
+.movie__detail {
+   font-size: 13px;
+   margin-right: 20px;
+   display: flex;
+   align-items: center;
+}
+
+.icons i {
+    margin-right: 3px;
+    font-size: 18px;
+}
+
+.icons-red {
+    color: salmon;
+}
+.icons-grey {
+    color: grey;
+}
+
+.icons-yellow {
+    color: rgb(190, 190, 71);
+
+}
+
+
+    
+
+   
+   .close-modal {
+    position: absolute;
+ top: 10px; /* Adjusted to use viewport units for better responsiveness */
+ right: 10px; /* Adjusted to use viewport units for better responsiveness */
+ background:linear-gradient(to bottom, black 0%, orange 100%);
+ color: #fff;
+ border: none;
+ padding: 10px 20px;
+ border-radius: 5px;
+ cursor: pointer;
+ transition: background-color 0.3s ease;
+    
+   }
+   @media (max-width: 768px) {
+    .close-modal {
+       padding: 8px 16px; /* Smaller padding for smaller screens */
+       font-size: 14px; /* Smaller font size for smaller screens */
+    }
+   }
+   
+   @media (max-width: 480px) {
+    .close-modal {
+       padding: 6px 12px; /* Even smaller padding for very small screens */
+       font-size: 12px; /* Even smaller font size for very small screens */
+    }
+   }
+   @media (max-width: 768px) {
+    .figure {
+       padding: 15px;
+       max-width: 90%; /* Adjust the max-width for smaller screens */
+    }
+   }
+   
+   @media (max-width: 480px) {
+    .figure {
+       padding: 10px;
+       max-width: 95%; /* Adjust the max-width for very small screens */
+    }
+   }
+
+
+   .buy-ticket-btn {
+    background-color: #feba08;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    height: 51px;
+    width: 150px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   }
+   .close-modal:hover {
+    background-color: #c82333;
+   }
+
+ 

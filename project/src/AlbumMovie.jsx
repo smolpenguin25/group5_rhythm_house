@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SearchNameMovie from "./AlbumMovieSearch";
-import Footer from "./Footer";
 
 function AlbumMovie() {
   const [lgShow, setLgShow] = useState(false);
@@ -165,7 +164,6 @@ function AlbumMovie() {
           </Row>
         </Container>
       </div>
-      <Footer></Footer>
     </div>
   );
 }

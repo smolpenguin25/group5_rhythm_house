@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import { useOutletContext } from "react-router-dom";
-import Footer from "./Footer";
 
 function Cart() {
   const [CartList, setCartList] = useOutletContext();
@@ -81,7 +80,6 @@ function Cart() {
           </div>
         </div>
       </div>
-      <Footer></Footer>
     </div>
   );
 }

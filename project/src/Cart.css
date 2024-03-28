@@ -8,98 +8,25 @@
     overflow-y: scroll;
     height: 70vh;
     width: 50vw;
-    background-color: rgb(241, 241, 241);
+    background-color: white;
 }
 
 .cart-item-list{
     display: flex;
     border-bottom: 1px solid black;
-    background: linear-gradient(to bottom right, rgb(94, 217, 255), rgb(68, 255, 124));
 }
 
 .cart-item{
     margin: auto;
 }
 
-.item-avatar-container{
-    min-width: 150px;
-    min-height: 150px;
-}
-
 .cart-item-avatar{
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
 }
 
 .cart-container{
     height: 100vh;
     background: linear-gradient(rgb(85, 85, 105), rgb(20, 20, 20));
     overflow: auto;
-}
-
-.cross-span{
-    text-decoration: line-through;
-    color: grey;
-}
-
-.red-price{
-    color: red;
-}
-
-.font-20{
-    font-size: 20px;
-}
-
-.change-button-container{
-    margin: auto;
-}
-
-.change-button{
-    height: 30px;
-    width: 20px;
-    margin-bottom: 5px;
-}
-
-.inside-button{
-    text-align: center;
-    line-height: 10px;
-}
-
-.inside-button1{
-    text-align: center;
-    line-height: 20px;
-}
-
-.amount-box{
-    display: inline-block;
-    background-color: white;
-    width: 20px;
-    min-width: fit-content;
-}
-
-.pay-bar-container{
-    background-color: white;
-    width: 50vw;
-    margin: auto;
-    border-top: 1px solid black;
-}
-
-.pay-bar{
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
-}
-
-.pay-button{
-    min-width: 100px;
-    max-width: fit-content;
-}
-
-.pay-label{
-    font-size: 25px;
-}
-
-.cart-item h4{
-    overflow: hidden;
-    text-overflow: ellipsis;
 }

@@ -4,31 +4,16 @@ import AlbumDropDownButton from "./AlbumDropDownButton";
 import Button from "react-bootstrap/Button";
 import { Icon } from 'react-icons-kit';
 import { shopping_cart } from 'react-icons-kit/ikons/shopping_cart';
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 
-function Navbar() {
+
+function Navbar({setCart}) {
   const cart_icon = shopping_cart;
 
   const [CartList, setCartList] = useState([]);
 
-  const [totalAmount, settotalAmount] = useState(0);
-
-  const calAmount = () => {
-    if(CartList.length === 0){
-      settotalAmount(0);
-    }
-    else{
-      var total = 0;
-      for(let i = 0; i < CartList.length; i++){
-        total += CartList[i].amount;
-      }
-      settotalAmount(total);
-    }
-  }
-
   useEffect(() => {
-    calAmount();
-    console.log(totalAmount);
+    setCart(CartList);
   });
 
 
@@ -36,7 +21,7 @@ function Navbar() {
     <div>
       <div className="navbar-container">
         <div className="navbar">
-          <Link to="/"><span className="shop-name">Rhythm House</span></Link>
+          <span className="shop-name">Rhythm House</span>
           <Link to="/">Home</Link>
           <AlbumDropDownButton />
           <Link to="/events">Events</Link>
@@ -48,7 +33,7 @@ function Navbar() {
         <div className="icon-container-1">
           <Link to="/cart" className="icon-1"><Icon icon={cart_icon} size={30} /></Link>
           <div  className="cart-label-container">
-            <label className="cart-label">{totalAmount}</label>
+            <label className="cart-label">{CartList.length}</label>
           </div>  
         </div>
 

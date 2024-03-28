@@ -32,10 +32,6 @@
   display: flex;
   color: white;
 }
-.album-item-price{
-  height: 40px;
-  max-height: 40px;
-}
 .album-item-percent {
   margin-top: 443px;
 }
@@ -57,14 +53,12 @@
   position: relative;
   margin-top: 4px;
 }
-
 .detail-price {
   display: flex;
   position: relative;
+  margin-top: -430px;
   margin-left: -10px;
   font-size: 20px;
-  height: 40px;
-  max-height: 40px;
 }
 .soldout {
   color: green;
@@ -111,12 +105,6 @@
   color: aliceblue;
   text-align: start;
   text-align: justify;
-}
-#fix-prices{
-margin-top: 0;
-}
-#fix-prices-s{
-  margin-top: 14px;
 }
 
 .playlist {
