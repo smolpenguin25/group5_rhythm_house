@@ -14,6 +14,7 @@
 .cart-item-list{
     display: flex;
     border-bottom: 1px solid black;
+    background: linear-gradient(to bottom right, rgb(94, 217, 255), rgb(68, 255, 124));
 }
 
 .cart-item{
