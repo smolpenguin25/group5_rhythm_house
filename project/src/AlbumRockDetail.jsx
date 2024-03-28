@@ -14,6 +14,7 @@ import AccordionContext from "react-bootstrap/AccordionContext";
 import { useAccordionButton } from "react-bootstrap/AccordionButton";
 import { useContext } from "react";
 import Alert from "react-bootstrap/Alert";
+import Footer from "./Footer";
 
 const PINK = "rgba(255, 192, 203, 0.6)";
 const BLUE = "rgba(0, 0, 255, 0.6)";
@@ -169,10 +170,10 @@ function RockDetail() {
 
                 <div>
                   <div className="detail-price">
-                    <div className="album-item-price">{rock.price}$</div>
+                    <div className="album-item-price" id="fix-prices">{rock.price}$</div>
                   </div>
                   <div className="detail-price">
-                    <div className="album-item-price ">{rock.pricesold}</div>
+                    <div className="album-item-price " id="fix-prices">{rock.pricesold}</div>
                   </div>
                 </div>
 
@@ -292,7 +293,7 @@ function RockDetail() {
                         <div className="album-item-name" id="related-name">
                           {rock.name}
                         </div>
-                        <div className="album-item-prices" id="related-price">
+                        <div className="album-item-prices"  id="related-price">
                           <div
                             className="album-item-price"
                             id="related-price-i"
@@ -310,6 +311,7 @@ function RockDetail() {
           </Row>
         </div>
       </Container>
+      <Footer></Footer>
     </div>
   );
 }

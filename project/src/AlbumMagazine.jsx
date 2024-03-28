@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SearchNameMagazine from "./AlbumMagazineSearch";
+import Footer from "./Footer";
 
 function AlbumMagazine() {
   const [lgShow, setLgShow] = useState(false);
@@ -152,6 +153,7 @@ function AlbumMagazine() {
           </Row>
         </Container>
       </div>
+      <Footer></Footer>
     </div>
   );
 }

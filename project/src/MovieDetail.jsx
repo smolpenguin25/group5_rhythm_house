@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { useOutletContext } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 
 function MovieDetail() {
   const [CartList, setCartList] = useOutletContext(); //cart list
@@ -122,9 +123,9 @@ function MovieDetail() {
 
                 <div>
                   <div className="detail-price">
-                    <div className="album-item-price">{movie.price}$</div>
-                    <div className="album-item-sell">{movie.sell}</div>
-                    <div className="album-item-percent">{movie.percent}</div>
+                    <div className="album-item-price" id="fix-prices">{movie.price}$</div>
+                    <div className="album-item-sell" id="fix-prices">{movie.sell}</div>
+                    <div className="album-item-percent" id="fix-prices-s">{movie.percent}</div>
                   </div>
                   <div className="soldout">{movie.soldout}</div>
                 </div>
@@ -189,6 +190,7 @@ function MovieDetail() {
           </Row>
         </div>
       </Container>
+      <Footer></Footer>
     </div>
   );
 }

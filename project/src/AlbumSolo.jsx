@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SearchName from "./AlbumSoloSearch";
+import Footer from "./Footer";
 
 function AlbumSolo() {
   const [ListSolo, setListSolo] = useState([]);
@@ -164,6 +165,7 @@ function AlbumSolo() {
           </Row>
         </Container>
       </div>
+      <Footer></Footer>
     </div>
   );
 }
