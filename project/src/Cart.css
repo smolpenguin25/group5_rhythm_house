@@ -30,3 +30,42 @@
     background: linear-gradient(rgb(85, 85, 105), rgb(20, 20, 20));
     overflow: auto;
 }
+
+.item-avatar-container{
+    min-width: 150px;
+    min-height: 150px;
+}
+
+.amount-box{
+    display: inline-block;
+    background-color: white;
+    width: 20px;
+    min-width: fit-content;
+}
+
+.pay-bar-container{
+    background-color: white;
+    width: 50vw;
+    margin: auto;
+    border-top: 1px solid black;
+}
+
+.pay-bar{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.pay-button{
+    min-width: 100px;
+    max-width: fit-content;
+}
+
+.pay-label{
+    font-size: 25px;
+}
+
+.cart-item h4{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
