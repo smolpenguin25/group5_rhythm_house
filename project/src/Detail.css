@@ -11,12 +11,9 @@
   background-color: rgba(128, 128, 128, 0.5);
   color: rgba(255, 255, 255, 0.7);
   position: relative;
-  margin-top: 50px;
 }
 .container-detail {
-  height: 1000px;
   background: linear-gradient(rgb(85, 85, 105), rgb(20, 20, 20));
-  overflow: auto;
   min-width: 100%;
 }
 .main {
@@ -34,6 +31,13 @@
 .detail-info-purch {
   display: flex;
   color: white;
+}
+.album-item-price{
+  height: 40px;
+  max-height: 40px;
+}
+.album-item-percent {
+  margin-top: 443px;
 }
 .kedoc {
   width: 22px;
@@ -53,12 +57,14 @@
   position: relative;
   margin-top: 4px;
 }
+
 .detail-price {
   display: flex;
   position: relative;
-  margin-top: -430px;
   margin-left: -10px;
   font-size: 20px;
+  height: 40px;
+  max-height: 40px;
 }
 .soldout {
   color: green;
@@ -68,10 +74,24 @@
 .addtocart {
   width: 150px;
   height: 38px;
+  color: black;
+  background-color: #198754;
+}
+.buynow:hover {
+  background-color: #ffff07;
+  box-shadow: 0px 15px 20px rgba(13, 240, 252, 0.4);
+  color: black;
+}
+.addtocart:hover {
+  background-color: #13fa0a;
+  box-shadow: 10px 15px 20px rgba(13, 240, 252, 0.4);
+  color: #fff;
 }
 .buynow {
   width: 150px;
   height: 38px;
+  color: black;
+  background-color: #ffc107;
 }
 .add {
   text-align: start;
@@ -90,7 +110,15 @@
 .describe-describe {
   color: aliceblue;
   text-align: start;
+  text-align: justify;
 }
+#fix-prices{
+margin-top: 0;
+}
+#fix-prices-s{
+  margin-top: 14px;
+}
+
 .playlist {
   color: aliceblue;
   background-color: #1e5130;
@@ -124,6 +152,8 @@
   font-size: 35px;
 }
 .playlist-i {
+  width: 200px;
+  max-width: 200px;
   font-size: 30px;
   color: black;
   font-weight: bold;

@@ -6,20 +6,45 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { useOutletContext } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 
 function SoloDetail() {
-  const [CartList, setCartList] = useOutletContext(); //cart list
+  const [CartList, setCartList] = useOutletContext();
 
-  const { id } = useParams(); // Lấy id từ URL
+  const [ListSolo, setListSolo] = useState([]);
+  const navigate = useNavigate();
 
-  const [solo, setSolo] = useState({}); // State để lưu thông tin của solo
+  const { id } = useParams();
 
-  //add item to cart
+  const [solo, setSolo] = useState({});
+
   const addToCart = () => {
     setCartList(oldCart => [...oldCart, solo]);
-  }
+  };
 
-  // Hàm để lấy thông tin của solo từ API
+  const getSolos = () => {
+    fetch("https://65d55b883f1ab8c63436c62f.mockapi.io/solo", {
+      method: "GET",
+      headers: { "content-type": "application/json" },
+    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+      })
+      .then((Solos) => {
+        setListSolo(Solos);
+      })
+      .catch((error) => {
+        console.log("Error: " + error);
+      });
+  };
+
+  useEffect(() => {
+    getSolos();
+  }, []);
+
   const fetchSolo = () => {
     fetch(`https://65d55b883f1ab8c63436c62f.mockapi.io/solo/${id}`)
       .then((response) => {
@@ -29,19 +54,16 @@ function SoloDetail() {
         throw new Error("Failed to fetch solo");
       })
       .then((data) => {
-        setSolo(data); // Cập nhật state với thông tin của solo
+        setSolo(data);
       })
       .catch((error) => {
         console.error("Error fetching solo:", error);
       });
   };
 
-  //ham sold out
-
-  // Gọi hàm fetchSolo khi component được render
   useEffect(() => {
     fetchSolo();
-  }, [id]); // Khi id thay đổi, component sẽ re-render và gọi lại hàm fetchSolo
+  }, [id]); 
 
   return (
     <div className="container-detail">
@@ -56,7 +78,6 @@ function SoloDetail() {
             <Col xs={1} />
             <Col xs={4}>
               <div className="main-left">
-                {/* Hiển thị ảnh solo */}
                 <img src={solo.avatar} alt={solo.avatar} />
                 <div className="kengang"></div>
                 <div className="playlist">
@@ -86,7 +107,6 @@ function SoloDetail() {
               </div>
             </Col>
             <Col xs={6}>
-              {/* Hiển thị thông tin chi tiết solo */}
               <div className="detail-info">
                 <div className="detail-info-name">{solo.name}</div>
                 <div className="detail-info-purch">
@@ -108,22 +128,22 @@ function SoloDetail() {
 
                 <div>
                   <div className="detail-price">
-                    <div className="album-item-price">{solo.price}</div>
-                    <div className="album-item-sell">{solo.sell}</div>
-                    <div className="album-item-percent">{solo.percent}</div>
+                    <div className="album-item-price " id="fix-prices">{solo.price}$</div>
+                    <div className="album-item-sell" id="fix-prices">{solo.sell}</div>
+                    <div className="album-item-percent" id="fix-prices-s">{solo.percent}</div>
                   </div>
                   <div className="soldout">{solo.soldout}</div>
                 </div>
 
                 <div className="add">
                   <div>
-                    <Button variant="outline-success" className="addtocart" onClick={addToCart}>
-                      Add to Cart
+                    <Button variant="outline-success" className="addtocart" onClick={addToCart} >
+                      <b>Add to Cart</b>
                     </Button>
                   </div>
                   <div className="kc">
                     <Button variant="outline-warning" className="buynow">
-                      Buy Now
+                      <b>Buy Now</b>
                     </Button>
                   </div>
                 </div>
@@ -139,7 +159,43 @@ function SoloDetail() {
             <Col xs={1} />
           </Row>
         </div>
+        <div className="main">
+          <Row>
+            <Col xs={1} />
+            <Col xs={10}>
+              <h3 className="related-title">RELATED PRODUCTS</h3>
+            </Col>
+
+            <Col xs={1} />
+          </Row>
+        </div>
+        <div className="main">
+          <Row>
+            <Col xs={1} />
+            <Col xs={10} className="related-kc">
+              {ListSolo.slice(0, 7).map(
+                (sol, index) =>
+                  sol.id !== id && (
+                    <button className="hover-item" onClick={() => {window.scrollTo(0, 0);navigate(`/solo/${sol.id}`)} } >
+                      <div className="album-item " id="related-item">
+                        <img className="album-item-img" id="related-img" alt="" src={sol.avatar} />
+                        <div className="album-item-name" id="related-name">{sol.name}</div>
+                        <div className="album-item-prices" id="related-price">
+                          <div className="album-item-price" id="related-price-i">{sol.price}$</div>
+                          <div className="album-item-sell" id="related-price-i">{sol.sell}</div>
+                          <div className="album-item-percent" id="related-price-o"> {sol.percent} </div>
+                        </div>
+                      </div>
+                    </button>
+                  )
+              )}
+            </Col>
+
+            <Col xs={1} />
+          </Row>
+        </div>
       </Container>
+      <Footer></Footer>
     </div>
   );
 }

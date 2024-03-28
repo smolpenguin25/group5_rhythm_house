@@ -5,13 +5,55 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import { useOutletContext } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 
 function BandDetail() {
-  const { id } = useParams(); // Lấy id từ URL
+  const [CartList, setCartList] = useOutletContext(); 
 
-  const [band, setBand] = useState({}); // State để lưu thông tin của solo
+  const [ListBand, setListBand] = useState([]);
+  const navigate = useNavigate();
 
-  // Hàm để lấy thông tin của solo từ API
+  const { id } = useParams();
+
+  const [band, setBand] = useState({});
+
+  const addToCart = () => {
+    for (let i = 0; i < CartList.length; i++){
+      if(band.name === CartList[i].name){
+        CartList[i].amount++;
+        console.log(CartList[i].amount);
+        setCartList(oldCart => [...oldCart]);
+        return;
+      }
+    }
+    band.amount = 1;
+    setCartList(oldCart => [...oldCart, band]);
+  };
+
+  const getBands = () => {
+    fetch("https://65d55b883f1ab8c63436c62f.mockapi.io/band", {
+      method: "GET",
+      headers: { "content-type": "application/json" },
+    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+      })
+      .then((Bands) => {
+        setListBand(Bands);
+      })
+      .catch((error) => {
+        console.log("Error: " + error);
+      });
+  };
+
+  useEffect(() => {
+    getBands();
+  }, []);
+
   const fetchBand = () => {
     fetch(`https://65d55b883f1ab8c63436c62f.mockapi.io/band/${id}`)
       .then((response) => {
@@ -21,19 +63,16 @@ function BandDetail() {
         throw new Error("Failed to fetch band");
       })
       .then((data) => {
-        setBand(data); // Cập nhật state với thông tin của solo
+        setBand(data);
       })
       .catch((error) => {
         console.error("Error fetching band:", error);
       });
   };
 
-  //ham sold out
-
-  // Gọi hàm fetchSolo khi component được render
   useEffect(() => {
     fetchBand();
-  }, [id]); // Khi id thay đổi, component sẽ re-render và gọi lại hàm fetchSolo
+  }, [id]);
 
   return (
     <div className="container-detail">
@@ -48,7 +87,6 @@ function BandDetail() {
             <Col xs={1} />
             <Col xs={4}>
               <div className="main-left">
-                {/* Hiển thị ảnh solo */}
                 <img src={band.avatar} alt={band.avatar} />
                 <div className="kengang"></div>
                 <div className="playlist">
@@ -78,7 +116,6 @@ function BandDetail() {
               </div>
             </Col>
             <Col xs={6}>
-              {/* Hiển thị thông tin chi tiết solo */}
               <div className="detail-info">
                 <div className="detail-info-name">{band.name}</div>
                 <div className="detail-info-purch">
@@ -100,7 +137,7 @@ function BandDetail() {
 
                 <div>
                   <div className="detail-price">
-                    <div className="album-item-price">{band.price}</div>
+                    <div className="album-item-price" id="fix-prices">{band.price}$</div>
                   </div>
                   <div className="soldout">{band.soldout}</div>
                 </div>
@@ -129,7 +166,41 @@ function BandDetail() {
             <Col xs={1} />
           </Row>
         </div>
+        <div className="main">
+          <Row>
+            <Col xs={1} />
+            <Col xs={10}>
+              <h3 className="related-title">RELATED PRODUCTS</h3>
+            </Col>
+
+            <Col xs={1} />
+          </Row>
+        </div>
+        <div className="main">
+          <Row>
+            <Col xs={1} />
+            <Col xs={10} className="related-kc">
+              {ListBand.slice(0, 7).map(
+                (ban, index) =>
+                  ban.id !== id && (
+                    <button className="hover-item" onClick={() => {window.scrollTo(0, 0);navigate(`/band/${ban.id}`)} } >
+                      <div className="album-item " id="related-item">
+                        <img className="album-item-img" id="related-img" alt="" src={ban.avatar} />
+                        <div className="album-item-name" id="related-name">{ban.name}</div>
+                        <div className="album-item-prices" id="related-price">
+                          <div className="album-item-price" id="related-price-i">{ban.price}$</div>
+                        </div>
+                      </div>
+                    </button>
+                  )
+              )}
+            </Col>
+
+            <Col xs={1} />
+          </Row>
+        </div>
       </Container>
+      <Footer></Footer>
     </div>
   );
 }
