@@ -9,6 +9,9 @@ import 'reactjs-popup/dist/index.css';
 import TicketModal from './Modal';
 import './Modal.css'; 
 import React, { useState, useEffect } from 'react';
+import YouTubeVideoModal from './YouTubeVideoModal'; // Adjust the path as necessary
+
+
 
 
 
@@ -18,11 +21,23 @@ import React, { useState, useEffect } from 'react';
 
 
 export const JoinUs = () => {
-  const [isOpen, setOpen] = useState(false);
 
-  function handleChange() {
-    setOpen(!isOpen);
-  }
+  const [youtubeModalOpen, setYoutubeModalOpen] = useState(false);
+  const [youtubeVideoId, setYoutubeVideoId] = useState(''); // Replace '' with your YouTube video ID
+
+
+  const openYoutubeModal = (videoId) => {
+    setYoutubeVideoId(videoId);
+    setYoutubeModalOpen(true);
+   };
+   
+   const closeYoutubeModal = () => {
+    setYoutubeModalOpen(false);
+   };
+ 
+
+
+ 
   
 
   const targetDate = new Date('2024-05-11T00:00:00');
@@ -92,11 +107,20 @@ export const JoinUs = () => {
               <p className="text-wrapper-4">Turn on the feeling with all music event</p>
             </div>
             <div className="overlap-group-wrapper">
-              <div className="play-arrow-wrapper" >
-                <img className="play-arrow" alt="Play arrow" src={playarrow} />
+              <div className="play-arrow-wrapper"  >
+              <button onClick={() => openYoutubeModal('YOUR_YOUTUBE_VIDEO_ID')}>
 
-                
+                  <img className="play-arrow" alt="Play arrow" src={playarrow} />
+                  </button>
+                  <YouTubeVideoModal
+ isOpen={youtubeModalOpen}
+ closeModal={closeYoutubeModal}
+ videoId={youtubeVideoId}
+/>
+                  
+
               </div>
+
 
             </div>
           </div>
@@ -130,8 +154,6 @@ export const JoinUs = () => {
           <img className="arrow-chevron-down" alt="Arrow chevron down" src={arrowdown1} />
         </div>
         <div className="ellipse" />
-        <div className="ellipse-2" />
-        <div className="ellipse-3" />
         <div className="group-3">
           <div className="group-4">
 

@@ -141,6 +141,33 @@
   position: relative;
   width: fit-content;
 }
+.event-schedule .element-1 {
+  color: var(--general-blue);
+  font-family: var(--h3-font-family);
+  font-size: var(--h3-font-size);
+  font-style: var(--h3-font-style);
+  font-weight: var(--h3-font-weight);
+  letter-spacing: var(--h3-letter-spacing);
+  line-height: var(--h3-line-height);
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.event-schedule .element-4 {
+  color: var(--general-blue);
+  font-family: var(--h5-font-family);
+  font-size: var(--h5-font-size);
+  font-style: var(--h5-font-style);
+  font-weight: var(--h5-font-weight);
+  letter-spacing: var(--h5-letter-spacing);
+  line-height: var(--h5-line-height);
+  opacity: 0.5;
+  position: relative;
+  width: fit-content;
+}
+
 
 .event-schedule .indicator {
   background-color: var(--general-blue);
@@ -215,7 +242,7 @@
 
 .event-schedule .BG {
   background-color: var(--general-blue);
-  height: 120px;
+  height: 100px;
   left: 0;
   opacity: 0.05;
   position: absolute;
@@ -424,3 +451,13 @@
   text-align: right;
   width: fit-content;
 }
+
+.day.active {
+  background-color: #f0f0f0; /* Light gray background for active day */
+  color: #000; /* Black text for active day */
+ }
+ 
+ .indicator.active,
+ .indicator-2.active {
+  background-color: #007bff; /* Blue background for active indicator */
+ }
