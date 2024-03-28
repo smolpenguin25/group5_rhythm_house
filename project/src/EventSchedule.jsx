@@ -4,19 +4,13 @@ import { IconsClock } from "./icons/IconsClock";
 import { IconsPlay } from "./icons/IconsPlay";
 import "./EventSchedule.css";
 import avatar from "./img/avatar.svg";
-import avatar1 from "./img/avatar-1.svg"
-import avatar2 from "./img/avatar-2.svg"
-import avatar3 from "./img/avatar-3.svg"
-import avatar4 from "./img/avatar-4.svg"
-import avatar5 from "./img/avatar-5.svg"
-import divider from "./img/divider.svg"
-import divider1 from "./img/divider-1.svg"
-
-
-
-
-
-
+import avatar1 from "./img/avatar-1.svg";
+import avatar2 from "./img/avatar-2.svg";
+import avatar3 from "./img/avatar-3.svg";
+import avatar4 from "./img/avatar-4.svg";
+import avatar5 from "./img/avatar-5.svg";
+import divider from "./img/divider.svg";
+import divider1 from "./img/divider-1.svg";
 
 export const EventSchedule = () => {
   return (
@@ -60,7 +54,9 @@ export const EventSchedule = () => {
           <div className="list">
             <div className="content">
               <p className="p">11:00 AM to 12:00 PM</p>
-              <p className="text-wrapper-5">Vestibulum vel eros vel metus lacinia feugiat a nec metus.</p>
+              <p className="text-wrapper-5">
+                Vestibulum vel eros vel metus lacinia feugiat a nec metus.
+              </p>
               <div className="speakers">
                 <div className="speaker">
                   <img className="avatar" alt="Avatar" src={avatar} />
@@ -84,9 +80,11 @@ export const EventSchedule = () => {
             <div className="content">
               <p className="p">12:00 PM to 03:00 PM</p>
               <p className="text-wrapper-5">
-                Duis nec sodales nibh. Proin lectus tortor, rutrum vel vulputate vitae, fringilla id magna. Vestibulum
-                ornare eget urna nec pulvinar. Praesent porttitor convallis blandit. Fusce vel egestas dolor. Donec eu
-                augue enim. Donec rutrum non lacus ac rhoncus. Morbi quis luctus leo, nec cursus ex.
+                Duis nec sodales nibh. Proin lectus tortor, rutrum vel vulputate
+                vitae, fringilla id magna. Vestibulum ornare eget urna nec
+                pulvinar. Praesent porttitor convallis blandit. Fusce vel
+                egestas dolor. Donec eu augue enim. Donec rutrum non lacus ac
+                rhoncus. Morbi quis luctus leo, nec cursus ex.
               </p>
               <div className="speakers">
                 <div className="speaker">
@@ -130,7 +128,9 @@ export const EventSchedule = () => {
           <div className="list">
             <div className="content">
               <p className="p">03:00 PM to 04:00 PM</p>
-              <p className="text-wrapper-5">Vestibulum vel eros vel metus lacinia feugiat a nec metus.</p>
+              <p className="text-wrapper-5">
+                Vestibulum vel eros vel metus lacinia feugiat a nec metus.
+              </p>
               <div className="speakers">
                 <div className="speaker">
                   <img className="avatar" alt="Avatar" src={avatar4} />

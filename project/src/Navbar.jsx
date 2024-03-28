@@ -4,9 +4,7 @@ import AlbumDropDownButton from "./AlbumDropDownButton";
 import Button from "react-bootstrap/Button";
 import { Icon } from 'react-icons-kit';
 import { shopping_cart } from 'react-icons-kit/ikons/shopping_cart';
-import React, { useState, useEffect } from 'react';
-import Footer from "./Footer";
-
+import React, { useState, useEffect } from 'react'
 
 function Navbar() {
   const cart_icon = shopping_cart;

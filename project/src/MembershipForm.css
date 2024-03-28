@@ -73,8 +73,7 @@ button[type="submit"]:hover {
 .contain{
   position: relative;
   top: -59px;
-  width: 1742px;
-  left: -195px;
+  /* width: 1742px; */
 }
 .titleForm {
 color: #fff;
