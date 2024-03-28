@@ -2,11 +2,12 @@ import './Home.css'
 import Carousel from 'react-bootstrap/Carousel';
 import logo from './img/logo192.png';
 import { Link } from "react-router-dom";
+import Footer from './Footer';
 
 function Home() {
     return (
         <div className='home-container'>
-            <div className="carousel-container">
+            <div className="carousel-container1">
                 <div className='carousel-title'>Discounted Products</div>
                 <div className='carousel-content'>
                     <Carousel>
@@ -24,7 +25,7 @@ function Home() {
                 </div>
             </div>
 
-            <div className="carousel-container">
+            <div className="carousel-container1">
                 <div className='carousel-title'>Featured Album</div>
                 <div className='carousel-content'>
                     <Carousel>
@@ -41,6 +42,7 @@ function Home() {
                     </Carousel>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 }

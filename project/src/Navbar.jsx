@@ -64,7 +64,6 @@ function Navbar() {
         </div>
       </div>
       <Outlet context={[CartList, setCartList]}></Outlet>
-      {/* <Footer></Footer> */}
     </div>
   );
 }

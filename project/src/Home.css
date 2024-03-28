@@ -1,8 +1,10 @@
 .home-container {
     background: linear-gradient(rgb(85, 85, 105), rgb(20, 20, 20));
-  }
+    height: auto;
+    overflow: auto;
+}
   
-  .carousel-container {
+  .carousel-container1 {
     margin-top: 100px;
     width: 100%;
   }

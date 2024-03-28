@@ -19,7 +19,16 @@ function BandDetail() {
   const [band, setBand] = useState({});
 
   const addToCart = () => {
-    setCartList((oldCart) => [...oldCart, band]);
+    for (let i = 0; i < CartList.length; i++){
+      if(band.name === CartList[i].name){
+        CartList[i].amount++;
+        console.log(CartList[i].amount);
+        setCartList(oldCart => [...oldCart]);
+        return;
+      }
+    }
+    band.amount = 1;
+    setCartList(oldCart => [...oldCart, band]);
   };
 
   const getBands = () => {

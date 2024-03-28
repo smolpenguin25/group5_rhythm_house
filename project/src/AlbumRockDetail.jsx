@@ -52,7 +52,16 @@ function RockDetail() {
   const [rock, setRock] = useState({});
 
   const addToCart = () => {
-    setCartList((oldCart) => [...oldCart, rock]);
+    for (let i = 0; i < CartList.length; i++) {
+      if (rock.name === CartList[i].name) {
+        CartList[i].amount++;
+        console.log(CartList[i].amount);
+        setCartList(oldCart => [...oldCart]);
+        return;
+      }
+    }
+    rock.amount = 1;
+    setCartList(oldCart => [...oldCart, rock]);
   };
 
   const getRocks = () => {
@@ -271,7 +280,7 @@ function RockDetail() {
                   rock.id !== id && (
                     <button
                       className="hover-item"
-                      onClick={() => {window.scrollTo(0, 0);navigate(`/rock/${rock.id}`)} }
+                      onClick={() => { window.scrollTo(0, 0); navigate(`/rock/${rock.id}`) }}
                     >
                       <div className="album-item " id="related-item">
                         <img
