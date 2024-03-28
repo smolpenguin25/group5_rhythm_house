@@ -18,7 +18,7 @@ function Navbar({setCart}) {
 
 
   return (
-    <div>
+    <>
       <div className="navbar-container">
         <div className="navbar">
           <span className="shop-name">Rhythm House</span>
@@ -47,7 +47,7 @@ function Navbar({setCart}) {
         </div>
       </div>
       <Outlet context={[CartList, setCartList]}></Outlet>
-    </div>
+    </>
   );
 }
 
