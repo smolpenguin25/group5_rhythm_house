@@ -5,11 +5,27 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import { useOutletContext } from "react-router-dom";
 
 function BandDetail() {
+  const [CartList, setCartList] = useOutletContext(); //cart list
+
   const { id } = useParams(); // Lấy id từ URL
 
   const [band, setBand] = useState({}); // State để lưu thông tin của solo
+
+  const addToCart = () => {
+    for (let i = 0; i < CartList.length; i++){
+      if(band.name === CartList[i].name){
+        CartList[i].amount++;
+        console.log(CartList[i].amount);
+        setCartList(oldCart => [...oldCart]);
+        return;
+      }
+    }
+    band.amount = 1;
+    setCartList(oldCart => [...oldCart, band]);
+  }
 
   // Hàm để lấy thông tin của solo từ API
   const fetchBand = () => {
@@ -107,7 +123,7 @@ function BandDetail() {
 
                 <div className="add">
                   <div>
-                    <Button variant="outline-success" className="addtocart">
+                    <Button variant="outline-success" className="addtocart" onClick={addToCart}>
                       Add to Cart
                     </Button>
                   </div>

@@ -5,9 +5,10 @@ import Button from "react-bootstrap/Button";
 import { Icon } from 'react-icons-kit';
 import { shopping_cart } from 'react-icons-kit/ikons/shopping_cart';
 import React, { useState, useEffect } from 'react';
+import Footer from "./Footer";
 
 
-function Navbar({setCart}) {
+function Navbar() {
   const cart_icon = shopping_cart;
 
   const [CartList, setCartList] = useState([]);
@@ -28,7 +29,6 @@ function Navbar({setCart}) {
   }
 
   useEffect(() => {
-    setCart(CartList);
     calAmount();
     console.log(totalAmount);
   });
@@ -64,6 +64,7 @@ function Navbar({setCart}) {
         </div>
       </div>
       <Outlet context={[CartList, setCartList]}></Outlet>
+      <Footer></Footer>
     </div>
   );
 }

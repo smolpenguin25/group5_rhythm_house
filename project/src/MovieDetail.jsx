@@ -5,11 +5,27 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import { useOutletContext } from "react-router-dom";
 
 function MovieDetail() {
+  const [CartList, setCartList] = useOutletContext(); //cart list
+
   const { id } = useParams(); // Lấy id từ URL
 
   const [movie, setMovie] = useState({}); // State để lưu thông tin của solo
+
+  const addToCart = () => {
+    for (let i = 0; i < CartList.length; i++){
+      if(movie.name === CartList[i].name){
+        CartList[i].amount++;
+        console.log(CartList[i].amount);
+        setCartList(oldCart => [...oldCart]);
+        return;
+      }
+    }
+    movie.amount = 1;
+    setCartList(oldCart => [...oldCart, movie]);
+  }
 
   // Hàm để lấy thông tin của solo từ API
   const fetchMovie = () => {
@@ -109,7 +125,7 @@ function MovieDetail() {
 
                 <div className="add">
                   <div>
-                    <Button variant="outline-success" className="addtocart">
+                    <Button variant="outline-success" className="addtocart" onClick={addToCart}>
                       Add to Cart
                     </Button>
                   </div>

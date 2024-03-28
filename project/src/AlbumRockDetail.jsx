@@ -10,7 +10,7 @@ import Accordion from "react-bootstrap/Accordion";
 import AccordionContext from "react-bootstrap/AccordionContext";
 import { useAccordionButton } from "react-bootstrap/AccordionButton";
 import Card from "react-bootstrap/Card";
-
+import { useOutletContext } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 
 // ll
@@ -39,9 +39,24 @@ function ContextAwareToggle({ children, eventKey, callback }) {
 }
 
 function RockDetail() {
+  const [CartList, setCartList] = useOutletContext(); //cart list
+
   const { id } = useParams(); // Lấy id từ URL
 
   const [rock, setRock] = useState({}); // State để lưu thông tin của solo
+
+  const addToCart = () => {
+    for (let i = 0; i < CartList.length; i++){
+      if(rock.name === CartList[i].name){
+        CartList[i].amount++;
+        console.log(CartList[i].amount);
+        setCartList(oldCart => [...oldCart]);
+        return;
+      }
+    }
+    rock.amount = 1;
+    setCartList(oldCart => [...oldCart, rock]);
+  }
 
   // Hàm để lấy thông tin của solo từ API
   const fetchRock = () => {
@@ -182,6 +197,7 @@ function RockDetail() {
                               <Button
                                 variant="outline-success"
                                 className="addtocart"
+                                onClick={addToCart}
                               >
                                 Send
                               </Button>

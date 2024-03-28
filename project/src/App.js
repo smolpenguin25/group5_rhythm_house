@@ -32,12 +32,10 @@ function App() {
     document.title = "Rhythm House";
   }, []);
 
-  const [CartList, setCartList] = useState([]);
-
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Navbar setCart={setCartList}/>}>
+        <Route path="/" element={<Navbar/>}>
           <Route index element={<Home />} />
 
           <Route path="band" element={<AlbumBand />} />
@@ -62,7 +60,7 @@ function App() {
           <Route path="solo/:id" element={<SoloDetail />} />
           <Route path="more" element={<More/>} />
           <Route path="event-schedule" element={<EventSchedule/>} />
-          <Route path="cart" element={<Cart cart={CartList}/>}/>
+          <Route path="cart" element={<Cart/>}/>
           <Route path="success" element={<SignUpSuccess/>}/>
 
         </Route>
