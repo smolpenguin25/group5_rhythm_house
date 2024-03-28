@@ -7,13 +7,29 @@ import { shopping_cart } from 'react-icons-kit/ikons/shopping_cart';
 import React, { useState, useEffect } from 'react';
 
 
-function Navbar({setCart}) {
+function Navbar() {
   const cart_icon = shopping_cart;
 
   const [CartList, setCartList] = useState([]);
 
+  const [totalAmount, settotalAmount] = useState(0);
+
+  const calAmount = () => {
+    if(CartList.length === 0){
+      settotalAmount(0);
+    }
+    else{
+      var total = 0;
+      for(let i = 0; i < CartList.length; i++){
+        total += CartList[i].amount;
+      }
+      settotalAmount(total);
+    }
+  }
+
   useEffect(() => {
-    setCart(CartList);
+    calAmount();
+    console.log(totalAmount);
   });
 
 
