@@ -2,6 +2,8 @@ import * as React from "react";
 import './EventMainPage.css';
 import abc from "./img/eventimg1.png";
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import Footer from "./Footer";
+
 
 function EventMainPage() {
  const navItems = [
@@ -57,6 +59,7 @@ function EventMainPage() {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
  );
 }
