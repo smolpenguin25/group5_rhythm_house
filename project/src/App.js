@@ -8,6 +8,7 @@ import React, { useEffect, useState } from "react";
 import ContactUs from "./ContactUs";
 import AboutUs from "./AboutUs";
 import SignUp from "./SignUp";
+import SignUpSuccess from "./SignUpSuccess";
 import Login from "./Login";
 import ErrorPage from "./ErrorPage";
 import EventMainPage from "./EventMainPage";
@@ -62,6 +63,7 @@ function App() {
           <Route path="more" element={<More/>} />
           <Route path="event-schedule" element={<EventSchedule/>} />
           <Route path="cart" element={<Cart cart={CartList}/>}/>
+          <Route path="success" element={<SignUpSuccess/>}/>
 
         </Route>
       </Routes>

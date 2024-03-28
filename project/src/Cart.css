@@ -8,12 +8,13 @@
     overflow-y: scroll;
     height: 70vh;
     width: 50vw;
-    background-color: white;
+    background-color: rgb(241, 241, 241);
 }
 
 .cart-item-list{
     display: flex;
     border-bottom: 1px solid black;
+    background: linear-gradient(to bottom right, rgb(94, 217, 255), rgb(68, 255, 124));
 }
 
 .cart-item{
@@ -21,12 +22,49 @@
 }
 
 .cart-item-avatar{
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
 }
 
 .cart-container{
     height: 100vh;
     background: linear-gradient(rgb(85, 85, 105), rgb(20, 20, 20));
     overflow: auto;
+}
+
+.cross-span{
+    text-decoration: line-through;
+    color: grey;
+}
+
+.red-price{
+    color: red;
+}
+
+.font-20{
+    font-size: 20px;
+}
+
+.change-button-container{
+    margin: auto;
+}
+
+.change-button{
+    height: 30px;
+    width: 20px;
+    margin-bottom: 5px;
+}
+
+.inside-button{
+    text-align: center;
+    line-height: 10px;
+}
+
+.inside-button1{
+    text-align: center;
+    line-height: 20px;
+}
+
+.amount-box{
+    background-color: white;
 }

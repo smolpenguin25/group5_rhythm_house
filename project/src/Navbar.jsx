@@ -12,8 +12,25 @@ function Navbar({setCart}) {
 
   const [CartList, setCartList] = useState([]);
 
+  const [totalAmount, settotalAmount] = useState(0);
+
+  const calAmount = () => {
+    if(CartList.length === 0){
+      settotalAmount(0);
+    }
+    else{
+      var total = 0;
+      for(let i = 0; i < CartList.length; i++){
+        total += CartList[i].amount;
+      }
+      settotalAmount(total);
+    }
+  }
+
   useEffect(() => {
     setCart(CartList);
+    calAmount();
+    console.log(totalAmount);
   });
 
 
@@ -33,7 +50,7 @@ function Navbar({setCart}) {
         <div className="icon-container-1">
           <Link to="/cart" className="icon-1"><Icon icon={cart_icon} size={30} /></Link>
           <div  className="cart-label-container">
-            <label className="cart-label">{CartList.length}</label>
+            <label className="cart-label">{totalAmount}</label>
           </div>  
         </div>
 
