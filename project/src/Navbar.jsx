@@ -49,7 +49,7 @@ function Navbar() {
         <div className="icon-container-1">
           <Link to="/cart" className="icon-1"><Icon icon={cart_icon} size={30} /></Link>
           <div  className="cart-label-container">
-            <label className="cart-label">{CartList.length}</label>
+            <label className="cart-label">{totalAmount}</label>
           </div>  
         </div>
 
