@@ -25,6 +25,7 @@ import Membership from "./Membership";
 import { More } from "./More";
 import { EventSchedule } from "./EventSchedule";
 import Cart from "./Cart";
+import SignUpSuccess from "./SignUpSuccess"
 
 function App() {
   useEffect(() => {
@@ -63,6 +64,7 @@ function App() {
           <Route path="solo/:id" element={<SoloDetail />} />
           <Route path="more" element={<More/>} />
           <Route path="event-schedule" element={<EventSchedule/>} />
+          <Route path="success" element={<SignUpSuccess/>} />
 
         </Route>
       </Routes>
