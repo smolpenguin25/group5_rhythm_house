@@ -100,6 +100,7 @@ function AlbumSolo() {
                               <div className="album-item">
                                 <img
                                   className="album-item-img"
+                                  id="album-item-fix"
                                   alt=""
                                   src={solo.avatar}
                                 />
@@ -134,7 +135,8 @@ function AlbumSolo() {
                                 <Col className="vitri">
                                   <div className="album-item">
                                     <img
-                                      className="album-item-img"
+                                      className="album-item-img "
+                                      id="album-item-fix"
                                       alt=""
                                       src={solo.avatar}
                                     />

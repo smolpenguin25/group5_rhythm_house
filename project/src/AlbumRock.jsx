@@ -99,6 +99,7 @@ function AlbumRock() {
                               <div className="album-item">
                                 <img
                                   className="album-item-img"
+                                  id="album-item-fix"
                                   alt=""
                                   src={rock.avatar}
                                 />
@@ -128,6 +129,7 @@ function AlbumRock() {
                                   <div className="album-item">
                                     <img
                                       className="album-item-img"
+                                      id="album-item-fix"
                                       alt=""
                                       src={rock.avatar}
                                     />

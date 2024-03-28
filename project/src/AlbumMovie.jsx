@@ -100,6 +100,7 @@ function AlbumMovie() {
                               <div className="album-item">
                                 <img
                                   className="album-item-img"
+                                  id="album-item-fix"
                                   alt=""
                                   src={movie.avatar}
                                 />
@@ -135,6 +136,7 @@ function AlbumMovie() {
                                   <div className="album-item">
                                     <img
                                       className="album-item-img"
+                                      id="album-item-fix"
                                       alt=""
                                       src={movie.avatar}
                                     />

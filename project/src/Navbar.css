@@ -4,6 +4,9 @@
     width: 65%;
     flex-direction: row;
 }
+.nav-text{
+    text-decoration: none;
+}
 
 .navbar-container{
     display: flex;

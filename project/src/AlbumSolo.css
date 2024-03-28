@@ -173,6 +173,9 @@ div .title {
   margin-left: -6px;
   width: 100%;
 }
+#album-item-fix{
+  margin-left: 6px;
+}
 
 .album-item-img {
   width: 197px;

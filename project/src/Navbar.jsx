@@ -38,12 +38,12 @@ function Navbar() {
       <div className="navbar-container">
         <div className="navbar">
           <span className="shop-name">Rhythm House</span>
-          <Link to="/">Home</Link>
+          <Link className="nav-text" to="/">Home</Link>
           <AlbumDropDownButton />
-          <Link to="/events">Events</Link>
-          <Link to="/membership">Membership</Link>
-          <Link to="/about">About Us</Link>
-          <Link to="/contact">Contact Us</Link>
+          <Link className="nav-text" to="/events">Events</Link>
+          <Link className="nav-text" to="/membership">Membership</Link>
+          <Link className="nav-text" to="/about">About Us</Link>
+          <Link className="nav-text" to="/contact">Contact Us</Link>
         </div>
           
         <div className="icon-container-1">

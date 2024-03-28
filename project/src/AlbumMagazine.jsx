@@ -100,6 +100,7 @@ function AlbumMagazine() {
                               <div className="album-item">
                                 <img
                                   className="album-item-img"
+                                  id="album-item-fix"
                                   alt=""
                                   src={magazine.avatar}
                                 />
@@ -129,6 +130,7 @@ function AlbumMagazine() {
                                   <div className="album-item">
                                     <img
                                       className="album-item-img"
+                                      id="album-item-fix"
                                       alt=""
                                       src={magazine.avatar}
                                     />
