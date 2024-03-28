@@ -13,10 +13,16 @@
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
     "react-icons-kit": "^2.0.0",
+    "react-modal-video": "^2.0.1",
     "react-player": "^2.15.1",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.22.3",
+<<<<<<< HEAD
     "react-scripts": "^5.0.1",
+=======
+    "react-scripts": "5.0.1",
+    "reactjs-popup": "^2.0.6",
+>>>>>>> c7c6a2724e4755482ed047ba1d73a99efbf9c701
     "web-vitals": "^2.1.4"
   },
   "scripts": {
