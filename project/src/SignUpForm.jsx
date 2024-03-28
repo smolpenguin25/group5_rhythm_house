@@ -16,10 +16,11 @@ function SignUpForm() {
     const userUrl = new URL('https://65d55b833f1ab8c63436c5fa.mockapi.io/user');
     const [UserErrorLabel, setUserErrorLabel] = useState("");
     const [PassErrorLabel, setPassErrorLabel] = useState("");
-
+    
     const [Username, setUsername] = useState("");
     const [Password, setPassword] = useState("");
-
+    const [ConfirmPass, setConfirmPass] = useState("");
+    const [ConfirmError, setConfirmError] = useState("");
     const handleToggle = () => {
         if (type === 'password') {
             setIcon(eye);
@@ -34,9 +35,15 @@ function SignUpForm() {
     const handleSignUp = () => {
         setPassErrorLabel("");
         setUserErrorLabel("");
+        setConfirmError("");
 
         if (Username === "") {
             setUserErrorLabel("Please fill in username");
+            return;
+        }
+        
+        if (ConfirmPass !== Password) {
+            setConfirmError("Confrim Password doesnt match");
             return;
         }
 
@@ -61,6 +68,31 @@ function SignUpForm() {
             if (usrname === Username) {
                 setUserErrorLabel("Username already exists");
                 return;
+            }
+            else {
+                const newUser = {
+                    "username": Username,
+                    "password": Password,
+                    "membership": "none"
+                }
+
+                fetch('https://65d55b833f1ab8c63436c5fa.mockapi.io/user', {
+                    method: 'POST',
+                    headers: { 'content-type': 'application/json' },
+                    // Send your data in the request body as JSON
+                    body: JSON.stringify(newUser)
+                }).then(res => {
+                    if (res.ok) {
+                        return res.json();
+                    }
+                    // handle error
+                }).then(task => {
+                    // do something with the new task
+                    navigate("/success");
+                }).catch(error => {
+                    // handle error
+                    console.log("cannot add user")
+                })
             }
         }).catch(error => {
             // handle error
@@ -104,6 +136,14 @@ function SignUpForm() {
                         <Icon className="icon-content" icon={icon} size={25} />
                     </span>
                     <label className="errorLabel">{PassErrorLabel}</label>
+                </div>
+                <div className="input-container">
+                    <input type={type} placeholder="Confirm Password" className="inputbox"
+                        value={ConfirmPass} onChange={(e) => setConfirmPass(e.target.value)} />
+                    <span className="icon-container" onClick={handleToggle}>
+                        <Icon className="icon-content" icon={icon} size={25} />
+                    </span>
+                    <label className="errorLabel">{ConfirmError}</label>
                 </div>
                 <div className="birthday-input">
                     <span className="inline-text">Date of birth: </span>
