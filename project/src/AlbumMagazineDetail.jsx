@@ -19,7 +19,16 @@ function MagazineDetail() {
   const [magazine, setMagazine] = useState({});
 
   const addToCart = () => {
-    setCartList((oldCart) => [...oldCart, magazine]);
+    for (let i = 0; i < CartList.length; i++) {
+      if (magazine.name === CartList[i].name) {
+        CartList[i].amount++;
+        console.log(CartList[i].amount);
+        setCartList(oldCart => [...oldCart]);
+        return;
+      }
+    }
+    magazine.amount = 1;
+    setCartList(oldCart => [...oldCart, magazine]);
   };
 
   const getMagazines = () => {
@@ -79,7 +88,7 @@ function MagazineDetail() {
               <div className="main-left">
                 <img src={magazine.avatar} alt={magazine.avatar} />
                 <div className="kengang"></div>
-                
+
               </div>
             </Col>
             <Col xs={6}>
@@ -111,7 +120,7 @@ function MagazineDetail() {
 
                 <div className="add">
                   <div>
-                    <Button variant="outline-success" className="addtocart">
+                    <Button variant="outline-success" className="addtocart" onClick={addToCart}>
                       Add to Cart
                     </Button>
                   </div>
@@ -150,7 +159,7 @@ function MagazineDetail() {
               {ListMagazine.slice(0, 7).map(
                 (mag, index) =>
                   mag.id !== id && (
-                    <button className="hover-item" onClick={() => {window.scrollTo(0, 0);navigate(`/magazine/${mag.id}`)} } >
+                    <button className="hover-item" onClick={() => { window.scrollTo(0, 0); navigate(`/magazine/${mag.id}`) }} >
                       <div className="album-item " id="related-item">
                         <img className="album-item-img" id="related-img" alt="" src={mag.avatar} />
                         <div className="album-item-name" id="related-name">{mag.name}</div>

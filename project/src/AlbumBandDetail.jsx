@@ -143,7 +143,7 @@ function BandDetail() {
 
                 <div className="add">
                   <div>
-                    <Button variant="outline-success" className="addtocart">
+                    <Button variant="outline-success" className="addtocart" onClick={addToCart}>
                       Add to Cart
                     </Button>
                   </div>
