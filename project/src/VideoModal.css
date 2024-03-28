@@ -1,0 +1,21 @@
+/* VideoModal.css */
+.video-modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.9) /* Green background with 30% opacity */
+    
+   }
+   
+   .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    border: 1px solid #888;
+    width: 0%;
+    align-items: center;
+
+
+   }

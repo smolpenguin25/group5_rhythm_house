@@ -1,14 +1,30 @@
 // TicketModal.jsx
-import React from 'react';
 import Popup from 'reactjs-popup';
 import './Modal.css'
 import tier1 from "./img/TIER1.png"
 import tier2 from "./img/TIER2.png"
 import tier3 from "./img/TIER3.png"
+import React, { useState } from 'react';
+
 
 
 
 const TicketModal = ({ open, closeModal }) => {
+
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (item) => {
+   setCart([...cart, item]);
+  };
+   
+
+
+
+
+
+
+
+  
   return (
     <Popup  open={open} closeOnDocumentClick onClose={closeModal} >
       <h2 >Buy Concert Ticket</h2>
@@ -37,7 +53,15 @@ const TicketModal = ({ open, closeModal }) => {
             </span>Time: 7:00 PM</p>
           </div>
         </div>
-        <div class="movie__price">$12.56</div>
+        <button className="movie__price" onClick={() => addToCart({
+ id: "tier1",
+ name: "TIER I",
+ price: 12.56,
+ description: "General admission to the concert.",
+ image: tier1,
+})}>$12.56</button>
+        
+
       </figure>
       <figure class="movie">
         <div class="movie__hero">
@@ -59,7 +83,7 @@ const TicketModal = ({ open, closeModal }) => {
             </span>Time: 7:00 PM</p>
           </div>
         </div>
-        <div class="movie__price">$22.56</div>
+        <button class="movie__price">$22.56</button>
       </figure>
       <figure class="movie">
         <div class="movie__hero">
@@ -81,7 +105,7 @@ const TicketModal = ({ open, closeModal }) => {
             </span>Time: 7:00 PM</p>
           </div>
         </div>
-        <div class="movie__price">$32.56</div>
+        <button class="movie__price">$32.56</button>
       </figure>
 
 

@@ -20,7 +20,15 @@ import YouTubeVideoModal from './YouTubeVideoModal'; // Adjust the path as neces
 
 
 
+
+
 export const JoinUs = () => {
+  // const [CartList, setCartList] = useOutletContext(); //cart list
+
+  // const addToCart = () => {
+  //   setCartList(oldCart => [...oldCart, solo]);
+  // }
+
 
   const [youtubeModalOpen, setYoutubeModalOpen] = useState(false);
   const [youtubeVideoId, setYoutubeVideoId] = useState(''); // Replace '' with your YouTube video ID

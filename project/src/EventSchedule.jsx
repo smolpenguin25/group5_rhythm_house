@@ -36,7 +36,7 @@ export const EventSchedule = () => {
             </div>
             <div className={`day ${activeDay === 2 ? 'active' : ''}`} onClick={() => handleDayClick(2)}>
               <div className="div">
-                <div className="element-1">Day 30</div>
+                <div className="element-3">Day 30</div>
                 <div className="element-4">March</div>
               </div>
               <div className={`indicator-2 ${activeDay === 2 ? 'active' : ''}`} />
