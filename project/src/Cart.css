@@ -24,3 +24,9 @@
     height: 100px;
     width: 100px;
 }
+
+.cart-container{
+    height: 100vh;
+    background: linear-gradient(rgb(85, 85, 105), rgb(20, 20, 20));
+    overflow: auto;
+}

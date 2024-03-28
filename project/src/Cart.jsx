@@ -17,7 +17,7 @@ function Cart({ cart }) {
     ))
 
     return (
-        <div className="home-container">
+        <div className="cart-container">
             <h3 className="cart-header">Items in cart</h3>
             <div className="cart-list">
                 {renderCartItem}
