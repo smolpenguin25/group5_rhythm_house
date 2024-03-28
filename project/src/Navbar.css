@@ -33,6 +33,10 @@
     -webkit-text-fill-color: transparent;
 }
 
+a:link{
+    text-decoration: none;
+}
+
 .search{
     font-size: 20px;
     background: linear-gradient(#777777, #ffffff);

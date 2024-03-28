@@ -38,7 +38,7 @@ function Navbar() {
     <div>
       <div className="navbar-container">
         <div className="navbar">
-          <span className="shop-name">Rhythm House</span>
+          <Link to="/"><span className="shop-name">Rhythm House</span></Link>
           <Link to="/">Home</Link>
           <AlbumDropDownButton />
           <Link to="/events">Events</Link>
