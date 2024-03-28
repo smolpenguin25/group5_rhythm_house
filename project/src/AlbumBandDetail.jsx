@@ -5,47 +5,11 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import { useOutletContext } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
 function BandDetail() {
-  const [CartList, setCartList] = useOutletContext(); //cart list
-
-  // list solo
-  const [ListBand, setListBand] = useState([]);
-  const navigate = useNavigate();
-
   const { id } = useParams(); // Lấy id từ URL
 
   const [band, setBand] = useState({}); // State để lưu thông tin của solo
-
-  //add item to cart
-  const addToCart = () => {
-    setCartList((oldCart) => [...oldCart, band]);
-  };
-
-  const getBands = () => {
-    fetch("https://65d55b883f1ab8c63436c62f.mockapi.io/band", {
-      method: "GET",
-      headers: { "content-type": "application/json" },
-    })
-      .then((res) => {
-        if (res.ok) {
-          return res.json();
-        }
-        // handle error
-      })
-      .then((Bands) => {
-        setListBand(Bands);
-      })
-      .catch((error) => {
-        console.log("Error: " + error);
-      });
-  };
-
-  useEffect(() => {
-    getBands();
-  }, []);
 
   // Hàm để lấy thông tin của solo từ API
   const fetchBand = () => {
@@ -162,39 +126,6 @@ function BandDetail() {
                 </div>
               </div>
             </Col>
-            <Col xs={1} />
-          </Row>
-        </div>
-        <div className="main">
-          <Row>
-            <Col xs={1} />
-            <Col xs={10}>
-              <h3 className="related-title">RELATED PRODUCTS</h3>
-            </Col>
-
-            <Col xs={1} />
-          </Row>
-        </div>
-        <div className="main">
-          <Row>
-            <Col xs={1} />
-            <Col xs={10} className="related-kc">
-              {ListBand.slice(0, 7).map(
-                (ban, index) =>
-                  ban.id !== id && (
-                    <button className="hover-item" onClick={() => {window.scrollTo(0, 0);navigate(`/band/${ban.id}`)} } >
-                      <div className="album-item " id="related-item">
-                        <img className="album-item-img" id="related-img" alt="" src={ban.avatar} />
-                        <div className="album-item-name" id="related-name">{ban.name}</div>
-                        <div className="album-item-prices" id="related-price">
-                          <div className="album-item-price" id="related-price-i">{ban.price}</div>
-                        </div>
-                      </div>
-                    </button>
-                  )
-              )}
-            </Col>
-
             <Col xs={1} />
           </Row>
         </div>

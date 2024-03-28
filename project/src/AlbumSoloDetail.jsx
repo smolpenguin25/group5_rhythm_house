@@ -6,14 +6,9 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { useOutletContext } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
 function SoloDetail() {
   const [CartList, setCartList] = useOutletContext(); //cart list
-
-  // list solo
-  const [ListSolo, setListSolo] = useState([]);
-  const navigate = useNavigate();
 
   const { id } = useParams(); // Lấy id từ URL
 
@@ -30,31 +25,8 @@ function SoloDetail() {
       }
     }
     solo.amount = 1;
-    setCartList((oldCart) => [...oldCart, solo]);
-  };
-
-  const getSolos = () => {
-    fetch("https://65d55b883f1ab8c63436c62f.mockapi.io/solo", {
-      method: "GET",
-      headers: { "content-type": "application/json" },
-    })
-      .then((res) => {
-        if (res.ok) {
-          return res.json();
-        }
-        // handle error
-      })
-      .then((Solos) => {
-        setListSolo(Solos);
-      })
-      .catch((error) => {
-        console.log("Error: " + error);
-      });
-  };
-
-  useEffect(() => {
-    getSolos();
-  }, []);
+    setCartList(oldCart => [...oldCart, solo]);
+  }
 
   // Hàm để lấy thông tin của solo từ API
   const fetchSolo = () => {
@@ -154,13 +126,13 @@ function SoloDetail() {
 
                 <div className="add">
                   <div>
-                    <Button variant="outline-success" className="addtocart" onClick={addToCart} >
-                      <b>Add to Cart</b>
+                    <Button variant="outline-success" className="addtocart" onClick={addToCart}>
+                      Add to Cart
                     </Button>
                   </div>
                   <div className="kc">
                     <Button variant="outline-warning" className="buynow">
-                      <b>Buy Now</b>
+                      Buy Now
                     </Button>
                   </div>
                 </div>
@@ -173,41 +145,6 @@ function SoloDetail() {
                 </div>
               </div>
             </Col>
-            <Col xs={1} />
-          </Row>
-        </div>
-        <div className="main">
-          <Row>
-            <Col xs={1} />
-            <Col xs={10}>
-              <h3 className="related-title">RELATED PRODUCTS</h3>
-            </Col>
-
-            <Col xs={1} />
-          </Row>
-        </div>
-        <div className="main">
-          <Row>
-            <Col xs={1} />
-            <Col xs={10} className="related-kc">
-              {ListSolo.slice(0, 7).map(
-                (sol, index) =>
-                  sol.id !== id && (
-                    <button className="hover-item" onClick={() => {window.scrollTo(0, 0);navigate(`/solo/${sol.id}`)} } >
-                      <div className="album-item " id="related-item">
-                        <img className="album-item-img" id="related-img" alt="" src={sol.avatar} />
-                        <div className="album-item-name" id="related-name">{sol.name}</div>
-                        <div className="album-item-prices" id="related-price">
-                          <div className="album-item-price" id="related-price-i">{sol.price}</div>
-                          <div className="album-item-sell" id="related-price-i">{sol.sell}</div>
-                          <div className="album-item-percent" id="related-price-o"> {sol.percent} </div>
-                        </div>
-                      </div>
-                    </button>
-                  )
-              )}
-            </Col>
-
             <Col xs={1} />
           </Row>
         </div>
